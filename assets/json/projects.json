@@ -13,23 +13,23 @@
             "techs":[
                 "tech1"
             ],
-            "buttons":{
-                "button 1":{
+            "buttons":[
+                {
                     "visibility":0,
-                    "button text":"button 1",
-                    "button link":"#"
+                    "button_text":"button 1",
+                    "button_link":"#"
                 },
-                "button 2":{
+                {
                     "visibility":0,
-                    "button text":"button 2",
-                    "button link":"#"
+                    "button_text":"button 2",
+                    "button_link":"#"
                 }
-            },
+            ],
             "smallImage":"",
             "mainImage":""
         },
         {
-            "name":"xx",
+            "name":"xxx",
             "smallSummary":"text here",
             "summary":[
                 "text 1",
@@ -41,18 +41,18 @@
             "techs":[
                 "tech1"
             ],
-            "buttons":{
-                "button 1":{
+            "buttons":[
+                {
                     "visibility":0,
-                    "button text":"button 1",
-                    "button link":"#"
+                    "button_text":"button 1",
+                    "button_link":"#"
                 },
-                "button 2":{
+                {
                     "visibility":0,
-                    "button text":"button 2",
-                    "button link":"#"
+                    "button_text":"button 2",
+                    "button_link":"#"
                 }
-            },
+            ],
             "smallImage":"",
             "mainImage":""
         }
