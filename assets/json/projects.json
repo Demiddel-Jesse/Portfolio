@@ -24,7 +24,37 @@
                     "button text":"button 2",
                     "button link":"#"
                 }
-            }
+            },
+            "smallImage":"",
+            "mainImage":""
+        },
+        {
+            "name":"xx",
+            "smallSummary":"text here",
+            "summary":[
+                "text 1",
+                "text 2"
+            ],
+            "tasks":[
+                "task1"
+            ],
+            "techs":[
+                "tech1"
+            ],
+            "buttons":{
+                "button 1":{
+                    "visibility":0,
+                    "button text":"button 1",
+                    "button link":"#"
+                },
+                "button 2":{
+                    "visibility":0,
+                    "button text":"button 2",
+                    "button link":"#"
+                }
+            },
+            "smallImage":"",
+            "mainImage":""
         }
     ]
 }
