@@ -1,0 +1,71 @@
+.c-detail{
+    display: flex;
+    justify-content: center;
+
+    margin: 1rem 0;
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+
+        width: 400px;
+
+        margin-left: 3rem;
+    }
+
+    &__tasks{
+
+    }
+
+    &__list{
+        padding: 0 20px;
+
+        list-style-type: square;
+
+        :nth-child(even){
+            color: rgb(140, 190, 255);
+        }
+
+        &--tasks{
+
+        }
+
+        &--tech{
+
+        }
+    }
+
+    &__tech{
+
+    }
+
+    &__buttons{
+        flex-grow: 1;
+        display: flex;
+        align-items: flex-end;
+
+        a{
+            margin: 0rem 1rem;
+
+            display: none;
+        }
+    }
+
+    &__button--display{
+        display: block !important;
+    }
+
+    section{
+        margin: 0 0 1rem;
+    }
+
+    img{
+        // margin-left: 3rem;
+        width: 650px;
+    }
+
+    h2{
+        font-size: 1.75rem;
+        margin-top: 0;
+    }
+}
