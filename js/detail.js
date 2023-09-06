@@ -32,6 +32,7 @@ function detailInit(jsonData) {
         summaryhtml += `
             ${line}
             <br>
+            <br>
         ` 
     });
 

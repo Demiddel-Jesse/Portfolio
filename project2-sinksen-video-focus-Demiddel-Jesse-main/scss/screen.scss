@@ -1,0 +1,874 @@
+/*------------------------------------*\
+	#SETTINGS
+\*------------------------------------*/
+
+// MIXINS
+// mobile
+@mixin mob {
+	@media (min-width: 320px) {
+		@content;
+	}
+}
+
+// Small devices
+@mixin sm {
+	@media (min-width: 577px) {
+		@content;
+	}
+}
+
+// Medium devices
+@mixin md {
+	@media (min-width: 769px) {
+		@content;
+	}
+}
+
+// Large devices
+@mixin lg {
+	@media (min-width: 993px) {
+		@content;
+	}
+}
+
+// Extra large devices
+@mixin xl {
+	@media (min-width: 1201px) {
+		@content;
+	}
+}
+
+@mixin xll {
+	@media (min-width: 1401px) {
+		@content;
+	}
+}
+
+@mixin xxl {
+	@media (min-width: 1601px) {
+		@content;
+	}
+}
+
+// importing fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+// font variables
+
+$font-headers: 'Playfair Display', serif;
+$font-main: 'IBM Plex Sans', sans-serif;
+
+// color variables
+// colors for text
+$Color-text-dark: #000000;
+$Color-text-light: #ffffff;
+
+// colors for website
+$Color-base: #888888;
+$Color-secondary: #b39436;
+$Color-tertiary: #e6be45;
+$Color-accent-1: #4863a0;
+$Color-accent-2: #bb2423;
+
+/*------------------------------------*\
+	#TOOLS
+\*------------------------------------*/
+
+/*------------------------------------*\
+	#GENERIC
+\*------------------------------------*/
+
+body {
+	font-family: $font-main;
+}
+
+/*------------------------------------*\
+	#ELEMENTS
+\*------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font-headers;
+}
+
+/*------------------------------------*\
+	#OBJECTS
+\*------------------------------------*/
+
+/*------------------------------------*\
+	#COMPONENTS
+\*------------------------------------*/
+
+.c-header {
+	background-color: $Color-text-dark;
+}
+
+/* Component Navigatie */
+
+.c-nav {
+	border-bottom: $Color-secondary;
+	border-top: $Color-secondary;
+
+	border-width: 2px;
+	border-style: solid;
+
+	border-left: none;
+	border-right: none;
+
+	&__footer {
+		list-style: none;
+		padding-left: 0;
+
+		a {
+			padding-left: 0 !important;
+			color: $Color-text-dark !important;
+		}
+	}
+}
+
+/* Component button */
+
+.c-btn {
+	&__primary {
+		font-size: 1rem;
+		background-color: $Color-tertiary;
+		text-decoration: none;
+		color: $Color-text-dark;
+		border-radius: 5px;
+		border-style: solid;
+		border-color: transparent;
+		height: 3rem;
+
+		p {
+			margin-top: 0.5rem !important;
+			margin-bottom: 0.5rem !important;
+		}
+
+		&:hover {
+			background-color: $Color-secondary;
+			color: $Color-text-light !important;
+		}
+
+		&--disabled {
+			background-color: $Color-tertiary;
+			color: $Color-text-dark;
+			opacity: 50%;
+
+			&:hover {
+				background-color: $Color-tertiary;
+				color: $Color-text-dark !important;
+			}
+		}
+	}
+
+	&__secondary {
+		font-size: 1rem;
+		display: inline-flex;
+		border-color: $Color-tertiary;
+		border-style: solid;
+		background-color: transparent;
+		text-decoration: none;
+		color: $Color-text-dark;
+		border-radius: 5px;
+
+		&:hover {
+			border-color: $Color-secondary;
+			color: $Color-tertiary !important;
+		}
+
+		&--disabled {
+			border-color: $Color-tertiary;
+			color: $Color-tertiary;
+			opacity: 50%;
+			&:hover {
+				border-color: $Color-tertiary;
+				color: $Color-tertiary !important;
+			}
+		}
+	}
+}
+
+.c-nieuwsbrief {
+	.form {
+		&-control {
+			border-top: $Color-secondary;
+			border-left: $Color-secondary;
+			border-right: $Color-secondary;
+			border-bottom: $Color-secondary;
+			border-style: solid;
+			transition: border-color 0s;
+			margin-bottom: 0;
+			height: 3.75rem;
+
+			@include mob {
+				width: 18rem;
+			}
+
+			@include sm {
+				width: 23rem;
+			}
+
+			@include md {
+				width: 30rem;
+			}
+
+			@include lg {
+				width: 20rem;
+			}
+
+			@include xl {
+				width: 27rem;
+			}
+
+			@include xll {
+				width: 31rem;
+			}
+
+			@include xxl {
+				width: 32rem;
+			}
+
+			&:focus {
+				border-style: solid !important;
+				border-top: $Color-secondary;
+				border-left: $Color-secondary;
+				border-right: $Color-secondary;
+				border-bottom: $Color-secondary;
+				box-shadow: none;
+			}
+		}
+
+		&-floating {
+			margin-bottom: 0 !important;
+			padding: 0 !important;
+
+			label {
+				margin-left: 1rem;
+			}
+		}
+	}
+
+	button {
+		margin-top: 0.3125rem;
+	}
+}
+
+.c-social {
+	width: 30px;
+	height: 30px;
+	margin: 0.75rem;
+	margin-left: 0;
+	margin-right: 1.25rem;
+
+	&__btn {
+		padding: 0.5rem;
+		padding-bottom: 0.75rem;
+		border-radius: 5px;
+		color: $Color-text-light;
+		background-color: $Color-secondary;
+		border-color: $Color-secondary;
+
+		&:hover {
+			background-color: $Color-tertiary;
+			border-color: $Color-tertiary;
+			color: $Color-text-light;
+		}
+	}
+}
+
+.c-carousel {
+	padding: 0;
+
+	&__light {
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0) 100%);
+	}
+
+	&__slide {
+		&--1 {
+			background-image: url(../img/notFound.png);
+		}
+	}
+}
+
+.c-paging {
+	// arrows used in carousel
+	&__arrow {
+		fill: $Color-secondary;
+
+		&:hover {
+			fill: $Color-tertiary;
+		}
+	}
+
+	&__active {
+		background-color: $Color-secondary;
+		color: $Color-text-light !important;
+		&:hover {
+			color: $Color-tertiary !important;
+		}
+	}
+}
+
+.c-footer {
+	&__bottom {
+		background-color: #44c8f5 !important;
+		margin: 0;
+
+		&--txt {
+			margin-bottom: 0 !important;
+		}
+	}
+
+	&__sponsor {
+		background-color: #212121;
+	}
+}
+
+.c-rommelmarkt {
+	&__txt {
+		@include mob {
+			margin-right: 0;
+		}
+		margin-right: 5rem;
+	}
+
+	&__img {
+		padding: 0;
+	}
+}
+
+.c-sfeerfoto {
+	img {
+		padding: 0 !important;
+	}
+}
+
+.c-video {
+	aspect-ratio: 16/9;
+}
+
+.c-contact {
+	&__img {
+		object-fit: scale-down;
+	}
+}
+
+.c-nieuws {
+	@include lg {
+		.col-lg-6 {
+			width: 49%;
+		}
+	}
+
+	&__item {
+		border: solid $Color-secondary;
+		padding: 0;
+
+		&--img {
+			object-position: center;
+			object-fit: cover;
+
+			@include mob {
+				height: 12.5rem;
+			}
+
+			@include md {
+				height: 15.625rem;
+			}
+		}
+
+		&--header {
+			padding: 1rem;
+
+			h2 {
+				width: auto;
+				margin: auto;
+			}
+
+			sub {
+				width: auto;
+				margin: auto;
+				line-height: normal;
+			}
+		}
+	}
+}
+
+.c-detail {
+	&__link {
+		text-decoration: none;
+		color: $Color-secondary !important;
+
+		&:hover {
+			color: $Color-tertiary;
+		}
+	}
+
+	&__img {
+		padding: 0;
+	}
+
+	&__txt {
+		&--like {
+			@include mob {
+				justify-content: end;
+			}
+
+			@include sm {
+				justify-content: space-between;
+			}
+
+			@include lg {
+				justify-content: end;
+			}
+
+			@include xxl {
+				justify-content: space-between;
+			}
+
+			a {
+				width: fit-content;
+				text-decoration: none;
+				color: $Color-secondary;
+
+				&:hover {
+					color: $Color-tertiary;
+				}
+			}
+		}
+	}
+
+	.c-map {
+		height: 300px;
+	}
+
+	.row {
+		.container {
+			.js-detail-location {
+				.c-detail__txt {
+					&--like {
+						@include mob {
+							justify-content: end;
+						}
+						@include sm {
+							justify-content: space-between;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Artist item component */
+
+.c-card {
+	&__text {
+		color: $Color-tertiary;
+	}
+	&__gradient {
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 30%, rgba(0, 0, 0, 0) 100%);
+	}
+}
+
+.c-programma {
+	@include lg {
+		.col-lg-2 {
+			width: 20%;
+		}
+	}
+
+	&__top {
+		.row {
+			--bs-gutter-x: 0;
+		}
+	}
+
+	&__filter {
+		.row {
+			margin-left: 0;
+		}
+
+		@include sm {
+			.col-sm-6 {
+				width: 49%;
+			}
+		}
+
+		@include lg {
+			.col-lg-3 {
+				width: 24.5% !important;
+			}
+		}
+
+		&--time {
+			padding: 0;
+
+			border-radius: 0.5rem;
+			background-color: $Color-tertiary;
+
+			.col-2 {
+				width: 10%;
+			}
+		}
+
+		&--location {
+			padding: 0;
+		}
+
+		&--type {
+			padding: 0;
+		}
+
+		&--search {
+			padding: 0;
+
+			div {
+				.form-control {
+					padding: 1rem;
+					margin-bottom: 0;
+					background-color: $Color-tertiary;
+					border: solid $Color-tertiary;
+					border-right: transparent;
+					border-width: 0.09rem;
+				}
+
+				.input-group-text {
+					background-color: $Color-tertiary;
+					border-color: $Color-tertiary;
+				}
+			}
+		}
+	}
+}
+
+.c-map {
+	height: 500px;
+	margin-bottom: 1rem;
+
+	&__filter {
+		.form-check {
+			&-input {
+				border-radius: 100%;
+				border-width: 1px;
+
+				&:checked {
+					background-image: none;
+				}
+
+				&:focus {
+					box-shadow: none;
+				}
+			}
+		}
+
+		&--locatie {
+			border-color: $Color-secondary;
+
+			&:focus {
+				border-color: $Color-secondary;
+			}
+
+			&:checked {
+				background-color: $Color-secondary;
+				border-color: $Color-secondary;
+			}
+		}
+
+		&--wc {
+			border-color: $Color-text-dark;
+
+			&:focus {
+				border-color: $Color-text-dark;
+			}
+
+			&:checked {
+				background-color: $Color-text-dark;
+				border-color: $Color-text-dark;
+			}
+		}
+
+		&--recycle {
+			border-color: $Color-accent-1;
+
+			&:focus {
+				border-color: $Color-accent-1;
+			}
+
+			&:checked {
+				background-color: $Color-accent-1;
+				border-color: $Color-accent-1;
+			}
+		}
+
+		&--fiets {
+			border-color: gray;
+
+			&:focus {
+				border-color: gray;
+			}
+
+			&:checked {
+				background-color: gray;
+				border-color: gray;
+			}
+		}
+
+		&--info {
+			border-color: $Color-accent-2;
+
+			&:focus {
+				border-color: $Color-accent-2;
+			}
+
+			&:checked {
+				background-color: $Color-accent-2;
+				border-color: $Color-accent-2;
+			}
+		}
+	}
+
+	&__legend {
+		&--text {
+			text-decoration: none;
+			width: auto;
+			margin: 0.2rem 0.4rem;
+			padding: 0.5rem;
+			color: $Color-text-light;
+			background-color: $Color-secondary;
+			border-radius: 0.3125rem;
+
+			&:hover {
+				color: $Color-text-dark;
+				background-color: $Color-tertiary;
+			}
+		}
+	}
+}
+
+.c-leaflet {
+	&__loc {
+		&--ico {
+			margin-left: -0.8rem;
+			margin-top: -1rem;
+			z-index: -2;
+		}
+
+		&--text {
+			font-family: $font-main;
+			color: $Color-text-light;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-45%, -60%);
+		}
+	}
+}
+
+/*------------------------------------*\
+	#UTILITIES
+\*------------------------------------*/
+
+/*------------------------------------*\
+	#BOOTSTRAP
+\*------------------------------------*/
+
+// bootstrap adjustments navigatie
+
+.nav-link {
+	padding-left: 2rem !important;
+	padding-right: 2rem !important;
+	font-style: bold;
+	color: $Color-text-light !important;
+	transition: opacity 250ms;
+	opacity: 70%;
+
+	h5 {
+		margin-bottom: 0;
+	}
+
+	&:hover {
+		opacity: 100%;
+		color: $Color-tertiary !important;
+	}
+}
+
+.active {
+	opacity: 100%;
+	color: $Color-text-light !important;
+
+	&:hover {
+		opacity: 100%;
+		color: $Color-text-light !important;
+	}
+}
+
+.carousel-indicators {
+	button {
+		width: 20px !important;
+		height: 20px !important;
+		border-radius: 2rem !important;
+		background-color: $Color-secondary !important;
+
+		&:hover {
+			background-color: $Color-tertiary !important;
+			opacity: 1 !important;
+		}
+	}
+
+	.active {
+		background-color: $Color-accent-1 !important;
+
+		&:hover {
+			background-color: $Color-accent-1 !important;
+			opacity: 1 !important;
+		}
+	}
+}
+
+.form-control {
+	border-top: transparent;
+	border-left: transparent;
+	border-right: transparent;
+	border-bottom: $Color-secondary;
+	border-style: solid;
+	transition: border-color 0s;
+	width: auto;
+	margin-bottom: 1rem;
+
+	@include mob {
+		width: 17rem;
+	}
+
+	@include sm {
+		width: 15rem;
+	}
+
+	@include md {
+		width: 20rem;
+	}
+
+	@include lg {
+		width: 13rem;
+	}
+
+	@include xl {
+		width: 16rem;
+	}
+
+	@include xll {
+		width: 18rem;
+	}
+
+	@include xxl {
+		width: 18rem;
+	}
+
+	&:focus {
+		border-style: none;
+		border-bottom-style: solid;
+		border-bottom-color: $Color-secondary;
+		box-shadow: none;
+	}
+
+	&-lg {
+		border-color: $Color-secondary;
+		margin-bottom: 2rem !important;
+
+		@include mob {
+			width: 17rem;
+		}
+
+		@include sm {
+			width: 30rem;
+		}
+
+		@include md {
+			width: 43rem;
+		}
+
+		@include lg {
+			width: 28rem;
+		}
+
+		@include xl {
+			width: 34rem;
+		}
+
+		@include xll {
+			width: 39rem;
+		}
+
+		@include xxl {
+			width: 39rem;
+		}
+
+		&:focus {
+			border-style: none;
+			border-style: solid;
+			border-color: $Color-secondary;
+			box-shadow: none;
+		}
+	}
+}
+
+// bootstrap adjustments artist item
+
+.bg-dark {
+	background-color: white !important;
+}
+
+.card {
+	border-radius: 15px !important;
+	border-color: transparent;
+	height: 250px;
+	padding: 0;
+	&-img {
+		width: 100%;
+		height: 100%;
+		object-position: center;
+		object-fit: cover;
+		border-radius: 15px !important;
+
+		&-overlay {
+			border-radius: 15px !important;
+		}
+	}
+
+	&-text {
+		margin-bottom: 4px;
+		text-shadow: 2px 2px 2px $Color-text-dark;
+	}
+}
+
+.page {
+	&-link {
+		border-color: transparent;
+		color: $Color-secondary;
+		&:hover {
+			color: $Color-tertiary;
+			border-color: $Color-tertiary;
+			background-color: transparent;
+		}
+	}
+}
+
+.form-select {
+	padding: 1rem 0.5rem;
+	color: $Color-text-dark;
+	background-color: $Color-tertiary;
+	border-color: $Color-tertiary;
+
+	&:focus {
+		border-style: none;
+		border-style: solid;
+		border-color: $Color-secondary;
+		box-shadow: none;
+	}
+}

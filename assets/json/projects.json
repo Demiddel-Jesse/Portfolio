@@ -1,28 +1,40 @@
 {
     "projects":[
         {
-            "name":"xx",
-            "smallSummary":"text here",
+            "name":"Sinksen 2022 Project",
+            "smallSummary":"For Sinksen 2022 we had to make a website and create a promotional video for it",
             "summary":[
-                "text 1",
-                "text 2"
+                "For our end project of 2022 we had to create a website for the festivities at Sinksen 2022 in Kortrijk. We had to show all activities and have the ability to sort/search through them to find what you want. Next tot that we also needed a map with the location markers for each activity on them plus the services provided by the city. Us video students also had to create a promotional video next to that.",
+                "For this we started with designing the entire thing in Adobe XD and creating a storyboard for the video. We then had to go film on Sinksen itself to get footage for the video. Each student had to create their own video but we all shared our footage and had to each film in a specific spot.",
+                "Then work started on the website, first building the basics like just the static pages while also creating a raw edit for the video.",
+                "After getting approval for the video the final touches on the edit started plus some extra effects, while on the website I started integrating the API content through JS and an API provided by the teachers.",
+                "I learned a lot from this project such as time management how to properly edit a video to sound/music and how to connect with an API and make a map with multiple markers from that.",
+                "At this point in time the API we used for this has gone down and its contents can't be seen again. I'm slowly building a small JSON file with which i can replace the API data handler. If this has already happend the original code will still be there in the source code but commented with a comment above explaining that this code was used for an API that has since gotten removed."
             ],
             "tasks":[
-                "task1"
+                "Designing",
+                "Programming",
+                "Filming",
+                "Editing"
             ],
             "techs":[
-                "tech1"
+                "SCSS",
+                "JS",
+                "Adobe XD",
+                "API calls",
+                "Leaflet",
+                "Premiere Pro"
             ],
             "buttons":[
                 {
-                    "visibility":0,
-                    "button_text":"button 1",
-                    "button_link":"#"
+                    "visibility":1,
+                    "button_text":"Website Link",
+                    "button_link":"/project2-sinksen-video-focus-Demiddel-Jesse-main/index.html"
                 },
                 {
-                    "visibility":0,
-                    "button_text":"button 2",
-                    "button_link":"#"
+                    "visibility":1,
+                    "button_text":"Source Code",
+                    "button_link":"https://github.com/howest-WDD/project2-sinksen-video-focus-Demiddel-Jesse"
                 }
             ],
             "smallImage":"",
