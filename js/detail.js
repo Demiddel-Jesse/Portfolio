@@ -39,7 +39,7 @@ function detailInit(jsonData) {
     project.buttons.forEach(button => {
         if(button.visibility === 1){
             buttonhtml += `
-                <a href="${button.button_link}" class="c-card__link">${button.button_text}</a>
+                <a target="_blank" href="${button.button_link}" class="c-card__link">${button.button_text}</a>
             `
         }
     });
