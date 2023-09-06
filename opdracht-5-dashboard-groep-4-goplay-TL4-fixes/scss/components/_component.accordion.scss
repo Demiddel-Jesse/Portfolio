@@ -1,0 +1,113 @@
+@use '../settings/colors' as color;
+@use '../tools/tools.breakpoints' as bp;
+
+.c-accordion {
+	background-color: transparent;
+
+	position: relative;
+
+	color: color.$text-color-a;
+
+	cursor: pointer;
+
+	padding: 18px;
+	padding-left: 0;
+	margin: 0;
+	margin-top: 20px;
+
+	width: 100%;
+
+	text-align: left;
+
+	transition: 0.4s;
+
+	border-radius: 15px;
+
+	outline: none;
+
+	&::after {
+		position: absolute;
+		right: 20px;
+
+		color: color.$text-color-a;
+
+		transition: all 0.4s;
+	}
+
+	&--active {
+		background-color: transparent;
+
+		span {
+			svg {
+				rotate: 180deg !important;
+			}
+		}
+	}
+
+	&__line {
+		width: fit-content;
+
+		span {
+			svg {
+				transition: all 0.4s;
+
+				rotate: 0deg;
+
+				@include bp.down(ml) {
+					width: 20px;
+					height: 20px;
+				}
+			}
+		}
+
+		font-size: 1.5rem;
+
+		input {
+			@include bp.down(ml) {
+				width: 200px;
+				margin-top: 10px;
+				font-size: 1.2rem;
+			}
+		}
+
+		@include bp.down(ml) {
+			padding-right: 0;
+		}
+	}
+}
+
+.c-panel {
+	padding: 0px 20px;
+
+	// background-color: color.$bg-color-nav;
+
+	max-height: 0;
+
+	overflow: hidden;
+
+	border: none;
+
+	color: color.$text-color-a;
+
+	transition: all 200ms ease-out;
+
+	@include bp.down(tl) {
+		width: fit-content;
+		max-width: 280px;
+		gap: 10px;
+		padding-right: 0 !important;
+		padding-left: 10px !important;
+	}
+
+	&--active {
+		border-top: none !important;
+
+		padding: 30px 20px;
+	}
+
+	&--subscriptions {
+		display: flex;
+
+		gap: 50px;
+	}
+}

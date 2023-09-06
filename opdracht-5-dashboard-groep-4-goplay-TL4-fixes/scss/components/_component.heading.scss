@@ -1,0 +1,24 @@
+@use '../settings/colors' as color;
+@use '../tools/tools.breakpoints' as bp;
+
+.c-heading {
+	margin-top: 40px;
+	margin-bottom: -25px;
+
+	@include bp.down(fhd) {
+		margin-bottom: 0;
+	}
+
+	width: 100%;
+
+	h1 {
+		color: color.$accent-00;
+		margin: 0;
+	}
+
+	p {
+		color: color.$text-color-a;
+
+		margin: 0;
+	}
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="78" height="100" viewBox="0 0 78 100">
+  <g id="Group_239" data-name="Group 239" transform="translate(-1778 -4245)">
+    <rect id="Rectangle_396" data-name="Rectangle 396" width="78" height="10" rx="5" transform="translate(1778 4268)" fill="#00f0c8"/>
+    <rect id="Rectangle_397" data-name="Rectangle 397" width="78" height="10" rx="5" transform="translate(1778 4290)" fill="#00f0c8"/>
+    <rect id="Rectangle_398" data-name="Rectangle 398" width="78" height="10" rx="5" transform="translate(1778 4312)" fill="#00f0c8"/>
+    <path id="Polygon_1" data-name="Polygon 1" d="M15.015,1.751a3,3,0,0,1,3.97,0l9.066,8A3,3,0,0,1,26.066,15H7.934A3,3,0,0,1,5.949,9.75Z" transform="translate(1800 4245)" fill="#00f0c8"/>
+    <path id="Polygon_2" data-name="Polygon 2" d="M15.015,1.751a3,3,0,0,1,3.97,0l9.066,8A3,3,0,0,1,26.066,15H7.934A3,3,0,0,1,5.949,9.75Z" transform="translate(1834 4345) rotate(180)" fill="#00f0c8"/>
+  </g>
+</svg>

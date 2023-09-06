@@ -29,7 +29,7 @@
                 {
                     "visibility":1,
                     "button_text":"Website Link",
-                    "button_link":"/project2-sinksen-video-focus-Demiddel-Jesse-main/index.html"
+                    "button_link":"./project2-sinksen-video-focus-Demiddel-Jesse-main/index.html"
                 },
                 {
                     "visibility":1,
@@ -41,28 +41,44 @@
             "mainImage":""
         },
         {
-            "name":"xxx",
-            "smallSummary":"text here",
+            "name":"GoPlay Dashboard",
+            "smallSummary":"For one of our last group projects we had to create a dashboard for a streaming service.",
             "summary":[
-                "text 1",
-                "text 2"
+                "For this project we had to work in groups of 4 with each person getting a different task to create and a different role todo.",
+                "Person 1 had to create the navigation and a way to move shows around on the user dashboard while also being the lead designer, ",
+                "Person 2 was the tester and had to make sure all our code works while creating the user management dashboard and a detail page for a user",
+                "person 3 was the team lead and had to create all pages for content management from adding and deleting shows to editing them",
+                "And then person 4 which was me was responsible for the entire git flow of our project and had to create the main dashboard and a settings page where you could edit the settings and stuff that users had access to",
+                "So after we designed everything I got started on the setup of our project ranging from setting up the basic grid and some basic scss files to setting up our gulp so it would work, I decided we would use gulp because I found webpack really annoying to work with but thats mostly because our teachers never showed us an easy way to setup webpack and use it while I had found that with gulp.",
+                "After all that was done I started with experimenting with multiple bundles for creating graphs and eventually settled that I would use multiple for different purposes.",
+                "Eventually I got all graphs working with good visuals and gave all of them some dummy data. Then I started on the settings screen but for that there wasn't much time left since i found the main dashboard page more important and wanted is as near as perfect as I could.",
+                "In the last couple days I helped with the person creating the user management page since I did that design and had made it a bit difficult for him. In the last day he sadly enough pushed a commit which broke a lot of things and I had to spend some time deleting that commit.",
+                "I found the working with graphs very intriguing and would have liked it if there was any actual data to read so that it wouldn't just be some gibirish "
             ],
             "tasks":[
-                "task1"
+                "Designing",
+                "Coding Homepage",
+                "Merging and checking Git Requests",
+                "Coding settings page"
             ],
             "techs":[
-                "tech1"
+                "Multiple graph js bundles",
+                "Git",
+                "JS",
+                "gulp",
+                "Adobe XD",
+                "SCSS"
             ],
             "buttons":[
                 {
-                    "visibility":0,
-                    "button_text":"button 1",
-                    "button_link":"#"
+                    "visibility":1,
+                    "button_text":"Website Link",
+                    "button_link":"./opdracht-5-dashboard-groep-4-goplay-TL4-fixes/index.html"
                 },
                 {
-                    "visibility":0,
-                    "button_text":"button 2",
-                    "button_link":"#"
+                    "visibility":1,
+                    "button_text":"Source Code",
+                    "button_link":"https://github.com/howest-WDD/opdracht-5-dashboard-groep-4-goplay"
                 }
             ],
             "smallImage":"",

@@ -1,0 +1,90 @@
+@use '../tools/tools.breakpoints' as bp;
+
+// grid row 1
+.u-grid__heading {
+	grid-area: heading;
+}
+
+// grid row 2
+.u-grid__sex {
+	grid-area: sex;
+}
+
+.u-grid__age {
+	grid-area: age;
+}
+
+.u-grid__growth {
+	grid-area: growth;
+}
+
+.u-grid__daily {
+	grid-area: daily;
+}
+
+.u-grid__returning {
+	grid-area: returning;
+}
+
+// grid row 3
+.u-grid__map {
+	grid-area: map;
+}
+
+.u-grid__genre {
+	grid-area: genre;
+}
+
+.u-grid__totals {
+	grid-area: totals;
+
+	display: grid;
+
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr;
+
+	grid-template-areas:
+		'label0'
+		'label3'
+		'label1'
+		'label2';
+
+	gap: 20px;
+	height: auto;
+
+	@include bp.up(tl) {
+		grid-template-rows: 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
+
+		grid-template-areas:
+			'label0 label3'
+			'label1 label2';
+
+		height: 322px;
+	}
+
+	&:nth-child(0) {
+		grid-area: label0;
+	}
+
+	&:nth-child(1) {
+		grid-area: label1;
+	}
+
+	&:nth-child(2) {
+		grid-area: label2;
+	}
+
+	&:nth-child(3) {
+		grid-area: label3;
+	}
+}
+
+// grid row 4
+.u-grid__income {
+	grid-area: income;
+}
+
+.u-grid__costs {
+	grid-area: costs;
+}

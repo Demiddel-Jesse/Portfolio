@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Content management</title>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+    <link rel="manifest" href="/site.webmanifest"/>
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
+    <meta name="msapplication-TileColor" content="#2b5797"/>
+    <meta name="theme-color" content="#000000"/>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./dist/index.css"/>
+    <!-- JS -->
+    <script type="module" src="./dist/main-min.js"></script>
+</head>
+<body class="o-darkmode o-grid">
+<nav class="c-nav">
+    <div class="c-sidebar c-nav__hide">
+        <!-- TODO: Als men klikt op de div in in alles kleiner dan 428 px klapt de hamburger menu uit-->
+        <img class="c-sidebar__logo js-logo" src="/assets/svg/logo.svg" alt="GoPlay"/>
+        <img class="c-sidebar__logo js-logo u-hidden" src="/assets/svg/logo_dark.svg" alt="GoPlay"/>
+        <ul>
+            <li class="c-sidebar__item"><a href="index.html">Dashboard</a></li>
+            <li class="c-sidebar__item"><a href="users.html">Gebruikers beheer</a></li>
+            <li class="c-sidebar__item active"><a class="active" href="content.html">Content beheer</a></li>
+            <li class="c-sidebar__item"><a href="startscherm.html">Startscherm beheer</a></li>
+            <li class="c-sidebar__item"><a href="settings.html">Website instellingen</a></li>
+            <!-- FIXME: De content management underline is kleiner dan die erboven ik zie de reden hiervan niet in net zoals settings en log out-->
+        </ul>
+        <div class="c-sidebar__account">
+            <h2>Account</h2>
+            <ul>
+                <li class="c-sidebar__item">
+                    <div class="c-profile">
+                        <div class="c-profile--details">
+                            <img src="assets/img/tony_stark.png" alt="profileImg"/>
+                        </div>
+                        <div class="name-job">
+                            <div class="profile_name">Tony Stark</div>
+                            <div class="role">Admin</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="c-sidebar__item"><a href="#">Instellingen</a></li>
+                <li class="c-sidebar__item"><a class="c-sidebar__item--accent js-logout" href="#">Uitloggen</a></li>
+                
+                <!-- TODO: een hovermode zou leuk zijn -->
+            </ul>
+            <p class="creddits">&copy; Howest - 2022</p>
+        </div>
+    </div>
+    <div class="c-mobilenav">
+        <img class="c-mobilenav__logo js-logo" src="/assets/svg/logo.svg" alt="GoPlay"/>
+        <img class="c-mobilenav__logo js-logo u-hidden" src="/assets/svg/logo_dark.svg" alt="GoPlay"/>
+        <div class="c-mobilenav__hamburger js-togglenav">
+            <input class="c-mobilenav__toggle" type="checkbox"/>
+            <span class="c-mobilenav__bar c-mobilenav__bar--top"></span>
+            <span class="c-mobilenav__bar c-mobilenav__bar--mid"></span>
+            <span class="c-mobilenav__bar c-mobilenav__bar--bottom"></span>
+        </div>
+        <div class="c-mobilenav__content u-hidden">
+            <ul>
+                <li class="c-sidebar__item"><a href="index.html">Dashboard</a></li>
+                <li class="c-sidebar__item"><a href="users.html">Gebruikers beheer</a></li>
+                <li class="c-sidebar__item active"><a class="active" href="content.html">Content beheer</a></li>
+                <li class="c-sidebar__item"><a href="startscherm.html">Startscherm beheer</a></li>
+                <li class="c-sidebar__item"><a href="settings.html">Website instellingen</a></li>
+            </ul>
+            <div class="c-mobilenav__account">
+                <h2>Account</h2>
+                <ul>
+                    <li class="c-sidebar__item">
+
+                    </li>
+                    <li class="c-sidebar__item"><a href="#">Instellingen</a></li>
+                    <li class="c-sidebar__item"><a class="c-sidebar__item--accent js-logout" href="#">Uitloggen</a></li>
+                </ul>
+                <p class="creddits">&copy; Howest - 2022</p>
+            </div>
+        </div>
+    </div>
+</nav>
+<main>
+    <div id="modalAddNew" class="c-modalContainer u-hidden">
+        <!-- content -->
+        <div class="c-modal c-modal--content">
+            <span class="c-modal__close" id="modalAddNewClose">&times;</span>
+        </div>
+    </div>
+    <div class="c-content-filter">
+        <input type="text" class="c-content-filter__search" id="filterInput" placeholder="zoek films of shows">
+        <div class="c-content-filter__genre"><label for="genres" hidden>
+            Genre:</label>
+            <select name="genres" id="genres">
+                <option value="allGenres" selected>Alle Categorieën</option>
+                <!--data loaded with JS-->
+            </select>
+        </div>
+    </div>
+    </div>
+    <div id="loading" class="u-hidden"></div>
+    <div class="o-content js-content">
+        <!--data loaded with JS-->
+    </div>
+</main>
+</body>
+</html>

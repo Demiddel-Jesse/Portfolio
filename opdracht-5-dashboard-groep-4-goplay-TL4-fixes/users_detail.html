@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<!-- favicon -->
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+		<meta name="msapplication-TileColor" content="#2b5797" />
+		<meta name="theme-color" content="#000000" />
+		<!-- CSS -->
+		<link rel="stylesheet" href="./dist/index.css" />
+		<!-- JS -->
+		<script type="module" src="./dist/main-min.js"></script>
+	</head>
+
+	<body class="o-darkmode o-grid">
+		<nav class="c-nav">
+			<div class="c-sidebar c-nav__hide"> <!-- TODO: Als men klikt op de div in in alles kleiner dan 428 px klapt de hamburger menu uit-->
+			  <img class="c-sidebar__logo js-logo" src="/assets/svg/logo.svg" alt="GoPlay" />
+			  <img class="c-sidebar__logo js-logo u-hidden" src="/assets/svg/logo_dark.svg" alt="GoPlay" />
+			  <ul>
+				<li class="c-sidebar__item active"><a class="active" href="index.html">Dashboard</a></li>
+				<li class="c-sidebar__item"><a href="users.html">Gebruikers beheer</a></li>
+				<li class="c-sidebar__item"><a href="content.html">Content beheer</a></li>
+				<li class="c-sidebar__item"><a href="startscherm.html">Startscherm beheer</a></li>
+				<li class="c-sidebar__item"><a href="settings.html">Website instellingen</a></li> <!-- FIXME: De content management underline is kleiner dan die erboven ik zie de reden hiervan niet in net zoals settings en log out-->
+			  </ul>
+			  <div class="c-sidebar__account">
+				<h2>Account</h2>
+				<ul>
+				  <li class="c-sidebar__item">
+					<div class="c-profile">
+					  <div class="c-profile--details">
+						<img src="assets/img/tony_stark.png" alt="profileImg" />
+					  </div>
+					  <div class="name-job">
+						<div class="profile_name">Tony Stark</div>
+						<div class="role">Admin</div>
+					  </div>
+					</div>
+				  </li>
+				  <li class="c-sidebar__item"><a href="#">Instellingen</a></li>
+				  <li class="c-sidebar__item"><a class="c-sidebar__item--accent js-logout" href="#">Uitloggen</a></li>
+				  <li class="c-sidebar__button"><a class="c-button js-darkmode" href="#">Light Mode</a></li> <!-- TODO: een hovermode zou leuk zijn -->
+				</ul>
+				<div class="c-sidebar__account">
+					<h2>Account</h2>
+					<ul>
+						<li class="c-sidebar__item">
+							<div class="c-profile">
+								<div class="c-profile--details">
+									<img src="assets/img/tony_stark.png" alt="profileImg" />
+								</div>
+								<div class="name-job">
+									<div class="profile_name">Tony Stark</div>
+									<div class="role">Admin</div>
+								</div>
+							</div>
+						</li>
+						<li class="c-sidebar__item"><a href="#">Settings</a></li>
+						<li class="c-sidebar__item"><a class="c-sidebar__item--accent js-logout" href="#">Log Out</a></li>
+						
+						<!-- TODO: een hovermode zou leuk zijn -->
+					</ul>
+					<p class="creddits">&copy; Howest - 2022</p>
+				</div>
+			</div>
+			<div class="c-mobilenav">
+			  <img class="c-mobilenav__logo js-logo" src="/assets/svg/logo.svg" alt="GoPlay" />
+			  <img class="c-mobilenav__logo js-logo u-hidden" src="/assets/svg/logo_dark.svg" alt="GoPlay" />
+					<div class="c-mobilenav__hamburger js-togglenav">
+						<input class="c-mobilenav__toggle" type="checkbox" />
+						<span class="c-mobilenav__bar c-mobilenav__bar--top"></span>
+						<span class="c-mobilenav__bar c-mobilenav__bar--mid"></span>
+						<span class="c-mobilenav__bar c-mobilenav__bar--bottom"></span>
+					</div>
+			  <div class="c-mobilenav__content u-hidden">
+				<ul>
+					<li class="c-sidebar__item active"><a class="active" href="index.html">Dashboard</a></li>
+					<li class="c-sidebar__item"><a href="users.html">Gebruikers beheer</a></li>
+					<li class="c-sidebar__item"><a href="content.html">Content beheer</a></li>
+					<li class="c-sidebar__item"><a href="startscherm.html">Startscherm beheer</a></li>
+					<li class="c-sidebar__item"><a href="settings.html">Website instellingen</a></li>
+				</ul>
+				<div class="c-mobilenav__account">
+				  <h2>Account</h2>
+				  <ul>
+					<li class="c-sidebar__item">
+				
+					</li>
+					<li class="c-sidebar__item"><a href="#">Instellingen</a></li>
+					<li class="c-sidebar__item"><a class="c-sidebar__item--accent js-logout" href="#">Uitloggen</a></li>
+				  </ul>
+				  <p class="creddits">&copy; Howest - 2022</p>
+				</div>
+			  </div>
+			</div>
+		</nav>
+		
+		<div class="c-detailuser js-user">
+			<div class="c-detailuser__welkomuser">
+				<h1 class="c-detailuser__titel js-userdetailname">Hallo naam</h1>
+				<p>Hoe voelt u zich vandaag ?</p>
+			</div>
+			
+			<a href="./users.html" class="c-detailuser__gobacklink">
+				<p class="c-detailuser__gobacktext">Go back</p>
+			</a>
+			
+			<ul class="c-detailuser__tabs">
+				<li data-tab-target="#home" class="c-detailuser__tab active">Gebruikersgegevens</li>
+				<li data-tab-target="#voorkeuren" class="c-detailuser__tab">Voorkeuren</li>
+				<li data-tab-target="#about" class="c-detailuser__tab">About</li>
+				<li data-tab-target="#news" class="c-detailuser__tab">News</li>
+			</ul>
+
+			<div class="c-detailuser__tabcontent ">
+				<div id="home" data-tab-content class="active c-detailuser__gebruikerkolomcontainer js-userdetails">
+					<div class="c-detailuser__contactcontainer">
+						<svg xmlns="http://www.w3.org/2000/svg" class="c-detailuser__contactsvg" width="34.1425" height="36.768" viewBox="0 0 68.285 73.536">
+							<g id="person" transform="translate(-3.374 -2.25)">
+							  <path id="Path_461" data-name="Path 461" d="M40.339,7.6A16.9,16.9,0,0,0,27.758,2.25,16.938,16.938,0,0,0,15.152,7.566a17.377,17.377,0,0,0-4.412,13.26c.728,10.031,8.362,18.192,17.018,18.192s16.276-8.159,17.016-18.19A17.309,17.309,0,0,0,40.336,7.6Z" transform="translate(9.759 0)" fill="#fff"/>
+							  <path id="Path_462" data-name="Path 462" d="M66.407,51.765H8.629a5.089,5.089,0,0,1-3.973-1.828,5.8,5.8,0,0,1-1.179-4.779A28.11,28.11,0,0,1,15.982,26.488,39.163,39.163,0,0,1,37.518,20.25a39.163,39.163,0,0,1,21.535,6.238,28.093,28.093,0,0,1,12.5,18.671,5.8,5.8,0,0,1-1.179,4.779A5.089,5.089,0,0,1,66.407,51.765Z" transform="translate(0 24.02)" fill="#fff"/>
+							</g>
+						  </svg>
+						<h2 class="c-detailuser__contacttitel">Contact informatie</h2>
+					</div>
+					
+					<div class="c-detailuser__gebruikerkolom">
+						<form action="" class="c-detailuser__detailform">
+							<label for="naam" class="c-detailuser__label">Naam:</label>
+							<input type="text" class="c-detailuser__input js-input" disabled value="Nathan" />
+						</form>
+						<form action="" class="c-detailuser__detailform">
+							<label for="achternaam" class="c-detailuser__label">Achternaam:</label>
+							<input type="text" disabled class="c-detailuser__input js-input" value="Dhaene">
+						</form>
+						<form action="" class="c-detailuser__detailform">
+							<label for="mail" class="c-detailuser__label">Mail:</label>
+							<input type="text" disabled class="c-detailuser__input js-input" value="nathan.dhaene@mail.com">
+						</form>
+						<label for="geslacht" class="c-detailuser__label">Geslacht:</label>	
+						<select name="geslacht" class="c-detailuser__input js-input" disabled id="geslacht">
+							<option value="man">man</option>
+							<option value="vrouw">vrouw</option>
+							<option value="non-binair">non-binair</option>
+						</select>
+					</div>
+					<div class="c-detailuser__gebruikerkolom">
+						<form action="" class="c-detailuser__detailform">
+							<label for="geboortedatum" class="c-detailuser__label">Geboortedatum</label>
+							<input type="text" class="c-detailuser__input js-input" disabled value="21/1/1987" />
+						</form>
+						<form action="" class="c-detailuser__detailform">
+							<label for="postcode" class="c-detailuser__label">Postcode:</label>
+							<input type="text" class="c-detailuser__input js-input" disabled value="8300">
+						</form>
+						<form action="" class="c-detailuser__detailform">
+							<label for="gemeente" class="c-detailuser__label">Gemeente:</label>
+							<input type="text" class="c-detailuser__input js-input" disabled value="Dieterzand">
+						</form>
+						<form action="" class="c-detailuser__detailform">
+							<label for="straatnaam" class="c-detailuser__label">Straatnaam:</label>
+							<input type="text" class="c-detailuser__input js-input" disabled value="Rue D'Angelo">
+						</form>
+
+					</div>
+					<div class="c-detailuser__gebruikerkolom">
+						<form action="" class="c-detailuser__detailform">
+							<label for="Telefoon" class="c-detailuser__label">Telefoon:</label>
+							<input type="text" class="c-detailuser__input js-input" disabled value="0491/278146">
+						</form>
+						<form action="" class="c-detailuser__detailform">
+							<label for="nr" class="c-detailuser__label">Nr</label>
+							<input type="text" class="c-detailuser__input js-input" disabled value="154">
+						</form>
+						<form action="" class="c-detailuser__detailform">
+							<label for="bus" class="c-detailuser__label">Bus:</label>
+							<input type="text" class="c-detailuser__input js-input" disabled value="15">
+						</form>
+						<form action="" class="c-detailuser__detailform">
+							<label for="nieuwsbrief" class="c-detailuser__label">Nieuwsbrief:</label>
+							<select name="nieuwsbrief" class="c-detailuser__input js-input" disabled id="nieuwsbrief">
+								<option value="yes">yes</option>
+								<option value="no">no</option>
+							</select>
+						</form>
+					</div>
+					<div class="c-detailuser__gebruikerkolomlast">
+						 <form action="" class="c-detailuser__detailform">
+							<label for="reclame" class="c-detailuser__label">Reclame:</label>
+							<select name="reclame" class="c-detailuser__input js-input" disabled id="reclame">
+								<option value="yes">yes</option>
+								<option value="no">no</option>
+							</select>
+						 </form>
+						 <form action="" class="c-detailuser__detailform">
+							<label for="admin" class="c-detailuser__label">Admin:</label>
+							<select name="admin" class="c-detailuser__input js-input" disabled id="admin">
+								<option value="yes">yes</option>
+								<option value="no">no</option>
+							</select>
+						 </form>
+					</div>
+					
+				</div>
+				<div class="c-detailuser__buttonscontainer">
+					<div class="c-detailuser__editbuttoncontainer js-edit">
+						<svg xmlns="http://www.w3.org/2000/svg" class="c-detailuser__editbuttonsvg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+							<path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
+						</svg>
+						<p>Bewerken</p>
+					</div>	
+					<div class="c-detailuser__deletebuttoncontainer js-delete">
+						<svg xmlns="http://www.w3.org/2000/svg" class="c-detailuser__deletebuttonsvg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+							<path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+						</svg>
+						<p>Verwijderen</p>
+					</div>
+				</div>	
+			</div>
+			<div id="about" data-tab-content>
+				<h1>About</h1>
+				<p>Let me tell you about me</p>
+			</div>
+			<div id="news" data-tab-content>
+				<h1>News</h1>
+				<p>News is great.</p>
+			</div>
+			
+		</div>
+		<div id="js-modal-delete" class="c-modalContainer u-hidden js-modal">
+			<!-- content -->
+			<div class="c-modal c-modal--delete">
+				<span class="c-modal__close js-modalclose" >&times;</span>
+				<h2>ben je zeker dat je deze wilt verwijderen</h2>
+				<div class="c-modal__buttons">
+					<button class="c-modal__button c-modal__button--delete js-delete">ja</button>
+					<button class="c-modal__button c-modal__button--no js-cancel">nee</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

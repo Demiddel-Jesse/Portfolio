@@ -1,0 +1,488 @@
+@use '../settings/colors' as color;
+@use '../tools/tools.breakpoints' as bp;
+
+.c-graphflex {
+	display: flex;
+	justify-content: center;
+
+	@include bp.up(tl) {
+		display: block;
+
+		margin-left: 50px;
+	}
+}
+
+.c-graphs {
+	grid-area: 'content';
+
+	// margin-left: 50px;
+	// margin-right: 100px;
+
+	height: 100%;
+
+	display: grid;
+
+	grid-template-rows: 100px 300px 300px 300px 300px 300px 300px 400px 1fr 120px 120px;
+	grid-template-columns: 300px;
+
+	grid-template-areas:
+		'heading'
+		'growth'
+		'daily'
+		'returning'
+		'sex'
+		'age'
+		'genre'
+		'map'
+		'totals'
+		'income'
+		'costs';
+
+	gap: 20px;
+
+	@include bp.up(ml) {
+		width: calc(100% - 75px);
+
+		grid-template-rows: 100px 300px 300px 300px 320px 1fr 1fr;
+		grid-template-columns: 49% 49% 1fr;
+
+		grid-template-areas:
+			'heading heading -'
+			'growth daily -'
+			'returning sex  -'
+			'age genre -'
+			'map map  -'
+			'totals totals  -'
+			'income costs -';
+	}
+
+	@include bp.up(tl) {
+		width: calc(100vw - 400px);
+	}
+
+	@include bp.up(ls) {
+		grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+		grid-template-columns: 32% 32% 32% 1fr;
+
+		grid-template-areas:
+			'heading heading heading -'
+			'growth daily returning -'
+			'sex age genre -'
+			'map map map -'
+			'totals totals totals -'
+			'income income costs -';
+	}
+
+	@include bp.up(ll) {
+		grid-template-rows: 120px 352px 372px 122px;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+		grid-template-areas:
+			'heading heading heading heading heading'
+			'growth daily returning sex age'
+			'map map genre totals totals'
+			'income income income costs costs';
+	}
+
+	.modebar {
+		top: -25000px !important;
+	}
+}
+
+// donut graphs
+.c-doGraph {
+	min-width: 270px;
+	height: 300px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	border: solid color.$accent-00;
+	border-width: 1px;
+	border-radius: 20px;
+
+	position: relative;
+
+	&__center {
+		position: absolute;
+		top: 26%;
+
+		font-size: 1.5rem;
+		font-weight: 700;
+
+		color: color.$accent-00;
+	}
+
+	&__title {
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		font-size: 1.125rem;
+		font-weight: 700;
+
+		color: color.$text-color-a;
+
+		h4 {
+			margin-left: 20px;
+			margin-top: 20px;
+			margin-bottom: 0;
+		}
+	}
+
+	&__legend {
+		position: absolute;
+		bottom: 5%;
+
+		width: 70%;
+
+		font-weight: 700;
+
+		div {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			color: color.$text-color-a;
+
+			p {
+				margin: 2px;
+			}
+		}
+	}
+
+	&__circle {
+		border-radius: 100px;
+		border: none;
+
+		width: 8px;
+		height: 8px;
+
+		content: '';
+
+		&--1 {
+			background-color: color.$neutral-900;
+
+			outline: 1px solid color.$accent-00;
+		}
+
+		&--2 {
+			background-color: color.$accent-00;
+		}
+
+		&--3 {
+			background-color: color.$neutral-500;
+		}
+	}
+
+	&__chart {
+		position: absolute;
+		top: 12%;
+	}
+}
+
+// bar graphs
+.c-barGraph {
+	min-width: 270px;
+	height: 300px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	border: solid color.$accent-00;
+	border-width: 1px;
+	border-radius: 20px;
+
+	position: relative;
+	&__chart {
+		position: absolute;
+		bottom: 10%;
+
+		&::after {
+			content: '';
+			height: 1px;
+			width: 100%;
+			position: absolute;
+			bottom: 5px;
+			background-color: color.$accent-00;
+		}
+	}
+
+	&__title {
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		margin-left: 20px;
+
+		color: color.$text-color-a;
+
+		h4 {
+			margin-top: 20px;
+			margin-bottom: 4px;
+		}
+
+		p {
+			margin: 4px 0;
+
+			span {
+				svg {
+					rotate: 180deg;
+				}
+			}
+		}
+
+		:nth-child(2) {
+			color: color.$accent-00;
+			display: flex;
+			align-items: center;
+
+			font-size: 1.875rem;
+			font-weight: 700;
+
+			svg {
+				width: 30px;
+				height: 30px;
+			}
+		}
+	}
+
+	&__legend {
+		display: flex;
+		justify-content: space-between;
+
+		width: 86%;
+
+		position: absolute;
+		bottom: 12px;
+
+		color: color.$text-color-a;
+
+		font-weight: 700;
+
+		p {
+			margin: 0;
+		}
+	}
+}
+
+// pie chart graphs
+.c-pieGraph {
+	min-width: 270px;
+	height: 300px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	border: solid color.$accent-00;
+	border-width: 1px;
+	border-radius: 20px;
+
+	position: relative;
+
+	&__chart {
+		position: absolute;
+		top: 15%;
+	}
+
+	&__title {
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		font-size: 1.125rem;
+		font-weight: 700;
+
+		color: color.$text-color-a;
+
+		h4 {
+			margin-left: 20px;
+			margin-top: 20px;
+			margin-bottom: 0;
+		}
+
+		h5 {
+			color: color.$accent-00;
+			margin-left: 20px;
+			margin-top: 4px;
+
+			font-size: 1.625rem;
+		}
+	}
+
+	&__legend {
+		position: absolute;
+		bottom: 5%;
+
+		width: 70%;
+
+		font-weight: 700;
+
+		div {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			color: color.$text-color-a;
+
+			p {
+				margin: 2px;
+			}
+		}
+
+		&--new {
+			width: 50% !important;
+		}
+	}
+
+	&__circle {
+		border-radius: 100px;
+		border: none;
+
+		width: 8px;
+		height: 8px;
+
+		content: '';
+
+		&--1 {
+			background-color: color.$neutral-900;
+
+			outline: 1px solid color.$accent-00;
+		}
+
+		&--2 {
+			background-color: color.$accent-00;
+		}
+	}
+}
+
+// sine graphs
+.c-sineGraph {
+	// min-width: 500px;
+	height: 120px;
+
+	border: solid color.$accent-00;
+	border-width: 1px;
+	border-radius: 20px;
+
+	position: relative;
+
+	overflow: hidden;
+
+	&__chart {
+		position: absolute;
+		bottom: 0;
+	}
+
+	&__title {
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		h4 {
+			margin: 0;
+			margin-top: 8px;
+			margin-left: 20px;
+
+			font-size: 1.5rem;
+
+			@include bp.down(ll) {
+				font-size: 1.2rem;
+			}
+
+			color: color.$text-color-a;
+		}
+
+		h5 {
+			margin: 0;
+			margin-top: 8px;
+			margin-left: 20px;
+
+			font-size: 1.5rem;
+
+			@include bp.down(ll) {
+				font-size: 1.2rem;
+			}
+
+			color: color.$accent-00;
+		}
+	}
+
+	&__percentage {
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		margin-right: 8px;
+
+		font-size: 1.2rem;
+
+		@include bp.down(ll) {
+			font-size: 1rem;
+		}
+
+		color: color.$accent-00;
+	}
+
+	&--cost {
+		.c-sineGraph__title {
+			h5 {
+				color: color.$accent-100;
+			}
+		}
+
+		.c-sineGraph__percentage {
+			color: color.$accent-100;
+		}
+	}
+}
+
+// radargraph
+.c-genre {
+	min-width: 270px;
+	height: 320px;
+
+	border: solid color.$accent-00;
+	border-width: 1px;
+	border-radius: 20px;
+
+	position: relative;
+
+	overflow: hidden;
+
+	display: flex;
+	justify-content: center;
+
+	@include bp.down(ll) {
+		height: 300px;
+	}
+
+	&__graph {
+		width: 250px;
+		height: 250px;
+
+		position: absolute;
+		bottom: 0;
+	}
+
+	&__txt {
+		margin-left: 20px;
+
+		position: absolute;
+
+		color: color.$text-color-a;
+
+		h4 {
+			font-size: 18px;
+			margin-bottom: 0;
+			margin-top: 10px;
+		}
+
+		p {
+			margin-top: 4px;
+		}
+	}
+}

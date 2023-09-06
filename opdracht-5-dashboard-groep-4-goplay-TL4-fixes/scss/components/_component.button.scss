@@ -1,0 +1,31 @@
+@use '../settings/colors' as color;
+
+.c-button{
+    display: flex;
+    background-color: color.$accent-00;
+    color: color.$neutral-900 !important;
+    border: none;
+    padding:.8125rem 2.1875rem;
+    border-radius: 6.25rem;
+    width: max-content;
+    margin-left: 2.625rem;
+    text-decoration: none;
+    transition: 0.1s;
+
+    &--offline{
+        @extend .c-button;
+        background-color: color.$accent-100;
+    }
+}
+.c-button2{
+    display: flex;
+    color: color.$neutral-900 !important;
+    border: .125rem solid color.$accent-00;
+    padding:.8125rem 2.1875rem;
+    border-radius: 6.25rem;
+    width: max-content;
+    margin-left: 2.625rem;
+    text-decoration: none;
+    transition: 0.1s;
+}
+

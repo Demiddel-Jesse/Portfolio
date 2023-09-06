@@ -1,0 +1,335 @@
+@use '../settings/colors' as color;
+@use '../tools/tools.breakpoints' as bp;
+
+.c-modalContainer {
+	position: fixed; /* Stay in place */
+	z-index: 20; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: none; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.c-modal {
+	background-color: color.$bg-color;
+	margin: 15% auto; /* 15% from the top and centered */
+	padding: 20px;
+	width: 50%; /* Could be more or less, depending on screen size */
+	height: 50%;
+
+	border-radius: 20px;
+
+	position: relative;
+
+	&--logo {
+		width: 20% !important;
+		height: 10% !important;
+
+		min-height: 150px;
+	}
+
+	&--content {
+		width: 25% !important;
+		height: 15% !important;
+	}
+
+	&__close {
+		color: color.$text-color-a;
+
+		position: absolute;
+		right: 20px;
+		top: 0;
+
+		font-size: 3.25rem;
+		font-weight: bold;
+
+		&:hover,
+		&:focus {
+			color: color.$text-color-b;
+			text-decoration: none;
+			cursor: pointer;
+		}
+	}
+
+	&__content {
+		margin: 20px 0;
+
+		color: color.$text-color-a;
+
+		.c-modal__content--pie & {
+		}
+
+		&--logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			margin-top: 40px;
+
+			p {
+				width: 50%;
+
+				img {
+					width: 100%;
+				}
+			}
+
+			label {
+				display: inline-block;
+				padding: 12px 18px;
+				cursor: pointer;
+				border-radius: 5px;
+				background-color: color.$accent-00;
+				font-size: 1.2rem;
+				font-weight: 600;
+				color: color.$neutral-900;
+			}
+
+			input[type='file'] {
+				// color: color.$accent-00;
+
+				position: absolute;
+				z-index: -1;
+				top: 10px;
+				left: 8px;
+				font-size: 17px;
+			}
+
+			input[type='submit'] {
+				margin-left: 0;
+				margin-top: 120px;
+				font-weight: 600;
+
+				position: absolute;
+			}
+		}
+	}
+
+	&__graph {
+	}
+
+	&__legend {
+		.c-modal__content--pie & {
+			position: absolute;
+			bottom: 42%;
+			width: 30%;
+			right: 15%;
+
+			font-weight: 700;
+			font-size: 2rem;
+
+			div {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				color: color.$text-color-a;
+
+				p {
+					margin: 2px;
+				}
+			}
+
+			.c-doGraph__circle {
+				width: 16px;
+				height: 16px;
+			}
+		}
+	}
+
+	&__total {
+		.c-modal__content--pie & {
+			position: absolute;
+			top: 20%;
+			right: 25%;
+
+			color: color.$accent-00;
+
+			font-size: 3rem;
+			font-weight: 800;
+		}
+	}
+
+	&--delete {
+		width: 20% !important;
+		height: 15% !important;
+
+		min-width: 200px;
+		min-height: 150px;
+
+		@include bp.down(ls) {
+			top: 25%;
+		}
+
+		color: color.$text-color-a;
+		text-align: center;
+	}
+
+	&__buttons {
+		display: flex;
+		justify-content: space-evenly;
+		gap: 20px;
+	}
+
+	&__button {
+		font-size: 1.2rem;
+
+		padding: 10px 20px;
+
+		border: none;
+
+		&--delete {
+			background-color: color.$accent-100;
+		}
+
+		&--no {
+			background-color: color.$accent-00;
+		}
+	}
+
+	&__newSub {
+		width: 20%;
+		height: 40%;
+
+		min-height: 350px;
+		max-height: 400px;
+
+		@include bp.down(ls) {
+			top: 25%;
+		}
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@include bp.down(ll) {
+			width: 50%;
+		}
+
+		@include bp.down(ml) {
+			width: 80%;
+		}
+
+		textarea {
+			height: 100px;
+			width: 75%;
+
+			margin-right: 0 !important;
+
+			overflow: hidden;
+		}
+
+		input,
+		textarea {
+			background-color: color.$neutral-800;
+			border: 2px solid grey;
+			border-radius: 4px;
+			color: color.$text-color-a;
+			margin-right: 2rem;
+			line-height: 2rem;
+
+			align-items: center;
+			&::placeholder {
+				color: color.$text-color-a;
+				border: none;
+			}
+			&:focus {
+				border: 2px solid grey;
+				outline: none;
+			}
+
+			&:active {
+				background-color: color.$neutral-800;
+				border: 2px solid grey;
+				box-shadow: none;
+				border-radius: 4px;
+			}
+			&:disabled {
+				background-color: transparent;
+				border: none;
+			}
+		}
+
+		p:nth-child(n) {
+			width: 80%;
+		}
+
+		.c-modal__button--delete {
+			background-color: color.$accent-00;
+		}
+
+		.c-modal__button--no {
+			background-color: color.$accent-100;
+		}
+	}
+
+	&__newSetting {
+		color: color.$text-color-a;
+
+		max-width: 400px;
+		min-width: 200px;
+		max-height: 300px;
+		min-height: 200px;
+
+		@include bp.down(tl) {
+			top: 25%;
+		}
+
+		.c-modal__buttons {
+			top: 25%;
+			position: relative;
+		}
+
+		> label {
+			top: 20%;
+			position: relative;
+			display: block;
+			width: 100%;
+
+			margin-top: 20px;
+		}
+
+		input,
+		textarea,
+		select {
+			background-color: color.$neutral-800;
+			border: 2px solid grey;
+			border-radius: 4px;
+			color: color.$text-color-a;
+			margin-right: 2rem;
+			line-height: 2rem;
+
+			align-items: center;
+			&::placeholder {
+				color: color.$text-color-a;
+				border: none;
+			}
+			&:focus {
+				border: 2px solid grey;
+				outline: none;
+			}
+
+			&:active {
+				background-color: color.$neutral-800;
+				border: 2px solid grey;
+				box-shadow: none;
+				border-radius: 4px;
+			}
+			&:disabled {
+				background-color: transparent;
+				border: none;
+			}
+		}
+
+		.c-modal__button--delete {
+			background-color: color.$accent-00;
+		}
+
+		.c-modal__button--no {
+			background-color: color.$accent-100;
+		}
+	}
+}
