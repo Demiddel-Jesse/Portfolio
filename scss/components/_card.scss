@@ -1,4 +1,14 @@
 .c-card{
+
+    @media (max-width: 450px) {
+        width: 300px;
+        min-width: 300px;
+
+        .c-card__heading{
+            width: 200px;
+        }
+    }
+
     width: 400px;
     min-width: 400px;
 
@@ -51,6 +61,7 @@
 
         text-decoration: none;
         color: white;
+        text-align: center;
 
         transition: 
             background-color 400ms
