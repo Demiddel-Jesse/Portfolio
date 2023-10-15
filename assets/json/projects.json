@@ -37,8 +37,8 @@
                     "button_link":"https://github.com/howest-WDD/project2-sinksen-video-focus-Demiddel-Jesse"
                 }
             ],
-            "smallImage":"",
-            "mainImage":""
+            "smallImage":"./assets/svg/logo-sinksen.svg",
+            "mainImage":"./assets/img/Screenshot-Sinksen2022.png"
         },
         {
             "name":"GoPlay Dashboard",
@@ -81,8 +81,8 @@
                     "button_link":"https://github.com/howest-WDD/opdracht-5-dashboard-groep-4-goplay"
                 }
             ],
-            "smallImage":"",
-            "mainImage":""
+            "smallImage":"./assets/img/Logo-GoPlay.png",
+            "mainImage":"./assets/img/Screenshot-GoPlay.png"
         },
         {
             "name":"De zeepfabriek",
@@ -134,8 +134,8 @@
                     "button_link":"https://github.com/howest-WDD/opdracht-5-dashboard-groep-4-goplay"
                 }
             ],
-            "smallImage":"",
-            "mainImage":""
+            "smallImage":"./assets/svg/Bubble.svg",
+            "mainImage":"./assets/img/Screenshot-DeZeepfabriek.png"
         }
     ]
 }
