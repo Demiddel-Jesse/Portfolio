@@ -21,3 +21,4 @@ function buildJS() {
 }
 
 exports.default = series(buildStyles, buildJS, watchTask);
+exports.build = series(buildJS, buildStyles)
