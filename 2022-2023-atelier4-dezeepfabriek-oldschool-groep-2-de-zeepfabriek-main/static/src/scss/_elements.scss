@@ -1,0 +1,31 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: $color-light;
+}
+
+a {
+	text-decoration: none;
+	transition: all 0.3s ease;
+
+	&:hover,
+	&:focus {
+		outline: none;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Montserrat', sans-serif;
+}

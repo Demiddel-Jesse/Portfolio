@@ -83,6 +83,43 @@
             ],
             "smallImage":"",
             "mainImage":""
+        },
+        {
+            "name":"De zeepfabriek",
+            "smallSummary":"For our final project we needed to create a webshop for a company within 4 weeks.",
+            "summary":[
+            ],
+            "tasks":[
+                "Designing",
+                "Coding Homepage",
+                "Coding settings page"
+            ],
+            "techs":[
+                "Git",
+                "JS",
+                "webpack",
+                "Adobe XD",
+                "SCSS",
+                "PHP",
+                "Wordpress",
+                "Docker",
+                "Premiere Pro",
+                "After Effects"
+            ],
+            "buttons":[
+                {
+                    "visibility":1,
+                    "button_text":"Website Link",
+                    "button_link":"https://dezeepfabriek.milandepauw.be/"
+                },
+                {
+                    "visibility":1,
+                    "button_text":"Source Code",
+                    "button_link":"https://github.com/howest-WDD/opdracht-5-dashboard-groep-4-goplay"
+                }
+            ],
+            "smallImage":"",
+            "mainImage":""
         }
     ]
 }

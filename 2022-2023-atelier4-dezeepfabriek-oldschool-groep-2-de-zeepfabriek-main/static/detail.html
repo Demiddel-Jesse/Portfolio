@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="dist/css/styles.css" />
+		<script src="dist/js/main.js"></script>
+		<title>Zeepfabriek - detailpagina</title>
+	</head>
+<body>
+    		<!-- Navigatie -->
+		<header class="c-header">
+			<div data-sticky-container>
+				<div class="grid-container c-header__content sticky js-nav" data-sticky data-margin-top="0">
+					<ul class="c-nav c-nav--secondary menu cell align-right">
+						<li class="c-nav__item">
+							<div class="c-search">
+								<input type="text" placeholder="Hoi wat zoek je?" class="c-search__input" />
+								<button class="c-search__button js-searchButton">
+									<img src="img/icons/search-icon.svg" alt="search-icon" />
+								</button>
+							</div>
+						</li>
+						<li class="c-nav__item">
+							<a href="#">
+								<img src="img/icons/user-icon.svg" alt="user-icon" />
+							</a>
+						</li>
+						<li class="c-nav__item c-nav__item--cart">
+							<a href="#">
+								<img src="img/icons/shopping-cart-header.svg" alt="shopping-cart-header" />
+							</a>
+						</li>
+						<li class="c-nav__item c-nav__item--language">
+							<button class="c-nav__languagebtn" type="button" data-toggle="language-dropdown">
+								Nederlands
+								<img src="img/icons/down-arrow-icon.svg" alt="down-arrow-icon" />
+							</button>
+							<div class="dropdown-pane" data-position="bottom" data-alignment="center" id="language-dropdown" data-dropdown>
+								<ul class="menu vertical">
+									<li>
+										<a href="#" class="p-0">Français</a>
+									</li>
+									<li>
+										<a href="#" class="p-0">Deutsch</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<nav class="c-nav c-nav--primary menu tablet-vertical">
+						<a href="#" class="c-nav__logo">
+							<img src="img/icons/logo.svg" alt="logo" />
+						</a>
+						<ul class="menu">
+							<li class="c-nav__item is-active">
+								<a href="./detail.html" class="c-nav__link">Shop</a>
+							</li>
+							<li class="c-nav__item">
+								<a href="./contact.html" class="c-nav__link">Onze winkels</a>
+							</li>
+							<li class="c-nav__item">
+								<a href="./blogoverzicht.html" class="c-nav__link">Blog</a>
+							</li>
+							<li class="c-nav__item">
+								<a href="./overons.html" class="c-nav__link">Ons verhaal</a>
+							</li>
+							<li class="c-nav__item">
+								<a href="./contact.html" class="c-nav__link">Contact</a>
+							</li>
+							<li class="c-nav__item">
+								<a href="#" class="c-nav__link">Getuigenissen</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div data-sticky-container>
+				<div class="grid-container c-header__content c-header__content--mobile sticky" data-sticky data-margin-top="0" data-stick-to="top">
+					<a href="#" class="c-nav__logo">
+						<img src="img/icons/logo.svg" alt="logo" />
+					</a>
+					<div class="c-nav__toggleContainer">
+						<a href="#">
+							<svg xmlns="http://www.w3.org/2000/svg" width="33.736" height="33.736" viewBox="0 0 33.736 33.736">
+								<path id="Icon_material-person-outline" data-name="Icon material-person-outline" d="M22.868,10.006a4.428,4.428,0,1,1-4.428,4.428,4.427,4.427,0,0,1,4.428-4.428m0,18.977c6.262,0,12.862,3.078,12.862,4.428V35.73H10.006V33.411c0-1.349,6.6-4.428,12.862-4.428M22.868,6A8.434,8.434,0,1,0,31.3,14.434,8.432,8.432,0,0,0,22.868,6Zm0,18.977C17.238,24.977,6,27.8,6,33.411v6.326H39.736V33.411C39.736,27.8,28.5,24.977,22.868,24.977Z" transform="translate(-6 -6)" fill="#898787" />
+							</svg>
+						</a>
+						<a href="#">
+							<svg id="Icon_feather-shopping-cart" data-name="Icon feather-shopping-cart" xmlns="http://www.w3.org/2000/svg" width="37.019" height="35.472" viewBox="0 0 37.019 35.472">
+								<path id="Path_63" data-name="Path 63" d="M15.093,31.546A1.546,1.546,0,1,1,13.546,30,1.546,1.546,0,0,1,15.093,31.546Z" transform="translate(0.324 0.88)" fill="none" stroke="#898787" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+								<path id="Path_64" data-name="Path 64" d="M31.593,31.546A1.546,1.546,0,1,1,30.046,30,1.546,1.546,0,0,1,31.593,31.546Z" transform="translate(0.834 0.88)" fill="none" stroke="#898787" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+								<path id="Path_65" data-name="Path 65" d="M1.5,1.5H7.685l4.144,20.705a3.093,3.093,0,0,0,3.093,2.49h15.03a3.093,3.093,0,0,0,3.093-2.49L35.519,9.232H9.232" transform="translate(0 0)" fill="none" stroke="#898787" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+							</svg>
+						</a>
+						<div>
+							<input type="checkbox" name="nav-toggle" id="nav-toggle" class="c-nav__toggle" />
+							<span class="c-nav__bar c-nav__bar--top"></span>
+							<span class="c-nav__bar c-nav__bar--mid"></span>
+							<span class="c-nav__bar c-nav__bar--bottom"></span>
+							<ul class="c-nav__list menu vertical">
+								<li class="">
+									<a href="./detail.html">Shop</a>
+								</li>
+								<li>
+									<a href="./contact.html">Onze winkels</a>
+								</li>
+								<li>
+									<a href="./blogoverzicht.html">Blog</a>
+								</li>
+								<li>
+									<a href="./overons.html">Ons verhaal</a>
+								</li>
+								<li>
+									<a href="./contact.html">Contact</a>
+								</li>
+								<li>
+									<a href="#">Getuigenissen</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+    <section>
+        <div class="grid-container">
+            <div class="grid-x">
+                <div class="columns end small-12 medium-12 large-10 large-offset-1 c-detailtitle">
+                    <p class="c-detailtitle__subtitle">Home / Shop / Zepen / Badmelk Lilac</p>
+                    <h3 class="c-detailtitle__title">Badmelk Lilac</h3>
+                    <div class="c-detailtitle__tags">
+                        <span class="c-detailtitle__tags--tag1">Gevoelige huid</span>
+                        <span class="c-detailtitle__tags--tag2">Vegan essentials</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-x c-detail">
+                <div class="columns small-12 medium-12 large-4 large-offset-1 c-detail__itemabove">
+                    <img class="c-detail__itemabove--img" src="img/detail-img.jpg" alt="detail-img">
+                </div>
+                <div class="columns end small-12 medium-12 large-5 large-offset-1  c-detail__itemabove">
+                    <p class="c-detail__itemabove--desc">Vegan badmelk met een zoet, zwoel en vrolijk aroma. Gracieus, rijkelijk en ravissant. De frisse geur van betoverende bloemenweelde laat je heerlijk wegdromen. De badmelk reinigt, verzacht en beschermt je huid. Verrijkt met vitamines, mineralen, proteïnes en maïszetmeel. Maïszetmeel verzacht de huid en verhoogt de natuurlijke weerstand. Het zuivere kokosmelkpoeder vormt een beschermende film, ideaal voor droge en gevoelige huid!</p>
+                    <ul class="c-detail__itemabove--list">
+                        <li>Verbeterde formule</li>
+                        <li>Meest populaire producten</li>
+                        <li>Gratis verzending vanaf 50€</li>
+                    </ul>
+                    <div class="c-detail__itemabove--price">
+                        <p>€ 11,95</p>
+                        <P>Incl. btw</P>
+                    </div>
+                    <div class="c-detail__itemabove--weights">
+                        <span>200g</span>
+                        <span>500g</span>
+                        <span>1kg</span>
+                        <span>2kg</span>
+                    </div>
+                    <p class="c-detail__itemabove--delivery">
+                        <ul>
+                            <li>Leverbaar binnen 1-2 werkdagen</li>
+                        </ul> 
+                    </p>
+                </div>
+                <div class="columns small-12 medium-12 large-4 large-offset-1 c-detail__itemunder">
+					<ul class=" c-tabs tabs" data-tabs id="example-tabs">
+						<li class="tabs-title is-active"><a href="#panel1" aria-selected="true">De tips van Catherine</a></li>
+						<li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">Handleiding</a></li>
+						<li class="tabs-title"><a data-tabs-target="panel3" href="#panel3">Reviewen</a></li>
+					  </ul>
+					<div class="tabs-content" data-tabs-content="example-tabs">
+						<div class="tabs-panel is-active" id="panel1">
+							<p><img src="img/icons/Bubble.svg" alt=""> <span></span> Geen bad? Neem de badmelk mee in de douche. Gebruik wat badmelk op een washandje, wrijf het lichaam in en geniet van de heerlijke geur!.</p>
+							<p><img src="img/icons/Bubble.svg" alt=""> <span></span> De aanwezige plantaardige oliën zorgen dat de huid niet uitdrogen.</p>
+</div>
+						<div class="tabs-panel" id="panel2">
+							<p><img src="img/icons/Bubble.svg" alt=""> <span></span> Voeg minimum 100g badmelk aan het water toe.</p>
+							<p><img src="img/icons/Bubble.svg" alt=""> <span></span> De ideale watertemperatuur tussen 36°C en 39°C voor een bad van 15 a 20 minuten.</p>
+							<p><img src="img/icons/Bubble.svg" alt=""> <span></span> De huid drogen door ze zachtjes met een handdoek af te deppen. (Niet wrijven!)</p>
+						  </div>
+						<div class="tabs-panel" id="panel3">
+							<p></p>
+						  </div>
+					  </div>
+				</div>
+                <div class="columns end small-12 medium-12 large-5 large-offset-1 c-detail__itemunder">
+					<div class="grid-x">		
+					<div class="c-detail__count">
+					<input type="number" value="1">
+				  </div>
+				  <div class=" c-detail__btn">
+				  <a href="#" class="button c-btn c-btn__detail"> In mijn winkelwagen </a>
+				</div>
+				</span>	
+				</div>
+            </div>
+
+        </div>
+    </section>
+			<!-- Product cards   -->
+			<section>
+				<div class="grid-container">
+					<div class="text-center">
+						<h2>Gelijkaardige producten</h2>
+					</div>
+					<div class="grid-x grid-margin-x small-up-1 medium-up-2 large-up-3 xlarge-up-4">
+						<!-- card 1 -->
+						<div class="cell small-12 medium-6 xlarge-3">
+							<div class="card c-product">
+								<div class="c-product__tag text-center">Nieuw!</div>
+								<img src="img/aardbei-zeep.jpg" alt="aardbei-zeep" />
+								<div class="card-section c-productcontent">
+									<h4 class="text-center">Aardbei zeep</h4>
+									<div class="c-productcontent__stars">
+										<img src="img/icons/star-fill.svg" class="c-productcontent__stars--star" alt="star" />
+										<img src="img/icons/star-fill.svg" class="c-productcontent__stars--star" alt="star" />
+										<img src="img/icons/star-fill.svg" class="c-productcontent__stars--star" alt="star" />
+										<img src="img/icons/star-fill.svg" class="c-productcontent__stars--star" alt="star" />
+										<img src="img/icons/star.svg" class="c-productcontent__stars--star" alt="star" />
+										<span class="c-productcontent__stars--desc">(10)</span>
+									</div>
+									<p class="c-productcontent__price">€ 13,40</p>
+									<div class="c-productcontent__buttons">
+										<a href="#" class="button c-btn c-btn__detail"> Bekijk product </a>
+										<a href="#" class="button c-btn c-btn__shopping">
+											<img class="c-btn__shopping--icon" src="img/icons/shopping-cart-product.svg" alt="shopping-cart-product" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- card 2 -->
+						<div class="cell small-12 medium-6 xlarge-3">
+							<div class="card c-product">
+								<div class="c-product__tag text-center">In promo!</div>
+								<img src="img/Anti-cellulitis-zeep.jpg" alt="Anti-cellulitis-zeep" />
+								<div class="card-section c-productcontent">
+									<h4 class="text-center">Anti-cellulitis zeep</h4>
+									<div class="c-productcontent__stars">
+										<img src="img/icons/star-fill.svg" class="c-productcontent__stars--star" alt="star" />
+										<img src="img/icons/star-fill.svg" class="c-productcontent__stars--star" alt="star" />
+										<img src="img/icons/star-fill.svg" class="c-productcontent__stars--star" alt="star" />
+										<img src="img/icons/star.svg" class="c-productcontent__stars--star" alt="star" />
+										<img src="img/icons/star.svg" class="c-productcontent__stars--star" alt="star" />
+										<span class="c-productcontent__stars--desc">(12)</span>
+									</div>
+
+									<p class="c-productcontent__crossed">€ 13,40</p>
+									<p class="c-productcontent__price c-productcontent__price--alignright">€ 10,40</p>
+									<div class="c-productcontent__buttons">
+										<a href="#" class="button c-btn c-btn__detail"> Bekijk product </a>
+										<a href="#" class="button c-btn c-btn__shopping">
+											<img class="c-btn__shopping--icon" src="img/icons/shopping-cart-product.svg" alt="shopping-cart-product" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- card 3 -->
+						<div class="cell small-12 medium-6 xlarge-3">
+							<div class="card c-product">
+								<img src="img/adoration-douchegel.jpg" alt="adoration-douchegel" />
+								<div class="card-section c-productcontent">
+									<h4 class="text-center">Adoration douchegel</h4>
+									<div class="c-productcontent__stars">
+										<img src="img/icons/star-fill.svg" class="c-productcontent__stars--star" alt="star" />
+										<img src="img/icons/star-fill.svg" class="c-productcontent__stars--star" alt="star" />
+										<img src="img/icons/star-fill.svg" class="c-productcontent__stars--star" alt="star" />
+										<img src="img/icons/star-fill.svg" class="c-productcontent__stars--star" alt="star" />
+										<img src="img/icons/star-fill.svg" class="c-productcontent__stars--star" alt="star" />
+										<span class="c-productcontent__stars--desc">(24)</span>
+									</div>
+
+									<p class="c-productcontent__price">€ 10,95</p>
+									<div class="c-productcontent__buttons">
+										<a href="#" class="button c-btn c-btn__detail"> Bekijk product </a>
+										<a href="#" class="button c-btn c-btn__shopping">
+											<img class="c-btn__shopping--icon" src="img/icons/shopping-cart-product.svg" alt="shopping-cart-product" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- card 4 -->
+						<div class="cell small-12 medium-6 xlarge-3">
+							<div class="card c-product">
+								<div class="c-product__tag text-center">Bijna uitverkocht!</div>
+								<img src="img/black-velvet.jpg" alt="black-velvet" />
+								<div class="card-section c-productcontent">
+									<h4 class="text-center">Black velvet limited edition</h4>
+									<div class="c-productcontent__stars">
+										<img src="img/icons/star-fill.svg" class="c-productcontent__stars--star" alt="star" />
+										<img src="img/icons/star-fill.svg" class="c-productcontent__stars--star" alt="star" />
+										<img src="img/icons/star-fill.svg" class="c-productcontent__stars--star" alt="star" />
+										<img src="img/icons/star-fill.svg" class="c-productcontent__stars--star" alt="star" />
+										<img src="img/icons/star.svg" class="c-productcontent__stars--star" alt="star" />
+										<span class="c-productcontent__stars--desc">(6)</span>
+									</div>
+
+									<p class="c-productcontent__price">€ 19,95</p>
+									<p class="c-productcontent__available">Nog 3 beschikbaar</p>
+									<div class="c-productcontent__buttons">
+										<a href="#" class="button c-btn c-btn__detail"> Bekijk product </a>
+										<a href="#" class="button c-btn c-btn__shopping">
+											<img class="c-btn__shopping--icon" src="img/icons/shopping-cart-product.svg" alt="shopping-cart-product" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- card 5 -->
+						<div class="cell small-12 medium-6 xlarge-3">
+							<div class="card c-product">
+								<div class="c-product__tag text-center">In promo!</div>
+								<img src="img/cadeaubox-bad-douche.jpg" alt="cadeaubox-bad-douche" />
+								<div class="card-section c-productcontent">
+									<h4 class="text-center">Cadeaubox bad & douche</h4>
+									<div class="c-productcontent__stars">
+										<img src="img/icons/star-fill.svg" class="c-productcontent__stars--star" alt="star" />
+										<img src="img/icons/star-fill.svg" class="c-productcontent__stars--star" alt="star" />
+										<img src="img/icons/star.svg" class="c-productcontent__stars--star" alt="star" />
+										<img src="img/icons/star.svg" class="c-productcontent__stars--star" alt="star" />
+										<img src="img/icons/star.svg" class="c-productcontent__stars--star" alt="star" />
+										<span class="c-productcontent__stars--desc">(6)</span>
+									</div>
+
+									<p class="c-productcontent__crossed">€ 22,95</p>
+									<p class="c-productcontent__price c-productcontent__price--alignright">€ 19,95</p>
+									<div class="c-productcontent__buttons">
+										<a href="#" class="button c-btn c-btn__detail"> Bekijk product </a>
+										<a href="#" class="button c-btn c-btn__shopping">
+											<img class="c-btn__shopping--icon" src="img/icons/shopping-cart-product.svg" alt="shopping-cart-product" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- card 6 -->
+						<div class="cell small-12 medium-6 xlarge-3">
+							<div class="card c-product">
+								<img src="img/amber-zeep.jpg" alt="amber-zeep" />
+								<div class="card-section c-productcontent">
+									<h4 class="text-center">Amber zeep</h4>
+									<div class="c-productcontent__stars">
+										<img src="img/icons/star-fill.svg" class="c-productcontent__stars--star" alt="star" />
+										<img src="img/icons/star-fill.svg" class="c-productcontent__stars--star" alt="star" />
+										<img src="img/icons/star-fill.svg" class="c-productcontent__stars--star" alt="star" />
+										<img src="img/icons/star-fill.svg" class="c-productcontent__stars--star" alt="star" />
+										<img src="img/icons/star.svg" class="c-productcontent__stars--star" alt="star" />
+										<span class="c-productcontent__stars--desc">(17)</span>
+									</div>
+
+									<p class="c-productcontent__price">€ 23,40</p>
+									<div class="c-productcontent__buttons">
+										<a href="#" class="button c-btn c-btn__detail"> Bekijk product </a>
+										<a href="#" class="button c-btn c-btn__shopping">
+											<img class="c-btn__shopping--icon" src="img/icons/shopping-cart-product.svg" alt="shopping-cart-product" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid-x">
+						<div class="cell small-12 small-offset-0 medium-4 medium-offset-4">
+							<a href="#" class="button expanded c-btn c-btn__detail c-btn--webshop">
+								Naar de webshop
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 12.156 7.753">
+									<path id="Icon_weather-direction-right" data-name="Icon weather-direction-right" d="M11.928,17.232a.951.951,0,0,0,.276.684.811.811,0,0,0,.672.24h7.9l-1.236,1.3a.928.928,0,0,0,0,1.344.931.931,0,0,0,.7.276.851.851,0,0,0,.636-.324l2.94-2.892a.931.931,0,0,0,.276-.7,1,1,0,0,0-.288-.7L20.832,13.6a.806.806,0,0,0-.648-.276.922.922,0,0,0-.684.264.879.879,0,0,0-.276.672.932.932,0,0,0,.276.684l1.272,1.3H12.864a.925.925,0,0,0-.672.3A1.01,1.01,0,0,0,11.928,17.232Z" transform="translate(-11.928 -13.319)" />
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+    		<!-- Footer -->
+		<footer class="c-footer">
+			<div class="c-footer__afscheiding">
+				<img src="img/icons/footer-afscheiding.svg" alt="footer-afscheiding" />
+			</div>
+
+			<div class="grid-container">
+				<div class="grid-x c-footer__content">
+					<div class="cell grid-y align-self-start small-12 large-6 c-footer__leftContent">
+						<div class="grid-x">
+							<div class="cell c-footer__col">
+								<ul>
+									<li class="c-footer__item"><h2>De Zeepfabriek</h2></li>
+									<li class="c-footer__item"><a href="">Testimonials</a></li>
+									<li class="c-footer__item"><a href="">Ons verhaal</a></li>
+									<li class="c-footer__item"><a href="">Inspiratie</a></li>
+									<li class="c-footer__item"><a href="">Blog</a></li>
+									<li class="c-footer__item"><a href="">Nieuws</a></li>
+								</ul>
+							</div>
+							<div class="cell c-footer__col">
+								<ul>
+									<li class="c-footer__item"><h2>Klantendienst</h2></li>
+									<li class="c-footer__item"><a href="">Contacteer ons</a></li>
+									<li class="c-footer__item"><a href="">Retourneren</a></li>
+									<li class="c-footer__item"><a href="">Verzending</a></li>
+									<li class="c-footer__item"><a href="">Betalen</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="c-footer__nieuwsbrief cell">
+							<p>Schrijf je in voor de nieuwsbrief!</p>
+							<label>
+								En kom meer te weten over alle deals en nieuwe spullen die wij aanbieden.
+								<input type="text" placeholder="e-mail" />
+							</label>
+							<button>
+								<img src="img/icons/newsletter-icon.svg" alt="newsletter-icon" />
+							</button>
+						</div>
+						<div class="c-footer__socialmedia cell">
+							<a href=""> <img src="img/icons/facebook.svg" alt="facebook" /></a>
+							<a href=""> <img src="img/icons/instagram.svg" alt="instagram" /></a>
+						</div>
+						<div class="c-footer__item c-footer__item--privacy cell">
+							<a href="">Algemene voorwaarden</a>
+							<a href="">Privacybeleid</a>
+						</div>
+					</div>
+					<div class="cell c-footer__winkels">
+						<ul>
+							<li class="c-footer__item">
+								<h2>De Zeepfabriek Gent</h2>
+							</li>
+							<li class="c-footer__item">
+								<a href="">Meer info over deze winkel <img src="img/icons/right-arrow-icon.svg" alt="right-arrow-icon" /></a>
+							</li>
+							<li class="c-footer__item">
+								<h2>De Zeepfabriek Antwerpen</h2>
+							</li>
+							<li class="c-footer__item">
+								<a href="">Meer info over deze winkel <img src="img/icons/right-arrow-icon.svg" alt="right-arrow-icon" /></a>
+							</li>
+							<li class="c-footer__item">
+								<h2>De Zeepfabriek Brussel</h2>
+							</li>
+							<li class="c-footer__item">
+								<a href="">Meer info over deze winkel <img src="img/icons/right-arrow-icon.svg" alt="right-arrow-icon" /></a>
+							</li>
+							<li class="c-footer__item">
+								<h2>De Zeepfabriek Brugge</h2>
+							</li>
+							<li class="c-footer__item">
+								<a href="">Meer info over deze winkel <img src="img/icons/right-arrow-icon.svg" alt="right-arrow-icon" /></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="c-footer__copyright">
+				<p>©Howest</p>
+			</div>
+		</footer>
+
+		<!-- jQuery must be imported before Foundation -->
+		<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+		<!-- this will include every plugin and utility required by Foundation -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/js/foundation.min.js"></script>
+		<!-- our main script file -->
+		<script src="./dist/js/main.js"></script>
+</body>
+</html>

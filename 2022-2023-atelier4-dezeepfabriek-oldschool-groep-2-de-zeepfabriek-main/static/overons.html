@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./dist/js/main.js"></script>
+    <link rel="stylesheet" href="dist/css/styles.css" />
+    <title>Over ons</title>
+</head>
+<body>
+    	<!-- Navigatie -->
+        <header class="c-header">
+            <div data-sticky-container>
+                <div class="grid-container c-header__content sticky" data-sticky data-margin-top="0">
+                    <ul class="c-nav c-nav--secondary menu cell align-right">
+                        <li class="c-nav__item">
+                            <div class="c-search">
+                                <input type="text" placeholder="Hoi wat zoek je?" class="c-search__input" />
+                                <button class="c-search__button js-searchButton">
+                                    <img src="img/icons/search-icon.svg" alt="search-icon" />
+                                </button>
+                            </div>
+                        </li>
+                        <li class="c-nav__item">
+                            <a href="#">
+                                <img src="img/icons/user-icon.svg" alt="user-icon" />
+                            </a>
+                        </li>
+                        <li class="c-nav__item c-nav__item--cart">
+                            <a href="#">
+                                <img src="img/icons/shopping-cart-header.svg" alt="shopping-cart-header" />
+                            </a>
+                        </li>
+                        <li class="c-nav__item c-nav__item--language">
+                            <button class="c-nav__languagebtn" type="button" data-toggle="language-dropdown">
+                                Nederlands
+                                <img src="img/icons/down-arrow-icon.svg" alt="down-arrow-icon" />
+                            </button>
+                            <div class="dropdown-pane" data-position="bottom" data-alignment="center" id="language-dropdown" data-dropdown>
+                                <ul class="menu vertical">
+                                    <li>
+                                        <a href="#" class="p-0">Français</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="p-0">Deutsch</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <nav class="c-nav c-nav--primary menu tablet-vertical">
+                        <a href="#" class="c-nav__logo">
+                            <img src="img/icons/logo.svg" alt="logo" />
+                        </a>
+                        <ul class="menu">
+                            <li class="c-nav__item is-active">
+                                <a href="#" class="c-nav__link">Shop</a>
+                            </li>
+                            <li class="c-nav__item">
+                                <a href="#" class="c-nav__link">Onze winkels</a>
+                            </li>
+                            <li class="c-nav__item">
+                                <a href="#" class="c-nav__link">Inspiratie</a>
+                            </li>
+                            <li class="c-nav__item">
+                                <a href="#" class="c-nav__link is-active">Ons verhaal</a>
+                            </li>
+                            <li class="c-nav__item">
+                                <a href="#" class="c-nav__link">Contact</a>
+                            </li>
+                            <li class="c-nav__item">
+                                <a href="#" class="c-nav__link">Getuigenissen</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div data-sticky-container>
+                <div class="grid-container c-header__content c-header__content--mobile sticky" data-sticky data-margin-top="0" data-stick-to="top">
+                    <a href="#" class="c-nav__logo">
+                        <img src="img/icons/logo.svg" alt="logo" />
+                    </a>
+                    <div class="c-nav__toggleContainer">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="33.736" height="33.736" viewBox="0 0 33.736 33.736">
+                                <path id="Icon_material-person-outline" data-name="Icon material-person-outline" d="M22.868,10.006a4.428,4.428,0,1,1-4.428,4.428,4.427,4.427,0,0,1,4.428-4.428m0,18.977c6.262,0,12.862,3.078,12.862,4.428V35.73H10.006V33.411c0-1.349,6.6-4.428,12.862-4.428M22.868,6A8.434,8.434,0,1,0,31.3,14.434,8.432,8.432,0,0,0,22.868,6Zm0,18.977C17.238,24.977,6,27.8,6,33.411v6.326H39.736V33.411C39.736,27.8,28.5,24.977,22.868,24.977Z" transform="translate(-6 -6)" fill="#898787" />
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg id="Icon_feather-shopping-cart" data-name="Icon feather-shopping-cart" xmlns="http://www.w3.org/2000/svg" width="37.019" height="35.472" viewBox="0 0 37.019 35.472">
+                                <path id="Path_63" data-name="Path 63" d="M15.093,31.546A1.546,1.546,0,1,1,13.546,30,1.546,1.546,0,0,1,15.093,31.546Z" transform="translate(0.324 0.88)" fill="none" stroke="#898787" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+                                <path id="Path_64" data-name="Path 64" d="M31.593,31.546A1.546,1.546,0,1,1,30.046,30,1.546,1.546,0,0,1,31.593,31.546Z" transform="translate(0.834 0.88)" fill="none" stroke="#898787" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+                                <path id="Path_65" data-name="Path 65" d="M1.5,1.5H7.685l4.144,20.705a3.093,3.093,0,0,0,3.093,2.49h15.03a3.093,3.093,0,0,0,3.093-2.49L35.519,9.232H9.232" transform="translate(0 0)" fill="none" stroke="#898787" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+                            </svg>
+                        </a>
+                        <div>
+                            <input type="checkbox" name="nav-toggle" id="nav-toggle" class="c-nav__toggle" />
+                            <span class="c-nav__bar c-nav__bar--top"></span>
+                            <span class="c-nav__bar c-nav__bar--mid"></span>
+                            <span class="c-nav__bar c-nav__bar--bottom"></span>
+                            <ul class="c-nav__list menu vertical">
+                                <li class="">
+                                    <a href="#">Shop</a>
+                                </li>
+                                <li>
+                                    <a href="#">Onze winkels</a>
+                                </li>
+                                <li>
+                                    <a href="#">Inspiratie</a>
+                                </li>
+                                <li>
+                                    <a href="#">Ons verhaal</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contact</a>
+                                </li>
+                                <li>
+                                    <a href="#">Getuigenissen</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <section class=" grid-container">
+            <section class="c-breadcrumbs">
+                <nav aria-label="You are here:" role="navigation">
+                    <ul class="breadcrumbs">
+                      <li><a href="#">Home</a></li>
+                      <li class="disabled">Ons verhaal</li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="c-overons grid-x">
+                
+            <div class="cell small-12 ">
+                    <h1>Van natuurlijke zeep tot complete huidverzorging</h1>
+                <div class="media-object">
+                <div class="media-object-section c-overons__text1">
+                    
+                <p>Het verhaal van Bubbles at Home startte in Brugge met een klein aanbod van zepen. Toch was de ambitie al vanaf dag één duidelijk: de tijd nemen om te luisteren naar onze klanten en hen een antwoord bieden op eventuele huidproblemen met natuurlijke zeep. 
+                </p>
+                <p>Jong en minder jong voelde het effect op hun huid en de vraag naar een breder gamma nam toe. Vandaag focussen we met onze huidverzorging enerzijds op de funfactor van baden en me-time, anderzijds op het verlichten van ongemakken door huidproblemen. 
+                </p>
+                <p>Een constante gedurende de jaren: persoonlijk advies staat altijd centraal. Onze klanten de winkel zien buitengaan met de juiste huidverzorging én een grote glimlach, dat is waar de BATH family elke dag voor gaat!</p>
+            </div>
+                <div class="media-object-section c-overons__imgcontainer">
+                    <img src="img/Overons.png" alt="">
+                </div>
+            </div>    
+            </div>
+            <div class="c-overons__text2" >
+                <h1>Ons badverhaal</h1>
+                <p>Het is een verhaal over een stuk zeep,
+                    boordevol natuurkrachten.
+                    Wij geloven sterk
+                    in de genezende kracht …
+                    van deze natuurlijke ingrediënten.
+                    Daarom nemen we ze op
+                    in al onze veganistische BATH-producten,
+                    die op een dierproefvrije manier zijn geproduceerd
+                    Ze prikkelen al je zintuigen &
+                    zijn gezonde voeding voor je huid...
+                    Ondergetekende
+                    De zeepfabriek familie
+                    Catharina & Frederique
+                    </p>
+            </div>
+            </section>
+        </section>
+        <footer class="c-footer">
+			<div class="c-footer__afscheiding">
+				<img src="img/icons/footer-afscheiding.svg" alt="footer-afscheiding" />
+			</div>
+
+			<div class="grid-container">
+				<div class="grid-x c-footer__content">
+					<div class="cell grid-y align-self-start small-12 large-6 c-footer__leftContent">
+						<div class="grid-x">
+							<div class="cell c-footer__col">
+								<ul>
+									<li class="c-footer__item"><h2>De Zeepfabriek</h2></li>
+									<li class="c-footer__item"><a href="">Testimonials</a></li>
+									<li class="c-footer__item"><a href="">Ons verhaal</a></li>
+									<li class="c-footer__item"><a href="">Inspiratie</a></li>
+									<li class="c-footer__item"><a href="">Blog</a></li>
+									<li class="c-footer__item"><a href="">Nieuws</a></li>
+								</ul>
+							</div>
+							<div class="cell c-footer__col">
+								<ul>
+									<li class="c-footer__item"><h2>Klantendienst</h2></li>
+									<li class="c-footer__item"><a href="">Contacteer ons</a></li>
+									<li class="c-footer__item"><a href="">Retourneren</a></li>
+									<li class="c-footer__item"><a href="">Verzending</a></li>
+									<li class="c-footer__item"><a href="">Betalen</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="c-footer__nieuwsbrief cell">
+							<p>Schrijf je in voor de nieuwsbrief!</p>
+							<label>
+								En kom meer te weten over alle deals en nieuwe spullen die wij aanbieden.
+								<input type="text" placeholder="e-mail" />
+							</label>
+							<button>
+								<img src="img/icons/newsletter-icon.svg" alt="newsletter-icon" />
+							</button>
+						</div>
+						<div class="c-footer__socialmedia cell">
+							<a href=""> <img src="img/icons/facebook.svg" alt="facebook" /></a>
+							<a href=""> <img src="img/icons/instagram.svg" alt="instagram" /></a>
+						</div>
+						<div class="c-footer__item c-footer__item--privacy cell">
+							<a href="">Algemene voorwaarden</a>
+							<a href="">Privacybeleid</a>
+						</div>
+					</div>
+					<div class="cell c-footer__winkels">
+						<ul>
+							<li class="c-footer__item">
+								<h2>De Zeepfabriek Gent</h2>
+							</li>
+							<li class="c-footer__item">
+								<a href="">Meer info over deze winkel <img src="img/icons/right-arrow-icon.svg" alt="right-arrow-icon" /></a>
+							</li>
+							<li class="c-footer__item">
+								<h2>De Zeepfabriek Antwerpen</h2>
+							</li>
+							<li class="c-footer__item">
+								<a href="">Meer info over deze winkel <img src="img/icons/right-arrow-icon.svg" alt="right-arrow-icon" /></a>
+							</li>
+							<li class="c-footer__item">
+								<h2>De Zeepfabriek Brussel</h2>
+							</li>
+							<li class="c-footer__item">
+								<a href="">Meer info over deze winkel <img src="img/icons/right-arrow-icon.svg" alt="right-arrow-icon" /></a>
+							</li>
+							<li class="c-footer__item">
+								<h2>De Zeepfabriek Brugge</h2>
+							</li>
+							<li class="c-footer__item">
+								<a href="">Meer info over deze winkel <img src="img/icons/right-arrow-icon.svg" alt="right-arrow-icon" /></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="c-footer__copyright">
+				<p>©Howest</p>
+			</div>
+		</footer>
+</body>
+</html>

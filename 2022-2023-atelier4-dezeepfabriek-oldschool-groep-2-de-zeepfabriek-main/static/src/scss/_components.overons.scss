@@ -1,0 +1,64 @@
+.c-overons {
+	margin-top: 5rem;
+
+	> div {
+		position: relative;
+	}
+
+	&__text1 {
+		width: 800px;
+		padding-right: 5rem;
+		margin-top: 0 !important;
+		border-radius: 8px;
+		border: none !important;
+		background-color: transparent !important;
+
+		& h1 {
+			font-size: 2.75rem;
+		}
+		@include breakpoint(large down) {
+			width: 100%;
+			padding-right: 0;
+			margin-top: 5rem;
+		}
+
+		p {
+			margin: 1rem 0 !important;
+		}
+	}
+	&__imgcontainer {
+		margin-left: 5rem;
+		& img {
+			width: 728px;
+			box-shadow: 8px 8px 12px rgba($color: #000000, $alpha: 0.25);
+		}
+		@include breakpoint(large down) {
+			margin-left: 0;
+			& img {
+				width: 100%;
+				display: none;
+			}
+		}
+	}
+	&__text2 {
+		position: absolute;
+		bottom: 0;
+		// margin-top: 32rem;
+		width: 60%;
+		background-color: $color-light;
+		padding-right: 1rem;
+		border-radius: 8px;
+		// height: 18.5rem;
+		& p{
+			padding-left: 1rem;
+			
+		}
+		@include breakpoint(large down) {
+			margin-top: 0;
+			width: 100%;
+			position: static;
+			background-color: none;
+			padding-bottom: 5rem;
+		}
+	}
+}

@@ -1,0 +1,127 @@
+.c-header {
+	background-color: $color-light;
+
+	padding-bottom: 0.5rem;
+
+	margin-bottom: 2rem;
+
+	@include breakpoint(small down) {
+		margin-bottom: 0;
+	}
+
+	position: relative;
+	z-index: 5;
+
+	&__content {
+		position: relative;
+
+		background-color: $color-light;
+
+		padding-top: 1rem;
+
+		&:after {
+			position: absolute;
+			bottom: 0;
+			left: 25px;
+
+			content: '';
+
+			width: 95%;
+			height: 1px;
+
+			background-color: $color-blue;
+		}
+
+		@include breakpoint(xlarge down) {
+			&::after {
+				width: 94%;
+			}
+		}
+
+		@include breakpoint(tablet down) {
+			display: none;
+		}
+
+		&--mobile {
+			display: none;
+
+			padding-top: 1rem;
+			margin-top: 0 !important;
+
+			width: 100vw;
+
+			position: sticky;
+
+			background-color: $color-light;
+
+			@include breakpoint(tablet down) {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+
+			@include breakpoint(small only) {
+				position: fixed !important;
+			}
+
+			li {
+				font-size: 1.5rem !important;
+			}
+
+			.c-nav__list {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.c-search {
+	display: flex;
+	align-items: center;
+	justify-content: end;
+
+	margin-right: 1rem;
+
+	&:hover {
+		.c-search__input {
+			opacity: 100%;
+			width: 20%;
+		}
+
+		.c-search__button {
+			path {
+				opacity: 75%;
+			}
+		}
+	}
+
+	&__input {
+		background-color: transparent;
+		box-shadow: none;
+		border-color: transparent;
+		border-bottom: 2px solid $color-blue;
+		width: 0px;
+		opacity: 0;
+		margin-right: 0rem;
+		transition: all 0.2s;
+
+		&:focus {
+			background-color: transparent;
+			box-shadow: none;
+			border-color: transparent;
+			border-bottom: 2px solid $color-blue;
+		}
+
+		&--expand {
+			margin-right: 1rem;
+			opacity: 100%;
+			width: 100% !important;
+
+			~ .c-search__button {
+				path {
+					opacity: 100% !important;
+				}
+			}
+		}
+	}
+}

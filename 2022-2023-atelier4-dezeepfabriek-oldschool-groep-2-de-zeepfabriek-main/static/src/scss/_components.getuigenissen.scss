@@ -1,0 +1,81 @@
+.c-review {
+	margin-top: 2rem;
+	border-radius: 8px;
+	border: 1px solid $color-blue;
+	background-color: $color-white;
+	padding: 1rem;
+	& p {
+		padding: 0;
+		margin: 0;
+	}
+	&__name {
+		font-weight: 600;
+	}
+	&__avatar {
+		border-radius: 100%;
+	}
+}
+.c-reviews {
+	&__header {
+		padding-bottom: 3rem;
+	}
+}
+
+.glsr-review {
+	background-color: $color-white;
+
+	border: 2px solid $color-blue;
+
+	padding: 1rem;
+
+	border-radius: 8px;
+}
+
+.glsr-textarea,
+.glsr-input {
+}
+
+.glsr-review-form {
+	textarea,
+	input {
+		border-radius: 8px !important;
+
+		&:focus,
+		&:focus-visible,
+		&:focus-within {
+			border-color: transparent !important;
+			border: 1px solid #90c7d3 !important;
+			border-color: #90c7d3 !important;
+		}
+	}
+}
+
+.glsr-toggle-track {
+	&::before {
+		background-color: $color-blue !important;
+	}
+}
+
+.glsr-button {
+	color: $color-dark;
+	background-color: transparent;
+
+	border: 2px solid $color-blue;
+
+	border-radius: 8px;
+
+	transition: all 0.3s;
+
+	&:hover {
+	}
+}
+
+.submit-button,
+.wp-block-button {
+	&:hover {
+		.glsr-button {
+			background-color: $color-blue !important;
+			color: $color-white !important;
+		}
+	}
+}

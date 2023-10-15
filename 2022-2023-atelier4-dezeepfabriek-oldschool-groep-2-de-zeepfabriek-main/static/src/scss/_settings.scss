@@ -1,0 +1,46 @@
+//color variables
+$color-dark: #272525;
+$color-white: #ffffff;
+$color-light: #f9f5f5;
+
+$color-main: #eac3b9;
+
+$color-blue: #90c7d3;
+$color-activeblue: #89b3bf;
+$color-green: #c7d390;
+
+//font weights variables
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+//foundation grid
+$grid-container: 1440px;
+$grid-padding-gutters: (
+	'small': 40px,
+	'medium': 50px,
+	'xxlarge': 132px,
+);
+$breakpoints: (
+	small: 0,
+	mobilelarge: 425px,
+	medium: 640px,
+	tablet: 768px,
+	large: 1024px,
+	xlarge: 1200px,
+	xxlarge: 1440px,
+);
+
+// foundation variable overwrites
+$menu-item-color-active: $color-dark;
+$menu-item-background-active: transparent;
+
+// dropdown on header
+$dropdown-width: 100px;
+$dropdown-background: $color-white;
+$dropdown-radius: 8px;
+$dropdown-border: 2px solid $color-blue;
+
+//card
+$card-border-radius: 1rem;
+$card-shadow: 0 6px 6px rgb(0 0 0 / 0.2);

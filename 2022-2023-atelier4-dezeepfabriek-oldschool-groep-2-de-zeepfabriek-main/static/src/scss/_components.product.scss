@@ -1,0 +1,44 @@
+.c-product {
+	position: relative;
+
+	height: 90%;
+
+	min-height: 600px;
+	max-height: 600px;
+
+	margin-bottom: 2rem;
+
+	justify-content: space-between;
+
+	&__tag {
+		position: absolute;
+		top: 1.25rem;
+		left: 0;
+		padding: 0.75rem 3rem;
+		font-weight: $fw-bold;
+		background-color: rgba($color: $color-green, $alpha: 0.75);
+	}
+
+	&__imgcontainer {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		> img {
+			object-fit: cover;
+			max-width: 350px;
+			width: 100%;
+			aspect-ratio: 1 / 1;
+		}
+	}
+}
+
+.c-pagination{
+	&__current{
+		background-color: $color-activeblue !important;
+		border-radius: 8px !important;
+		width: 30px;
+		color: black !important;
+		
+	}
+}

@@ -1,0 +1,39 @@
+.c-blogarticle {
+
+	margin-top: 3rem;
+	padding-top: 2rem;
+	@include breakpoint(tablet down) {
+		align-content: center;
+		//width: 100%;
+	}
+	& img {
+		width: 120%;
+		height: 40%;
+		object-fit: cover;
+		object-position: 50% 75%;
+		border-radius: 8px;
+		box-shadow: 8px 8px 12px rgba($color: #000000, $alpha: 0.25);
+		@include breakpoint(tablet down) {
+			display: hidden;
+			width: 0%;
+		}
+	}
+
+	&__btn {
+		margin-top: 1rem;
+		width: 15rem;
+		border-radius: 8px;
+	}
+
+	.c-btn {
+		width: 15rem !important;
+	}
+
+	.media-object {
+		div:last-child {
+			@include breakpoint(tablet down) {
+				width: 0;
+			}
+		}
+	}
+}
