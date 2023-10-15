@@ -1,8 +1,0 @@
-wp-config.php
-readme.pdf
-/static/dist
-.env
-.DS_Store
-node_modules/
-wordpress/wp-content/themes/zeepfabriek/css/
-wordpress/wp-content/themes/zeepfabriek/js/
