@@ -99,7 +99,8 @@
                 "Then I had to finish up the webshop, for which we used woocommerce to load in the products and stuff. While I got the products to show I was never able to create the filters for reasons I was unable to understand at the time within the timeframe we were allowed to work on features.",
                 "I eventually just hardcoded some HTML and CSS for the filters so there is at least a visual representation for them on the page.",
                 "After a while I think I figured out what went wrong, the previous person was loading in the products using just wordpress and not through woocommerce so that when I wanted to add the filters from woocommerce they never worked and I didn't understand why.",
-                "I did like this project eventually except for the 3 days where I was stressing on getting the shop page to fully work and not understanding why my PHP code didn't do what it should be doing. I would like to spend some time learning PHP especially after this but it isn't something I am prioritizing right now."
+                "I did like this project eventually except for the 3 days where I was stressing on getting the shop page to fully work and not understanding why my PHP code didn't do what it should be doing. I would like to spend some time learning PHP especially after this but it isn't something I am prioritizing right now.",
+                "Also the thing I truly like most about this project was creating the tiny animations to indicate things and most of that the little shopping cart bouncing when you hover over it."
             ],
             "tasks":[
                 "Design master",
