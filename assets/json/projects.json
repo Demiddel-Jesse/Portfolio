@@ -88,11 +88,26 @@
             "name":"De zeepfabriek",
             "smallSummary":"For our final project we needed to create a webshop for a company within 4 weeks.",
             "summary":[
+                "For our final project of our grade we needed to create a webshop for a 'Client' where we had to design and code the pages and get approval from our client for every step",
+                "We had to once again divide our team into roles where I got the design master. For which I had to make sure the design that everyone created stayed consistent throughout the entire design and eventually the website.",
+                "We did have a lot of problems with docker in the beginning to a point where someone had to fully reinstall windows but the teachers eventually got everything working.",
+                "For the first couple weeks we had 2 people setting up the wordpress page and starting the basics for the webshop in PHP while we were with 2 others to make sure the design was final and approved by the client and then start coding all the pages in basic HTML and CSS.",
+                "I don't fully remember which pages I coded, I just remember doing a lot of tiny fixes throughout every page we created such as some responsive issues on the homepage and others.",
+                "In the third week one of our team fell sick and we had to pickup his tasks, thankfully we were nearly done with most things so I decided i would pickup the couple of PHP pages he had to do since the other guy had a lot of work still to do for his pages.",
+                "Our third teammate worked on most part of the video in that time after we created a storyboard together and I had created a basic video where there weren't any proper animations and we had shown it to the client.",
+                "At this point I hadn't gotten any proper lessons in PHP so I decided to practice a bit with creating the blog page. The blog page eventually become fully editable and working after a day of struggle and learning PHP.",
+                "Then I had to finish up the webshop, for which we used woocommerce to load in the products and stuff. While I got the products to show I was never able to create the filters for reasons I was unable to understand at the time within the timeframe we were allowed to work on features.",
+                "I eventually just hardcoded some HTML and CSS for the filters so there is at least a visual representation for them on the page.",
+                "After a while I think I figured out what went wrong, the previous person was loading in the products using just wordpress and not through woocommerce so that when I wanted to add the filters from woocommerce they never worked and I didn't understand why.",
+                "I did like this project eventually except for the 3 days where I was stressing on getting the shop page to fully work and not understanding why my PHP code didn't do what it should be doing. I would like to spend some time learning PHP especially after this but it isn't something I am prioritizing right now."
             ],
             "tasks":[
-                "Designing",
-                "Coding Homepage",
-                "Coding settings page"
+                "Design master",
+                "coding half of the static pages",
+                "coding blog page in PHP",
+                "coding shop page in PHP",
+                "creating video storyboard",
+                "creating 2/5 of the video"
             ],
             "techs":[
                 "Git",
