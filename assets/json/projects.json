@@ -113,7 +113,7 @@
                     "button_link":"https://dezeepfabriek.milandepauw.be/"
                 },
                 {
-                    "visibility":1,
+                    "visibility":0,
                     "button_text":"Source Code",
                     "button_link":"https://github.com/howest-WDD/opdracht-5-dashboard-groep-4-goplay"
                 }
