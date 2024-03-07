@@ -1,5 +1,7 @@
+@use "variables" as var;
+
 body {
-    display: grid;
-    background-color: rgb(5, 5, 5); 
-    color: white;
+	font-family: "DOSVGA437-win";
+	background-color: var.$background-color;
+	color: var.$text-color;
 }
