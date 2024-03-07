@@ -1,0 +1,110 @@
+@use "variables" as var;
+
+$borderWidth: 2px;
+
+.c-card {
+	position: relative;
+
+	border: var.$text-color solid $borderWidth;
+	width: 360px;
+	max-width: 360px;
+
+	display: grid;
+	grid-template-columns: 1fr 80px;
+	grid-template-rows: 50px 180px 60px 35px;
+	gap: 0px 0px;
+	grid-template-areas:
+		"heading button"
+		"image image"
+		"tags tags"
+		"footer footer";
+
+	&__title {
+		grid-area: heading;
+		display: flex;
+		align-items: center;
+
+		h2 {
+			margin-left: 0.6rem;
+		}
+	}
+
+	&__link {
+		grid-area: button;
+		display: flex;
+
+		justify-content: center;
+		align-items: center;
+
+		a {
+			max-height: 31px;
+		}
+
+		img {
+			max-height: 31px;
+			filter: invert(89%) sepia(98%) saturate(0%) hue-rotate(282deg)
+				brightness(104%) contrast(103%);
+		}
+	}
+
+	&__imgContainer {
+		grid-area: image;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+		margin: 0.7rem 0.5rem 0.55rem;
+	}
+
+	&__img {
+		padding: 0.5rem;
+		max-width: 350px;
+		max-height: 350px;
+		flex-shrink: 0;
+	}
+
+	&__tags {
+		grid-area: tags;
+
+		p {
+			margin-left: 0.5rem;
+		}
+	}
+
+	&__footer {
+		grid-area: footer;
+		text-align: right;
+		display: flex;
+		align-items: center;
+		justify-content: right;
+
+		p {
+			margin-right: 0.5rem;
+		}
+	}
+
+	&__line {
+		height: $borderWidth;
+		background-color: var.$text-color;
+		width: 100%;
+		position: absolute;
+
+		&--splitHeading {
+			width: $borderWidth;
+			height: 50px;
+			left: 280px;
+		}
+
+		&--underHeading {
+			top: 50px;
+		}
+
+		&--underImage {
+			top: 230px;
+		}
+
+		&--underTags {
+			top: 290px;
+		}
+	}
+}
