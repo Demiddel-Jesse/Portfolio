@@ -1,32 +1,32 @@
 {
-  "name": "portfolio",
-  "version": "1.0.0",
-  "description": "Repo to have a backup of my Portfolio code",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp build --output public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Demiddel-Jesse/Portfolio.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Demiddel-Jesse/Portfolio/issues"
-  },
-  "homepage": "https://github.com/Demiddel-Jesse/Portfolio#readme",
-  "dependencies": {
-    "autoprefixer": "^10.4.15",
-    "cssnano": "^6.0.1",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^8.0.0",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-minify": "^3.1.0",
-    "gulp-postcss": "^9.0.1",
-    "gulp-sass": "^5.1.0",
-    "sass": "^1.66.1"
-  }
+	"name": "portfolio",
+	"version": "1.0.0",
+	"description": "Repo to have a backup of my Portfolio code",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "gulp build --output public && cd ./opdracht-5-dashboard-groep-4-goplay-TL4-fixes && npm install && npm run start"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Demiddel-Jesse/Portfolio.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Demiddel-Jesse/Portfolio/issues"
+	},
+	"homepage": "https://github.com/Demiddel-Jesse/Portfolio#readme",
+	"dependencies": {
+		"autoprefixer": "^10.4.15",
+		"cssnano": "^6.0.1",
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^8.0.0",
+		"gulp-clean-css": "^4.3.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-minify": "^3.1.0",
+		"gulp-postcss": "^9.0.1",
+		"gulp-sass": "^5.1.0",
+		"sass": "^1.66.1"
+	}
 }
