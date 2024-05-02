@@ -6,7 +6,8 @@
 	"scripts": {
 		"start": "npm-run-all --parallel watch devserver",
 		"watch": "gulp",
-		"devserver": "live-server --port=8080"
+		"devserver": "live-server --port=8080",
+		"build": "gulp build --output public"
 	},
 	"repository": {
 		"type": "git",
