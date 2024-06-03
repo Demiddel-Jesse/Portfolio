@@ -2,10 +2,15 @@
 	"name": "portfolio",
 	"version": "1.0.0",
 	"description": "Repo to have a backup of my Portfolio code",
-	"main": "index.js",
+	"main": "./src/index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "gulp build --output public && cd ./opdracht-5-dashboard-groep-4-goplay-TL4-fixes && npm install && npm run build"
+		"build-goplay": "cd ./opdracht-5-dashboard-groep-4-goplay-TL4-fixes && npm install && npm run build",
+		"build": "webpack --mode=production --node-env=production",
+		"build:dev": "webpack --mode=development",
+		"build:prod": "webpack --mode=production --node-env=production",
+		"watch": "webpack --watch",
+		"serve": "webpack serve"
 	},
 	"repository": {
 		"type": "git",
@@ -17,16 +22,30 @@
 		"url": "https://github.com/Demiddel-Jesse/Portfolio/issues"
 	},
 	"homepage": "https://github.com/Demiddel-Jesse/Portfolio#readme",
-	"dependencies": {
-		"autoprefixer": "^10.4.15",
-		"cssnano": "^6.0.1",
-		"gulp": "^4.0.2",
-		"gulp-autoprefixer": "^8.0.0",
-		"gulp-clean-css": "^4.3.0",
-		"gulp-concat": "^2.6.1",
-		"gulp-minify": "^3.1.0",
-		"gulp-postcss": "^9.0.1",
-		"gulp-sass": "^5.1.0",
-		"sass": "^1.66.1"
+	"dependencies": {},
+	"devDependencies": {
+		"@hail2u/css-mqpacker": "github:hail2u/node-css-mqpacker#v9.0.1",
+		"@webpack-cli/generators": "^3.0.7",
+		"autoprefixer": "^10.4.19",
+		"css-loader": "^7.1.2",
+		"cssnano": "^7.0.1",
+		"cssnano-preset-advanced": "^7.0.1",
+		"favicons": "^7.2.0",
+		"favicons-webpack-plugin": "^6.0.1",
+		"html-loader": "^5.0.0",
+		"html-webpack-plugin": "^5.6.0",
+		"mini-css-extract-plugin": "^2.9.0",
+		"postcss": "^8.4.38",
+		"postcss-loader": "^8.1.1",
+		"resolve-url-loader": "^5.0.0",
+		"sass": "^1.77.1",
+		"sass-loader": "^14.2.1",
+		"style-loader": "^4.0.0",
+		"terser-webpack-plugin": "^5.3.10",
+		"webpack": "^5.91.0",
+		"webpack-cli": "^5.1.4",
+		"webpack-dev-server": "^5.0.4",
+		"postcss-uncss": "^0.17.0",
+		"uncss": "^0.17.3"
 	}
 }
