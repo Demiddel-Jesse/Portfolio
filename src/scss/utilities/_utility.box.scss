@@ -11,7 +11,9 @@
 	border: 1px solid color.$box__border-color;
 
 	transition: all 500ms ease-in-out;
+
 	&:hover {
-		border-color: color.$box__border-color__hover;
+		background-color: color.$box__bg-color--hover;
+		border-color: color.$box__border-color--hover;
 	}
 }
