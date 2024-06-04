@@ -8,6 +8,7 @@
 	--box__background-color--hover: #252525;
 	--box__border-color: #404040;
 	--box__border-color--hover: #b30000;
+	--box__boxShadow-color--hover: #800002;
 
 	--github-color: #2dba4e;
 	--linkedIn-color: #0a66c2;
@@ -22,6 +23,7 @@ $box__bg-color: var(--box__background-color);
 $box__bg-color--hover: var(--box__background-color--hover);
 $box__border-color: var(--box__border-color);
 $box__border-color--hover: var(--box__border-color--hover);
+$box__boxShadow-color--hover: var(--box__boxShadow-color--hover);
 
 $github-color: var(--github-color);
 $linkedIn-color: var(--linkedIn-color);
