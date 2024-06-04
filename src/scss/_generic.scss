@@ -1,6 +1,10 @@
+@use "./settings/color" as color;
+
 body {
 	height: 100vh;
 
 	display: flex;
 	justify-content: center;
+
+	background-color: color.$background-color;
 }

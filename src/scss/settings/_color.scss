@@ -1,2 +1,13 @@
 :root {
+	--background-color: #000000;
+
+	--box__background-color: #171717;
+	--box__border-color: #404040;
+	--box__border-color--hover: red;
 }
+
+$background-color: var(--background-color);
+
+$box__bg-color: var(--box__background-color);
+$box__border-color: var(--box__border-color);
+$box__border-color__hover: var(--box__border-color--hover);
