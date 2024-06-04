@@ -1,0 +1,100 @@
+$rowGap: 8px;
+$columnGap: 8px;
+
+$columns: (
+	xs: 1,
+	//0px /* extra small */
+	ms: 1,
+	//320px /* mobile small */
+	mm: 1,
+	//375px /* mobile medium */
+	ml: 1,
+	//425px /* mobile large */
+	ts: 2,
+	//577px /* tablet small */
+	tl: 2,
+	//768px /* tablet large */
+	ls: 5,
+	//1024px /* laptop small */
+	hd: 5,
+	//1240px /* 720p */
+	ll: 5,
+	//1440px /* laptop large */
+	fhd: 5,
+	//1920px /* 1080p */
+	uhd: 5,
+	//2560px /* 4K */
+);
+$columnSize: (
+	xs: 217px,
+	//0px /* extra small */
+	ms: 217px,
+	//320px /* mobile small */
+	mm: 217px,
+	//375px /* mobile medium */
+	ml: 217px,
+	//425px /* mobile large */
+	ts: 217px,
+	//577px /* tablet small */
+	tl: 217px,
+	//768px /* tablet large */
+	ls: 217px,
+	//1024px /* laptop small */
+	hd: 217px,
+	//1280px /* 720p */
+	ll: 217px,
+	//1440px /* laptop large */
+	fhd: 217px,
+	//1920px /* 1080p */
+	uhd: 217px,
+	//2560px /* 4K */
+);
+
+$rows: (
+	xs: 8,
+	//0px /* extra small */
+	ms: 8,
+	//320px /* mobile small */
+	mm: 8,
+	//375px /* mobile medium */
+	ml: 8,
+	//425px /* mobile large */
+	ts: 8,
+	//577px /* tablet small */
+	tl: 8,
+	//768px /* tablet large */
+	ls: 8,
+	//1024px /* laptop small */
+	hd: 8,
+	//1280px /* 720p */
+	ll: 8,
+	//1440px /* laptop large */
+	fhd: 8,
+	//1920px /* 1080p */
+	uhd: 8,
+	//2560px /* 4K */
+);
+$rowSize: (
+	xs: 90px,
+	//0px /* extra small */
+	ms: 90px,
+	//320px /* mobile small */
+	mm: 90px,
+	//375px /* mobile medium */
+	ml: 90px,
+	//425px /* mobile large */
+	ts: 90px,
+	//577px /* tablet small */
+	tl: 90px,
+	//768px /* tablet large */
+	ls: 90px,
+	//1024px /* laptop small */
+	hd: 90px,
+	//1280px /* 720p */
+	ll: 90px,
+	//1440px /* laptop large */
+	fhd: 90px,
+	//1920px /* 1080p */
+	uhd: 90px,
+	//2560px /* 4K */
+);

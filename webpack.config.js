@@ -99,9 +99,9 @@ const config = {
 			},
 		],
 	},
-	watch: true,
+	// watch: true,
 	watchOptions: {
-		aggregateTimeout: 600,
+		aggregateTimeout: 1200,
 	},
 };
 

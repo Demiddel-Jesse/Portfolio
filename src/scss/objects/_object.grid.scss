@@ -1,0 +1,41 @@
+@use "../settings/breakpoints" as bp;
+@use "../settings/grid" as grid;
+@use "../tools/tools.media-querries" as mq;
+
+$breakpoint-names: map-keys(bp.$breakpoints);
+
+.o-grid {
+	width: fit-content;
+	padding: 1rem;
+	margin: auto;
+
+	display: grid;
+	grid-column-gap: grid.$columnGap;
+	grid-row-gap: grid.$rowGap;
+
+	$prevRow: 0;
+	$prevColumn: 0;
+
+	@each $breakpoint in $breakpoint-names {
+		@include mq.up($breakpoint) {
+			@if $prevColumn == map-get(grid.$columns, $breakpoint) {
+			} @else {
+				grid-template-columns: repeat(
+					map-get(grid.$columns, $breakpoint),
+					map-get(grid.$columnSize, $breakpoint)
+				);
+				$prevColumn: map-get(grid.$columns, $breakpoint);
+			}
+		}
+		@include mq.up($breakpoint) {
+			@if $prevRow == map-get(grid.$rows, $breakpoint) {
+			} @else {
+				grid-template-rows: repeat(
+					map-get(grid.$rows, $breakpoint),
+					map-get(grid.$rowSize, $breakpoint)
+				);
+				$prevRow: map-get(grid.$rows, $breakpoint);
+			}
+		}
+	}
+}
