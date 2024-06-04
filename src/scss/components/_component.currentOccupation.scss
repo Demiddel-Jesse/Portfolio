@@ -3,6 +3,8 @@
 @use "../settings/color" as color;
 
 .c-currentOccupation {
+	animation-delay: 750ms;
+
 	@include grid.width(1, "ls");
 	@include grid.height(1);
 

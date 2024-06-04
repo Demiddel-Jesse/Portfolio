@@ -2,6 +2,8 @@
 @use "../utilities/utility.box";
 
 .c-contact {
+	animation-delay: 650ms;
+
 	@include grid.width(2, "ls");
 	@include grid.height(2);
 

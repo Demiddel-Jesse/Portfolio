@@ -2,6 +2,8 @@
 @use "../utilities/utility.box";
 
 .c-copyright {
+	animation-delay: 1.6s;
+
 	@include grid.width(1, "ls");
 	@include grid.height(1);
 

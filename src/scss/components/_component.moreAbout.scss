@@ -6,6 +6,8 @@
 	justify-content: left;
 	align-items: center;
 
+	animation-delay: 400ms;
+
 	@include grid.width(1, "ls");
 	@include grid.height(1);
 

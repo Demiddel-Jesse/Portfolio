@@ -1,0 +1,17 @@
+@use "../settings/color" as color;
+
+@keyframes boxShow {
+	from {
+		opacity: 0;
+		transform: translate(0, -50px);
+		box-shadow: 0 0 30px 4px color.$box__boxShadow-color--hover;
+	}
+
+	25% {
+		box-shadow: 0 0 30px 4px color.$box__boxShadow-color--hover;
+	}
+
+	to {
+		opacity: 100;
+	}
+}

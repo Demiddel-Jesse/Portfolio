@@ -4,6 +4,8 @@
 .c-skills {
 	position: relative;
 
+	animation-delay: 1.25s;
+
 	@include grid.width(1, "ls");
 	@include grid.height(6);
 

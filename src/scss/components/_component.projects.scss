@@ -5,6 +5,8 @@
 	display: flex;
 	align-items: center;
 
+	animation-delay: 1s;
+
 	@include grid.width(4, "ls");
 	@include grid.height(2);
 
