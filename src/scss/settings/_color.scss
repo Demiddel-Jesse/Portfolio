@@ -4,8 +4,12 @@
 	--text-color-a: #ffffff;
 
 	--box__background-color: #171717;
+	--box__background-color--hover: #252525;
 	--box__border-color: #404040;
-	--box__border-color--hover: red;
+	--box__border-color--hover: #b30000;
+
+	--github-color: #2dba4e;
+	--linkedIn-color: #0a66c2;
 }
 
 $background-color: var(--background-color);
@@ -13,5 +17,9 @@ $background-color: var(--background-color);
 $text-color-a: var(--text-color-a);
 
 $box__bg-color: var(--box__background-color);
+$box__bg-color--hover: var(--box__background-color--hover);
 $box__border-color: var(--box__border-color);
-$box__border-color__hover: var(--box__border-color--hover);
+$box__border-color--hover: var(--box__border-color--hover);
+
+$github-color: var(--github-color);
+$linkedIn-color: var(--linkedIn-color);
