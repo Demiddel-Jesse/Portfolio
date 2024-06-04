@@ -21,7 +21,7 @@
 		box-shadow: 0 0 20px 4px color.$box__boxShadow-color--hover;
 
 		.c-svgArrow {
-			transform: rotate(360deg) matrix(1, 0, 0, 1, 0, 0);
+			transform: translate(5px, -5px);
 		}
 	}
 }
