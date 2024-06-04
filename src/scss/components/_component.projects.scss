@@ -1,9 +1,9 @@
 @use "../tools/tools.grid" as grid;
 @use "../utilities/utility.box";
 
-.c-about {
-	@include grid.width(3, "ls");
-	@include grid.height(4);
+.c-projects {
+	@include grid.width(4, "ls");
+	@include grid.height(2);
 
 	@extend %u-box;
 }
