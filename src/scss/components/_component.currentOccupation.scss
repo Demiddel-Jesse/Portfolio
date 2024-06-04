@@ -1,9 +1,24 @@
 @use "../tools/tools.grid" as grid;
 @use "../utilities/utility.box";
+@use "../settings/color" as color;
 
 .c-currentOccupation {
 	@include grid.width(1, "ls");
 	@include grid.height(1);
 
 	@extend %u-box;
+
+	h2 {
+		font-size: 1rem;
+		margin-top: 16px;
+	}
+
+	p {
+		font-size: 0.688rem;
+	}
+
+	&__explain {
+		font-size: 0.5rem;
+		color: color.$text-color-b;
+	}
 }
