@@ -4,11 +4,12 @@
 	from {
 		opacity: 0;
 		transform: translate(0, -50px);
-		box-shadow: 0 0 30px 4px color.$box__boxShadow-color--hover;
+		border-color: color.$box__border-color--hover;
+		box-shadow: 0 0 20px 4px color.$box__boxShadow-color--hover;
 	}
 
 	25% {
-		box-shadow: 0 0 30px 4px color.$box__boxShadow-color--hover;
+		border-color: color.$box__border-color--hover;
 	}
 
 	to {
