@@ -6,4 +6,12 @@
 	@include grid.height(1);
 
 	@extend %u-box;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	p {
+		font-weight: 200;
+	}
 }
