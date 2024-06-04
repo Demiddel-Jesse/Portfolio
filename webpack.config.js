@@ -49,11 +49,11 @@ const config = {
 					inject: true,
 				})
 		),
-		// new FaviconsWebpackPlugin({
-		// 	logo: "src/img/favicon.png",
-		// 	cache: true,
-		// 	prefix: "assets/favicon/",
-		// }),
+		new FaviconsWebpackPlugin({
+			logo: "src/assets/img/favicon.png",
+			cache: true,
+			prefix: "assets/favicon/",
+		}),
 	],
 	module: {
 		rules: [
