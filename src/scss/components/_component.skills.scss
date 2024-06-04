@@ -2,8 +2,26 @@
 @use "../utilities/utility.box";
 
 .c-skills {
+	position: relative;
+
 	@include grid.width(1, "ls");
 	@include grid.height(6);
 
 	@extend %u-box;
+
+	h2 {
+		font-size: 1.5rem;
+		text-align: center;
+	}
+
+	h3 {
+		position: absolute;
+		bottom: 0;
+
+		margin-bottom: 1.5rem;
+	}
+
+	a {
+		@extend %u-boxLink;
+	}
 }

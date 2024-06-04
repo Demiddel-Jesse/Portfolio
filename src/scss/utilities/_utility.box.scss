@@ -1,6 +1,8 @@
 @use "../settings/color" as color;
 
 %u-box {
+	position: relative;
+
 	width: 100%;
 	height: 100%;
 
@@ -16,4 +18,17 @@
 		background-color: color.$box__bg-color--hover;
 		border-color: color.$box__border-color--hover;
 	}
+}
+
+%u-boxLink {
+	position: absolute;
+
+	width: 100%;
+	height: 100%;
+
+	border-radius: 20px;
+
+	z-index: 1;
+
+	font-size: 0;
 }
