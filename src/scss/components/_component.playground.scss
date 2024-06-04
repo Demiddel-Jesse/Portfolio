@@ -2,8 +2,21 @@
 @use "../utilities/utility.box";
 
 .c-playground {
+	display: flex;
+	align-items: center;
+
 	@include grid.width(1, "ls");
 	@include grid.height(1);
 
 	@extend %u-box;
+
+	h2 {
+		margin-top: 8px;
+
+		font-size: 1.25rem;
+	}
+
+	a {
+		@extend %u-boxLink;
+	}
 }
