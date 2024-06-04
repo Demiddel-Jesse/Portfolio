@@ -2,8 +2,21 @@
 @use "../utilities/utility.box";
 
 .c-highlightedProject {
+	display: flex;
+	align-items: center;
+
 	@include grid.width(3, "ls");
 	@include grid.height(2);
 
 	@extend %u-box;
+
+	h2 {
+		margin-top: 8px;
+
+		font-size: 2.25rem;
+	}
+
+	a {
+		@extend %u-boxLink;
+	}
 }
