@@ -1,0 +1,44 @@
+@use "../settings/color" as color;
+
+.u-background {
+	position: relative;
+
+	background-color: color.$background-color;
+
+	background-image: linear-gradient(color.$background-color, #020202);
+
+	&::before {
+		content: "";
+
+		width: 100%;
+		height: 100%;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		background-image: linear-gradient(
+				to bottom,
+				rgba(153, 153, 153, 0.25),
+				transparent 1px
+			),
+			linear-gradient(to right, rgba(153, 153, 153, 0.25), transparent 1px);
+
+		background-size: 100% 120px, 120px 100%;
+
+		animation-name: backgroundMovement;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+	}
+}
+
+@keyframes backgroundMovement {
+	from {
+		background-position: 0 0;
+	}
+
+	to {
+		background-position: 120px 120px;
+	}
+}
