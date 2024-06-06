@@ -1,6 +1,7 @@
 @use "../settings/color" as color;
 @use "../tools/tools.grid" as grid;
 @use "../tools/tools.order" as order;
+@use "../tools/tools.media-querries" as mq;
 @use "../utilities/utility.box";
 
 .c-currentOccupation {
@@ -16,6 +17,10 @@
 	h2 {
 		font-size: 1rem;
 		margin-top: 16px;
+
+		@include mq.down(ts) {
+			margin-top: 12px;
+		}
 	}
 
 	p {
