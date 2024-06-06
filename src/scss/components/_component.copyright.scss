@@ -6,6 +6,8 @@
 	animation-delay: 1.6s;
 
 	@include order.pos(9);
+	@include order.pos(8, "ts");
+	@include order.pos(9, "tl");
 
 	@include grid.width(1, "ls");
 	@include grid.height(1);
