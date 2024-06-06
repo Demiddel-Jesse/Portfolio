@@ -6,6 +6,8 @@
 .c-contact {
 	animation-delay: 650ms;
 
+	order: 2;
+
 	@include grid.width(2, "ls");
 	@include grid.height(2);
 

@@ -8,6 +8,8 @@
 
 	animation-delay: 400ms;
 
+	order: 5;
+
 	@include grid.width(1, "ls");
 	@include grid.height(1);
 

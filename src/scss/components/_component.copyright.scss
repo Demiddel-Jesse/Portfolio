@@ -4,6 +4,8 @@
 .c-copyright {
 	animation-delay: 1.6s;
 
+	order: 9;
+
 	@include grid.width(1, "ls");
 	@include grid.height(1);
 
