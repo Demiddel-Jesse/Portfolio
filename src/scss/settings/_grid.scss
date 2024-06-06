@@ -12,11 +12,11 @@ $columns: (
 	//425px /* mobile large */
 	ts: 2,
 	//577px /* tablet small */
-	tl: 2,
+	tl: 3,
 	//768px /* tablet large */
-	ls: 5,
+	ls: 4,
 	//1024px /* laptop small */
-	hd: 5,
+	hd: 4,
 	//1240px /* 720p */
 	ll: 5,
 	//1440px /* laptop large */
@@ -26,15 +26,15 @@ $columns: (
 	//2560px /* 4K */
 );
 $columnSize: (
-	xs: 217px,
+	xs: 250px,
 	//0px /* extra small */
-	ms: 217px,
+	ms: 250px,
 	//320px /* mobile small */
-	mm: 217px,
+	mm: 300px,
 	//375px /* mobile medium */
-	ml: 217px,
+	ml: 325px,
 	//425px /* mobile large */
-	ts: 217px,
+	ts: clamp(217px, 45vw, 320px),
 	//577px /* tablet small */
 	tl: 217px,
 	//768px /* tablet large */
@@ -75,13 +75,13 @@ $rows: (
 	//2560px /* 4K */
 );
 $rowSize: (
-	xs: 90px,
+	xs: 80px,
 	//0px /* extra small */
-	ms: 90px,
+	ms: 80px,
 	//320px /* mobile small */
-	mm: 90px,
+	mm: 80px,
 	//375px /* mobile medium */
-	ml: 90px,
+	ml: 80px,
 	//425px /* mobile large */
 	ts: 90px,
 	//577px /* tablet small */

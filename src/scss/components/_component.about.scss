@@ -4,13 +4,17 @@
 .c-about {
 	animation-delay: 250ms;
 
+	@include grid.width(2, "tl");
 	@include grid.width(3, "ls");
-	@include grid.height(4);
+
+	@include grid.height(6);
+	@include grid.height(5, "tl");
+	@include grid.height(4, "ls");
 
 	@extend %u-box;
 
 	h1 {
-		font-size: 2rem;
+		font-size: clamp(1.5rem, 3vw + 1rem, 2.5rem);
 		font-weight: 400;
 		letter-spacing: -1px;
 

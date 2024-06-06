@@ -15,25 +15,51 @@ $breakpoint-names: map-keys(bp.$breakpoints);
 
 	$prevRow: 0;
 	$prevColumn: 0;
+	$prevColumnSize: 0;
+	$prevRowSize: 0;
 
 	@each $breakpoint in $breakpoint-names {
 		@include mq.up($breakpoint) {
 			@if $prevColumn == map-get(grid.$columns, $breakpoint) {
+				@if $prevColumnSize == map-get(grid.$columnSize, $breakpoint) {
+				} @else {
+					grid-template-columns: repeat(
+						map-get(grid.$columns, $breakpoint),
+						map-get(grid.$columnSize, $breakpoint)
+					);
+
+					$prevColumn: map-get(grid.$columns, $breakpoint);
+					$prevColumnSize: map-get(grid.$columnSize, $breakpoint);
+				}
 			} @else {
 				grid-template-columns: repeat(
 					map-get(grid.$columns, $breakpoint),
 					map-get(grid.$columnSize, $breakpoint)
 				);
+
 				$prevColumn: map-get(grid.$columns, $breakpoint);
+				$prevColumnSize: map-get(grid.$columnSize, $breakpoint);
 			}
 		}
 		@include mq.up($breakpoint) {
 			@if $prevRow == map-get(grid.$rows, $breakpoint) {
+				@if $prevRowSize == map-get(grid.$rowSize, $breakpoint) {
+				} @else {
+					grid-template-rows: repeat(
+						map-get(grid.$rows, $breakpoint),
+						map-get(grid.$rowSize, $breakpoint)
+					);
+
+					$prevRowSize: map-get(grid.$rowSize, $breakpoint);
+					$prevRow: map-get(grid.$rows, $breakpoint);
+				}
 			} @else {
 				grid-template-rows: repeat(
 					map-get(grid.$rows, $breakpoint),
 					map-get(grid.$rowSize, $breakpoint)
 				);
+
+				$prevRowSize: map-get(grid.$rowSize, $breakpoint);
 				$prevRow: map-get(grid.$rows, $breakpoint);
 			}
 		}
