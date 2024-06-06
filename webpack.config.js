@@ -47,12 +47,56 @@ const config = {
 					template: htmlFile,
 					filename: htmlFile.replace(path.normalize("src/"), ""),
 					inject: true,
+					meta: {
+						// description: { name: "description", content: "..." },
+						keyword: { name: "keywords", content: "..." },
+						"og:title": {
+							property: "og:title",
+							content: "Jesse Demiddels Portfolio",
+						},
+						"og:description": {
+							property: "og:description",
+							content: "Portfolio of Jesse Demiddel",
+						},
+						"og:type": { property: "og:type", content: "website" },
+						"og:url": { property: "og:url", content: "..." },
+						"og:image": { property: "og:image", content: "..." },
+						"twitter:card": {
+							name: "twitter:card",
+							content: "summary_large_image",
+						},
+						"twitter:title": {
+							name: "twitter:title",
+							content: "Jesse Demiddels Portfolio",
+						},
+						"twitter:description": {
+							name: "twitter:description",
+							content: "Portfolio of Jesse Demiddel",
+						},
+						"twitter:image": { name: "twitter:image", content: "..." },
+					},
 				})
 		),
 		new FaviconsWebpackPlugin({
 			logo: "src/assets/img/favicon.png",
 			cache: true,
 			prefix: "assets/favicon/",
+			favicons: {
+				appName: "Jesse Demiddels portfolio",
+				appDescription: "Portfolio of full stack developer - Jesse Demiddel",
+				developerName: "Jesse Demiddel",
+				developerURL: null, // prevent retrieving from the nearest package.json
+				background: "#000000",
+				theme_color: "#171717",
+				icons: {
+					android: true,
+					appleIcon: true,
+					appleStartup: true,
+					favicons: true,
+					windows: true,
+					yandex: true,
+				},
+			},
 		}),
 	],
 	module: {
