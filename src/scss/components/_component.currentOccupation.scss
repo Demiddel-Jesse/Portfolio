@@ -6,7 +6,7 @@
 .c-currentOccupation {
 	animation-delay: 750ms;
 
-	@include order.post(3);
+	@include order.pos(3);
 
 	@include grid.width(1, "ls");
 	@include grid.height(1);
