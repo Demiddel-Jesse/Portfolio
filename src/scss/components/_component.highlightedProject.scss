@@ -10,7 +10,7 @@
 
 	@include order.pos(8);
 	@include order.pos(9, "ts");
-	@include order.pos(8, "tl");
+	@include order.pos(8, "ls");
 
 	@include grid.width(2, "ts");
 	@include grid.width(3, "ls");

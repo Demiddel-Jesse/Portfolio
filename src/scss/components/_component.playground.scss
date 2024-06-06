@@ -9,8 +9,11 @@
 	animation-delay: 1.5s;
 
 	@include order.pos(7);
+	@include order.pos(9, "tl");
+	@include order.pos(7, "ls");
 
 	@include grid.width(1, "ls");
+
 	@include grid.height(1);
 
 	@extend %u-box;

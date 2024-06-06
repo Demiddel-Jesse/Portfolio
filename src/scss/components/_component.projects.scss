@@ -10,7 +10,9 @@
 
 	@include order.pos(6);
 
+	@include grid.width(2, "tl");
 	@include grid.width(4, "ls");
+
 	@include grid.height(2);
 
 	@extend %u-box;

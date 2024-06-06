@@ -8,6 +8,8 @@
 	animation-delay: 650ms;
 
 	@include order.pos(2);
+	@include order.pos(3, "tl");
+	@include order.pos(2, "ls");
 	@include order.pos(2, "ll");
 
 	@include grid.width(2, "ts");
