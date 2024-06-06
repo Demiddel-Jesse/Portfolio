@@ -1,12 +1,13 @@
-@use "../tools/tools.grid" as grid;
-@use "../utilities/utility.box";
 @use "../settings/color" as color;
+@use "../tools/tools.grid" as grid;
+@use "../tools/tools.order" as order;
 @use "../tools/tools.media-querries" as mq;
+@use "../utilities/utility.box";
 
 .c-contact {
 	animation-delay: 650ms;
 
-	order: 2;
+	@include order.pos(2);
 
 	@include grid.width(2, "ls");
 	@include grid.height(2);

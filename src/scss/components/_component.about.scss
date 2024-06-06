@@ -1,10 +1,11 @@
 @use "../tools/tools.grid" as grid;
+@use "../tools/tools.order" as order;
 @use "../utilities/utility.box";
 
 .c-about {
 	animation-delay: 250ms;
 
-	order: 1;
+	@include order.pos(1);
 
 	@include grid.width(2, "ts");
 	@include grid.width(3, "tl");

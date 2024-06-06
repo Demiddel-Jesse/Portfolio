@@ -1,4 +1,5 @@
 @use "../tools/tools.grid" as grid;
+@use "../tools/tools.order" as order;
 @use "../utilities/utility.box";
 
 .c-projects {
@@ -7,7 +8,7 @@
 
 	animation-delay: 1s;
 
-	order: 6;
+	@include order.pos(6);
 
 	@include grid.width(4, "ls");
 	@include grid.height(2);

@@ -1,11 +1,12 @@
-@use "../tools/tools.grid" as grid;
-@use "../utilities/utility.box";
 @use "../settings/color" as color;
+@use "../tools/tools.grid" as grid;
+@use "../tools/tools.order" as order;
+@use "../utilities/utility.box";
 
 .c-currentOccupation {
 	animation-delay: 750ms;
 
-	order: 3;
+	@include order.post(3);
 
 	@include grid.width(1, "ls");
 	@include grid.height(1);
