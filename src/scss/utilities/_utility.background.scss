@@ -1,11 +1,16 @@
 @use "../settings/color" as color;
+@use "../animations/animation.background";
+@use "../settings/background" as bg;
 
 .u-background {
 	position: relative;
 
 	background-color: color.$background-color;
 
-	background-image: linear-gradient(color.$background-color, #020202);
+	background-image: linear-gradient(
+		color.$background-color,
+		color.$background-color-b
+	);
 
 	&::before {
 		content: "";
@@ -19,26 +24,20 @@
 
 		background-image: linear-gradient(
 				to bottom,
-				rgba(153, 153, 153, 0.5),
+				color.$background__gridLines-color,
 				transparent 1px
 			),
-			linear-gradient(to right, rgba(153, 153, 153, 0.5), transparent 1px);
+			linear-gradient(
+				to right,
+				color.$background__gridLines-color,
+				transparent 1px
+			);
 
-		background-size: 100% 120px, 120px 100%;
+		background-size: 100% bg.$gridSize, bg.$gridSize 100%;
 
 		animation-name: backgroundMovement;
-		animation-duration: 10s;
+		animation-duration: bg.$animationDuration;
 		animation-iteration-count: infinite;
 		animation-timing-function: linear;
-	}
-}
-
-@keyframes backgroundMovement {
-	from {
-		background-position: 0 0;
-	}
-
-	to {
-		background-position: 120px 120px;
 	}
 }

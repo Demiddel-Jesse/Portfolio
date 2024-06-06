@@ -1,5 +1,7 @@
 :root {
 	--background-color: #000000;
+	--background-color-b: #020202;
+	--background__gridLines-color: rgba(153, 153, 153, 0.5);
 
 	--text-color-a: #ffffff;
 	--text-color-b: #858585;
@@ -16,6 +18,8 @@
 }
 
 $background-color: var(--background-color);
+$background-color-b: var(--background-color-b);
+$background__gridLines-color: var(--background__gridLines-color);
 
 $text-color-a: var(--text-color-a);
 $text-color-b: var(--text-color-b);
