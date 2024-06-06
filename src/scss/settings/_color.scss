@@ -3,6 +3,7 @@
 
 	--text-color-a: #ffffff;
 	--text-color-b: #858585;
+	--text-color__link-hover: #800002;
 
 	--box__background-color: #171717;
 	--box__background-color--hover: #252525;
@@ -18,6 +19,7 @@ $background-color: var(--background-color);
 
 $text-color-a: var(--text-color-a);
 $text-color-b: var(--text-color-b);
+$text-color__link-hover: var(--text-color__link-hover);
 
 $box__bg-color: var(--box__background-color);
 $box__bg-color--hover: var(--box__background-color--hover);

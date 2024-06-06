@@ -1,5 +1,6 @@
 @use "../tools/tools.grid" as grid;
 @use "../utilities/utility.box";
+@use "../settings/color" as color;
 
 .c-contact {
 	animation-delay: 650ms;
@@ -8,4 +9,49 @@
 	@include grid.height(2);
 
 	@extend %u-box;
+
+	&__link {
+		display: flex;
+		align-items: center;
+
+		padding-left: 12px;
+
+		text-decoration: none;
+
+		color: color.$text-color-a;
+
+		transition: all 250ms;
+
+		&--mail {
+			padding-bottom: 8px;
+			&:hover {
+				color: color.$text-color__link-hover;
+
+				.c-svgMail__iconCarrier path {
+					stroke: color.$text-color__link-hover;
+				}
+			}
+		}
+
+		&--linkedIn {
+			padding-bottom: 8px;
+			&:hover {
+				color: color.$linkedIn-color;
+
+				.c-svgLinkedIn__path1 {
+					fill: color.$linkedIn-color;
+				}
+			}
+		}
+
+		&--github {
+			&:hover {
+				color: color.$github-color;
+
+				.c-svgGithub {
+					fill: color.$github-color;
+				}
+			}
+		}
+	}
 }
