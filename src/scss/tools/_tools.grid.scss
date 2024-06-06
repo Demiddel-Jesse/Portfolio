@@ -2,14 +2,24 @@
 @use "../settings/grid" as grid;
 
 @mixin height($height, $bp: "xs") {
-	@if $height > map-get(grid.$rows, $bp) {
-		@warn 'too many rows defined';
-	} @else {
+	@if map-get($map: grid.$rows, $key: $bp) == auto {
 		@if $bp == "xs" {
 			grid-row-start: span $height;
 		} @else {
 			@include mq.up($bp) {
 				grid-row-start: span $height;
+			}
+		}
+	} @else {
+		@if $height > map-get(grid.$rows, $bp) {
+			@warn 'too many rows defined';
+		} @else {
+			@if $bp == "xs" {
+				grid-row-start: span $height;
+			} @else {
+				@include mq.up($bp) {
+					grid-row-start: span $height;
+				}
 			}
 		}
 	}
