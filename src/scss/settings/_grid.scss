@@ -32,7 +32,7 @@ $columnSize: (
 	//320px /* mobile small */
 	mm: 300px,
 	//375px /* mobile medium */
-	ml: 325px,
+	ml: clamp(325px, 80vw, 450px),
 	//425px /* mobile large */
 	ts: clamp(217px, 45vw, 320px),
 	//577px /* tablet small */
