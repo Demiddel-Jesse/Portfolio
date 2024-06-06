@@ -89,6 +89,7 @@ const config = {
 				background: "#000000",
 				theme_color: "#171717",
 				icons: {
+					//! need to make a more specific set for icons bc like 50 favicons is too much
 					android: true,
 					appleIcon: true,
 					appleStartup: true,
