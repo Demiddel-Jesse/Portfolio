@@ -51,6 +51,7 @@ $columnSize: (
 );
 
 $rows: (
+	//! currently not used because rows are done with grid-auto-rows instead of grid-template-rows.
 	xs: auto,
 	//0px /* extra small */
 	ms: auto,
