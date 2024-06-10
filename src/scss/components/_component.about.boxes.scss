@@ -80,7 +80,7 @@
 		@extend %u-box;
 	}
 
-	&__movies {
+	&__media {
 		animation-delay: 600ms;
 
 		@include order.pos(7);
