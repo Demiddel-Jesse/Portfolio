@@ -1,0 +1,28 @@
+@use "../settings/color" as color;
+@use "../tools/tools.grid" as grid;
+@use "../tools/tools.order" as order;
+@use "../tools/tools.media-querries" as mq;
+@use "../utilities/utility.box";
+
+.c-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	animation-delay: 1s;
+
+	@include order.pos(2);
+
+	@include grid.width(1);
+	@include grid.width(2, "tl");
+	@include grid.width(3, "ls");
+	@include grid.width(4, "ll");
+
+	@include grid.height(1);
+
+	@extend %u-box;
+
+	h1 {
+		margin-top: 8px;
+	}
+}
