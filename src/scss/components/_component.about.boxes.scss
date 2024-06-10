@@ -80,7 +80,7 @@
 	&__list {
 		margin-top: 8px;
 
-		padding-left: 30px;
+		padding-left: 24px;
 
 		&Item {
 			h3 {
@@ -96,15 +96,15 @@
 				color: color.$text-color-d;
 			}
 
+			h4 span {
+				color: color.$text-color-emphasis;
+			}
+
 			h3,
 			h4,
 			p {
 				margin-left: 0;
 			}
-		}
-
-		&--inner {
-			padding-inline-start: 8px;
 		}
 
 		h3,
