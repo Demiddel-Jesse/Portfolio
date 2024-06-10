@@ -57,6 +57,8 @@
 
 			transition: all 250ms;
 
+			width: fit-content;
+
 			@include mq.down(ml) {
 				font-size: 14px;
 			}
