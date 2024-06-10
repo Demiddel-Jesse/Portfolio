@@ -60,9 +60,12 @@
 		@include order.pos(8);
 
 		@include grid.width(1);
-		@include grid.width(2, "ts");
+		@include grid.width(2, "ls");
 
-		@include grid.height(3);
+		@include grid.height(6);
+		@include grid.height(5, "mm");
+		@include grid.height(6, "tl");
+		@include grid.height(3, "ls");
 
 		@extend %u-box;
 	}
