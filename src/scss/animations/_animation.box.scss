@@ -6,6 +6,8 @@
 		transform: translate(0, -50px);
 		border-color: color.$box__border-color--hover;
 		box-shadow: 0 0 20px 4px color.$box__boxShadow-color--hover;
+
+		// used to remove the hover effect while the animation is playing to prevent jumping around
 		pointer-events: none;
 	}
 
