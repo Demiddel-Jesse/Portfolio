@@ -13,7 +13,9 @@
 		@include grid.width(1);
 		@include grid.width(2, "ts");
 
-		@include grid.height(4);
+		@include grid.height(5);
+		@include grid.height(3, "ts");
+		@include grid.height(4, "ls");
 
 		@extend %u-box;
 
@@ -30,7 +32,8 @@
 		@include grid.width(1);
 		@include grid.width(2, "ts");
 
-		@include grid.height(3);
+		@include grid.height(5);
+		@include grid.height(3, "ts");
 
 		@extend %u-box;
 
@@ -97,6 +100,7 @@
 		&Item {
 			h3 {
 				display: flex;
+				flex-wrap: wrap;
 				justify-content: space-between;
 			}
 
