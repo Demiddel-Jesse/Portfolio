@@ -78,7 +78,9 @@
 		@include grid.width(1);
 		@include grid.width(2, "ts");
 
-		@include grid.height(4);
+		@include grid.height(6);
+		@include grid.height(5, "mm");
+		@include grid.height(4, "ts");
 
 		@extend %u-box;
 	}
@@ -130,5 +132,11 @@
 		h4 {
 			margin-top: 8px;
 		}
+	}
+
+	p span {
+		color: color.$text-color-emphasis;
+
+		font-weight: 700;
 	}
 }
