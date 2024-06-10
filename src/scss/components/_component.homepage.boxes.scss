@@ -4,8 +4,8 @@
 @use "../tools/tools.media-querries" as mq;
 @use "../utilities/utility.box";
 
-.c-homepage__box {
-	&--about {
+.c-homepage {
+	&__about {
 		animation-delay: 250ms;
 
 		@include order.pos(1);
@@ -33,7 +33,7 @@
 		}
 	}
 
-	&--contact {
+	&__contact {
 		animation-delay: 650ms;
 
 		@include order.pos(2);
@@ -101,7 +101,7 @@
 		}
 	}
 
-	&--copyright {
+	&__copyright {
 		animation-delay: 1.6s;
 
 		@include order.pos(9);
@@ -125,7 +125,7 @@
 		}
 	}
 
-	&--currentOccupation {
+	&__currentOccupation {
 		animation-delay: 750ms;
 
 		@include order.pos(3);
@@ -157,7 +157,7 @@
 		}
 	}
 
-	&--highlightedProject {
+	&__highlightedProject {
 		display: flex;
 		align-items: center;
 
@@ -194,7 +194,7 @@
 		}
 	}
 
-	&--moreAbout {
+	&__moreAbout {
 		display: flex;
 		justify-content: left;
 		align-items: center;
@@ -225,7 +225,7 @@
 		}
 	}
 
-	&--playground {
+	&__playground {
 		display: flex;
 		align-items: center;
 
@@ -256,7 +256,7 @@
 		}
 	}
 
-	&--projects {
+	&__projects {
 		display: flex;
 		align-items: center;
 
@@ -291,7 +291,7 @@
 		}
 	}
 
-	&--skills {
+	&__skills {
 		position: relative;
 
 		animation-delay: 1.25s;
