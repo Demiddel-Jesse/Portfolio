@@ -14,6 +14,10 @@
 		@include grid.height(4);
 
 		@extend %u-box;
+
+		h2 {
+			margin-bottom: 0;
+		}
 	}
 
 	&__experience {
@@ -25,6 +29,10 @@
 		@include grid.height(3);
 
 		@extend %u-box;
+
+		h2 {
+			margin-bottom: 0;
+		}
 	}
 
 	&__sports {
@@ -67,5 +75,41 @@
 		@include grid.height(4);
 
 		@extend %u-box;
+	}
+
+	&__list {
+		margin-top: 8px;
+
+		padding-left: 30px;
+
+		&Item {
+			h3 {
+				display: flex;
+				justify-content: space-between;
+			}
+
+			h3 span {
+				color: color.$text-color-c;
+			}
+
+			h4 {
+				color: color.$text-color-d;
+			}
+
+			h3,
+			h4,
+			p {
+				margin-left: 0;
+			}
+		}
+
+		&--inner {
+			padding-inline-start: 8px;
+		}
+
+		h3,
+		h4 {
+			margin-top: 8px;
+		}
 	}
 }
