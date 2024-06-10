@@ -1,0 +1,71 @@
+@use "../settings/color" as color;
+@use "../tools/tools.grid" as grid;
+@use "../tools/tools.order" as order;
+@use "../tools/tools.media-querries" as mq;
+@use "../utilities/utility.box";
+
+.c-about {
+	&__studies {
+		@include order.pos(3);
+
+		@include grid.width(1);
+		@include grid.width(2, "ts");
+
+		@include grid.height(4);
+
+		@extend %u-box;
+	}
+
+	&__experience {
+		@include order.pos(4);
+
+		@include grid.width(1);
+		@include grid.width(2, "ts");
+
+		@include grid.height(3);
+
+		@extend %u-box;
+	}
+
+	&__sports {
+		@include order.pos(5);
+
+		@include grid.width(1);
+
+		@include grid.height(3);
+
+		@extend %u-box;
+	}
+
+	&__miniatures {
+		@include order.pos(8);
+
+		@include grid.width(1);
+		@include grid.width(2, "ts");
+
+		@include grid.height(3);
+
+		@extend %u-box;
+	}
+
+	&__racing {
+		@include order.pos(6);
+
+		@include grid.width(1);
+		@include grid.width(2, "ts");
+
+		@include grid.height(4);
+
+		@extend %u-box;
+	}
+
+	&__movies {
+		@include order.pos(7);
+
+		@include grid.width(1);
+
+		@include grid.height(4);
+
+		@extend %u-box;
+	}
+}
