@@ -18,11 +18,14 @@
 	@include grid.width(3, "ls");
 	@include grid.width(4, "ll");
 
-	@include grid.height(1);
+	@include grid.height(2);
+	@include grid.height(1, "tl");
 
 	@extend %u-box;
 
 	h1 {
 		margin-top: 8px;
+
+		font-size: clamp(1.5rem, 1vw + 1rem, 2rem);
 	}
 }
