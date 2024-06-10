@@ -6,13 +6,19 @@
 		transform: translate(0, -50px);
 		border-color: color.$box__border-color--hover;
 		box-shadow: 0 0 20px 4px color.$box__boxShadow-color--hover;
+		pointer-events: none;
 	}
 
 	25% {
 		border-color: color.$box__border-color--hover;
 	}
 
+	99% {
+		pointer-events: none;
+	}
+
 	to {
 		opacity: 100;
+		pointer-events: all;
 	}
 }
