@@ -1,0 +1,74 @@
+@use "../settings/breakpoints" as bp;
+@use "../settings/grid" as grid;
+@use "../tools/tools.media-querries" as mq;
+
+$breakpoint-names: map-keys(bp.$breakpoints);
+
+.o-grid {
+	width: fit-content;
+	padding: 1rem;
+	margin: auto;
+
+	display: grid;
+	grid-column-gap: grid.$columnGap;
+	grid-row-gap: grid.$rowGap;
+
+	$prevRow: 0;
+	$prevColumn: 0;
+	$prevColumnSize: 0;
+	$prevRowSize: 0;
+
+	@each $breakpoint in $breakpoint-names {
+		@include mq.up($breakpoint) {
+			@if $prevColumn == map-get(grid.$columns, $breakpoint) {
+				@if $prevColumnSize == map-get(grid.$columnSize, $breakpoint) {
+				} @else {
+					grid-template-columns: repeat(
+						map-get(grid.$columns, $breakpoint),
+						map-get(grid.$columnSize, $breakpoint)
+					);
+
+					$prevColumn: map-get(grid.$columns, $breakpoint);
+					$prevColumnSize: map-get(grid.$columnSize, $breakpoint);
+				}
+			} @else {
+				grid-template-columns: repeat(
+					map-get(grid.$columns, $breakpoint),
+					map-get(grid.$columnSize, $breakpoint)
+				);
+
+				$prevColumn: map-get(grid.$columns, $breakpoint);
+				$prevColumnSize: map-get(grid.$columnSize, $breakpoint);
+			}
+			@if $prevRowSize != map-get(grid.$rowSize, $breakpoint) {
+				grid-auto-rows: map-get($map: grid.$rowSize, $key: $breakpoint);
+				$prevRowSize: map-get(grid.$rowSize, $breakpoint);
+			}
+			// @if map-get($map: grid.$rows, $key: $breakpoint) == auto {
+			// 	grid-auto-rows: map-get($map: grid.$rowSize, $key: $breakpoint);
+			// } @else {
+			// 	grid-auto-rows: none;
+			// 	@if $prevRow == map-get(grid.$rows, $breakpoint) {
+			// 		@if $prevRowSize == map-get(grid.$rowSize, $breakpoint) {
+			// 		} @else {
+			// 			grid-template-rows: repeat(
+			// 				map-get(grid.$rows, $breakpoint),
+			// 				map-get(grid.$rowSize, $breakpoint)
+			// 			);
+
+			// 			$prevRowSize: map-get(grid.$rowSize, $breakpoint);
+			// 			$prevRow: map-get(grid.$rows, $breakpoint);
+			// 		}
+			// 	} @else {
+			// 		grid-template-rows: repeat(
+			// 			map-get(grid.$rows, $breakpoint),
+			// 			map-get(grid.$rowSize, $breakpoint)
+			// 		);
+
+			// 		$prevRowSize: map-get(grid.$rowSize, $breakpoint);
+			// 		$prevRow: map-get(grid.$rows, $breakpoint);
+			// 	}
+			// }
+		}
+	}
+}

@@ -1,0 +1,28 @@
+@use "./settings/color" as color;
+
+body {
+	font-family: "Inter";
+
+	height: 100vh;
+
+	display: flex;
+	justify-content: center;
+
+	background-color: color.$background-color;
+
+	color: color.$text-color-a;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 24px 12px 8px;
+}
+
+p {
+	font-size: 1rem;
+	margin: 8px 12px;
+}

@@ -1,0 +1,41 @@
+:root {
+	--background-color: #000000;
+	--background-color-b: #020202;
+	--background__gridLines-color: rgba(153, 153, 153, 0.5);
+
+	--text-color-a: #ffffff;
+	--text-color-b: #858585;
+	--text-color-c: #aaaaaa;
+	--text-color-d: #cfcfcf;
+	--text-color-emphasis: #ad0000;
+	--text-color__link-hover: #800002;
+
+	--box__background-color: #171717;
+	--box__background-color--hover: #252525;
+	--box__border-color: #404040;
+	--box__border-color--hover: #b30000;
+	--box__boxShadow-color--hover: #800002;
+
+	--github-color: #2dba4e;
+	--linkedIn-color: #0a66c2;
+}
+
+$background-color: var(--background-color);
+$background-color-b: var(--background-color-b);
+$background__gridLines-color: var(--background__gridLines-color);
+
+$text-color-a: var(--text-color-a);
+$text-color-b: var(--text-color-b);
+$text-color-c: var(--text-color-c);
+$text-color-d: var(--text-color-d);
+$text-color-emphasis: var(--text-color-emphasis);
+$text-color__link-hover: var(--text-color__link-hover);
+
+$box__bg-color: var(--box__background-color);
+$box__bg-color--hover: var(--box__background-color--hover);
+$box__border-color: var(--box__border-color);
+$box__border-color--hover: var(--box__border-color--hover);
+$box__boxShadow-color--hover: var(--box__boxShadow-color--hover);
+
+$github-color: var(--github-color);
+$linkedIn-color: var(--linkedIn-color);
