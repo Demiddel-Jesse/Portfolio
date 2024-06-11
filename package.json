@@ -6,7 +6,7 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build-goplay": "cd ./opdracht-5-dashboard-groep-4-goplay-TL4-fixes && npm install && npm run build",
-		"build": "webpack --mode=production --node-env=production",
+		"build": "webpack --mode=production --node-env=production && npm run build-goplay",
 		"build:dev": "webpack --mode=development",
 		"build:prod": "webpack --mode=production --node-env=production",
 		"watch": "webpack --watch",
