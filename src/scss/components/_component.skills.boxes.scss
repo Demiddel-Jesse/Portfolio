@@ -1,0 +1,155 @@
+@use "../settings/color" as color;
+@use "../tools/tools.grid" as grid;
+@use "../tools/tools.order" as order;
+@use "../tools/tools.media-querries" as mq;
+@use "../utilities/utility.box";
+
+.c-skills {
+	&__webDev,
+	&__devLanguages,
+	&__languages,
+	&__graphics,
+	&__video,
+	&__3D {
+		display: flex;
+		align-items: center;
+		align-content: flex-start;
+		flex-wrap: wrap;
+
+		> ul {
+			margin: 0;
+
+			padding-inline-start: 30px;
+
+			h4 {
+				margin-left: 0;
+				margin-top: 8px;
+			}
+		}
+	}
+
+	&__webDev {
+		@include grid.width(1);
+
+		@include grid.height(6);
+
+		@include order.pos(3);
+
+		@extend %u-box;
+	}
+
+	&__devLanguages {
+		@include grid.width(1);
+
+		@include grid.height(2);
+
+		@include order.pos(3);
+
+		@extend %u-box;
+	}
+
+	&__languages {
+		@include grid.width(1);
+
+		@include grid.height(2);
+
+		@include order.pos(3);
+
+		@extend %u-box;
+	}
+
+	&__graphics {
+		@include grid.width(1);
+
+		@include grid.height(3);
+
+		@include order.pos(3);
+
+		@extend %u-box;
+	}
+
+	&__video {
+		@include grid.width(1);
+
+		@include grid.height(3);
+
+		@include order.pos(3);
+
+		@extend %u-box;
+	}
+
+	&__3D {
+		@include grid.width(1);
+
+		@include grid.height(2);
+
+		@include order.pos(3);
+
+		@extend %u-box;
+	}
+
+	&__list {
+		list-style: none;
+		padding: 0;
+
+		&Item {
+			progress {
+				border: none;
+				border-radius: 20px;
+
+				width: 150px;
+				max-width: 150px;
+
+				height: 12px;
+
+				background-color: white;
+
+				appearance: none;
+
+				&::-moz-progress-bar {
+					background-color: color.$text-color-emphasis;
+					background-image: linear-gradient(
+						45deg,
+						rgba(255, 255, 255, 0.15) 25%,
+						transparent 25%,
+						transparent 50%,
+						rgba(255, 255, 255, 0.15) 50%,
+						rgba(255, 255, 255, 0.15) 75%,
+						transparent 75%,
+						transparent
+					);
+					background-size: 1rem 1rem;
+				}
+
+				&::-webkit-progress-bar {
+					border-radius: 20px;
+					background-color: white;
+					border: none;
+				}
+
+				&::-webkit-progress-inner-element {
+					border-radius: 20px;
+					border: none;
+					color: white;
+				}
+
+				&::-webkit-progress-value {
+					border: none;
+					background-color: color.$text-color-emphasis;
+					background-image: linear-gradient(
+						45deg,
+						rgba(255, 255, 255, 0.15) 25%,
+						transparent 25%,
+						transparent 50%,
+						rgba(255, 255, 255, 0.15) 50%,
+						rgba(255, 255, 255, 0.15) 75%,
+						transparent 75%,
+						transparent
+					);
+					background-size: 1rem 1rem;
+					border-radius: 20px;
+				}
+			}
+		}
+	}
+}
