@@ -1,0 +1,34 @@
+@use "../settings/color" as color;
+@use "../tools/tools.grid" as grid;
+@use "../tools/tools.order" as order;
+@use "../tools/tools.media-querries" as mq;
+@use "../utilities/utility.box";
+
+.c-project {
+	&__about {
+		@include order.pos(3);
+
+		@include grid.width(2, "ts");
+		@include grid.width(3, "tl");
+
+		@include grid.height(10);
+		@include grid.height(9, "mm");
+		@include grid.height(8, "ml");
+		@include grid.height(5, "ts");
+		@include grid.height(4, "tl");
+
+		@extend %u-box;
+
+		a {
+			color: color.$text-color-emphasis;
+
+			transition: all 250ms;
+
+			font-weight: 600;
+
+			&:hover {
+				color: color.$text-color__link-hover;
+			}
+		}
+	}
+}
