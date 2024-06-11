@@ -2,6 +2,7 @@ const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 var fs = require("fs");
 
 const isProduction = process.env.NODE_ENV == "production";
@@ -155,6 +156,57 @@ module.exports = () => {
 		config.mode = "production";
 
 		config.plugins.push(new MiniCssExtractPlugin());
+		config.plugins.push(
+			new CopyPlugin({
+				patterns: [
+					// just to include only necessary files from Goplay folder
+					{
+						from: path.resolve(__dirname, "./Goplay/dist", "*.css"),
+						to: "./",
+					},
+					{
+						from: path.resolve(__dirname, "./Goplay/dist", "*.js"),
+						to: "./",
+					},
+					{
+						from: path.resolve(__dirname, "./Goplay/assets/img", "*"),
+						to: "./",
+					},
+					{
+						from: path.resolve(__dirname, "./Goplay/assets/svg", "*"),
+						to: "./",
+					},
+					{
+						from: path.resolve(__dirname, "./Goplay/json", "*"),
+						to: "./",
+					},
+					{
+						from: path.resolve(__dirname, "./Goplay", "*.html"),
+						to: "./",
+					},
+					{
+						from: path.resolve(__dirname, "./Goplay", "*.png"),
+						to: "./",
+					},
+					{
+						from: path.resolve(__dirname, "./Goplay", "*.ico"),
+						to: "./",
+					},
+					{
+						from: path.resolve(__dirname, "./Goplay", "*.svg"),
+						to: "./",
+					},
+					{
+						from: path.resolve(__dirname, "./Goplay", "*.xml"),
+						to: "./",
+					},
+					{
+						from: path.resolve(__dirname, "./Goplay", "*.webmanifest"),
+						to: "./",
+					},
+				],
+			})
+		);
 	} else {
 		config.mode = "development";
 	}
