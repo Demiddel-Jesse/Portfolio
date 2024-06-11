@@ -1,0 +1,74 @@
+@use "../settings/color" as color;
+@use "../tools/tools.grid" as grid;
+@use "../tools/tools.order" as order;
+@use "../tools/tools.media-querries" as mq;
+@use "../utilities/utility.box";
+
+.c-project {
+	&__about {
+		@include order.pos(3);
+
+		@include grid.width(2, "ts");
+		@include grid.width(3, "tl");
+
+		@include grid.height(10);
+		@include grid.height(9, "mm");
+		@include grid.height(8, "ml");
+		@include grid.height(5, "ts");
+		@include grid.height(4, "tl");
+
+		@extend %u-box;
+
+		a {
+			color: color.$text-color-emphasis;
+
+			transition: all 250ms;
+
+			font-weight: 600;
+
+			&:hover {
+				color: color.$text-color__link-hover;
+			}
+		}
+	}
+
+	&__links {
+		display: flex;
+		justify-content: center;
+		align-content: space-around;
+		flex-wrap: wrap;
+
+		@include order.pos(4);
+
+		@include grid.width(1);
+
+		@include grid.height(1);
+
+		@extend %u-box;
+
+		a {
+			width: 100%;
+			height: fit-content;
+
+			text-align: center;
+
+			color: color.$text-color-emphasis;
+
+			transition: all 250ms;
+
+			font-weight: 700;
+
+			&:hover {
+				color: color.$text-color__link-hover;
+			}
+
+			&:first-child {
+				padding-top: 8px;
+			}
+
+			&:last-child {
+				padding-bottom: 8px;
+			}
+		}
+	}
+}
