@@ -11,13 +11,17 @@
 		@include grid.width(2, "ts");
 		@include grid.width(3, "tl");
 
-		@include grid.height(10);
+		@include grid.height(11);
 		@include grid.height(9, "mm");
 		@include grid.height(8, "ml");
 		@include grid.height(5, "ts");
 		@include grid.height(4, "tl");
 
 		@extend %u-box;
+
+		p {
+			margin-top: 24px;
+		}
 
 		a {
 			color: color.$text-color-emphasis;
@@ -38,15 +42,21 @@
 		align-content: space-around;
 		flex-wrap: wrap;
 
-		@include order.pos(4);
-
 		@include grid.width(1);
 
 		@include grid.height(1);
 
 		@extend %u-box;
 
-		a {
+		&--site {
+			@include order.pos(4);
+		}
+
+		&--code {
+			@include order.pos(6);
+		}
+
+		h3 {
 			width: 100%;
 			height: fit-content;
 
@@ -58,17 +68,48 @@
 
 			font-weight: 700;
 
-			&:hover {
+			margin-top: 8px;
+		}
+
+		&:hover {
+			h3 {
 				color: color.$text-color__link-hover;
 			}
+		}
 
-			&:first-child {
-				padding-top: 8px;
-			}
+		a {
+			@extend %u-boxLink;
+		}
+	}
 
-			&:last-child {
-				padding-bottom: 8px;
-			}
+	&__tech {
+		@include order.pos(5);
+
+		@include grid.width(1);
+
+		@include grid.height(2);
+
+		@extend %u-box;
+	}
+
+	&__image {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: center;
+
+		@include order.pos(6);
+
+		@include grid.width(1);
+		@include grid.width(2, "ts");
+
+		@include grid.height(2);
+
+		@extend %u-box;
+
+		img {
+			max-width: 80%;
+			max-height: 80%;
 		}
 	}
 }
