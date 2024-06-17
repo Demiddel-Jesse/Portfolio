@@ -1,10 +1,10 @@
 "use strict";
 
-addActive = function (slide) {
+const addActive = function (slide) {
 	slide.classList.add("c-carousel__item--active");
 };
 
-removeActive = function (slide) {
+const removeActive = function (slide) {
 	slide.classList.remove("c-carousel__item--active");
 };
 
