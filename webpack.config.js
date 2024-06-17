@@ -50,7 +50,7 @@ const config = {
 					inject: true,
 					meta: {
 						// description: { name: "description", content: "..." },
-						keyword: { name: "keywords", content: "..." },
+						// keyword: { name: "keywords", content: "..." },
 						"og:title": {
 							property: "og:title",
 							content: "Jesse Demiddels Portfolio",
@@ -60,7 +60,11 @@ const config = {
 							content: "Portfolio of Jesse Demiddel",
 						},
 						"og:type": { property: "og:type", content: "website" },
-						"og:url": { property: "og:url", content: "..." },
+						"og:url": {
+							property: "og:url",
+							content:
+								"https://jesse-demiddels-portfolio-b7ikaqri8-demiddel-jesses-projects.vercel.app/index.html",
+						},
 						"og:image": { property: "og:image", content: "..." },
 						"twitter:card": {
 							name: "twitter:card",
@@ -75,6 +79,10 @@ const config = {
 							content: "Portfolio of Jesse Demiddel",
 						},
 						"twitter:image": { name: "twitter:image", content: "..." },
+						"twitter:image:alt": {
+							name: "twitter:image:alt",
+							content: "Alt text",
+						},
 					},
 				})
 		),
@@ -90,13 +98,28 @@ const config = {
 				background: "#000000",
 				theme_color: "#171717",
 				icons: {
-					//! need to make a more specific set for icons bc like 50 favicons is too much
-					android: true,
-					appleIcon: true,
-					appleStartup: true,
-					favicons: true,
-					windows: true,
-					yandex: true,
+					android: [
+						"android-chrome-144x144.png",
+						"android-chrome-192x192.png",
+						"android-chrome-256x256.png",
+						"android-chrome-512x512.png",
+					],
+					appleIcon: [
+						"apple-touch-icon-57x57.png",
+						"apple-touch-icon-76x76.png",
+						"apple-touch-icon-180x180.png",
+						,
+						"apple-touch-icon-120x120.png",
+					],
+					favicons: [
+						"favicon-16x16.png",
+						"favicon-32x32.png",
+						"favicon-48x48.png",
+						"favicon.ico",
+					],
+					appleStartup: false,
+					windows: ["mstile-144x144.png", "mstile-70x70.png"],
+					yandex: false,
 				},
 			},
 		}),
