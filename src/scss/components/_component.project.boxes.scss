@@ -7,6 +7,8 @@
 .c-project {
 	&__about {
 		@include order.pos(4);
+		@include order.pos(5, "ls");
+		@include order.pos(4, "ll");
 
 		@include grid.width(2, "ts");
 
@@ -83,6 +85,8 @@
 
 	&__tech {
 		@include order.pos(5);
+		@include order.pos(4, "ls");
+		@include order.pos(5, "ll");
 
 		@include grid.width(1);
 
