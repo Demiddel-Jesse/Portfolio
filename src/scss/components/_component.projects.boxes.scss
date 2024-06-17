@@ -5,28 +5,18 @@
 @use "../utilities/utility.box";
 
 .c-projects {
-	&__projectGoplay {
+	&__projectGoplay,
+	&__projectSinksen {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 
-		@include order.pos(3);
-
-		@include grid.width(1);
-		@include grid.width(2, "ts");
-
-		@include grid.height(2);
-
 		@extend %u-box;
-
-		a {
-			@extend %u-boxLink;
-		}
 
 		h2 {
 			margin-top: 8px;
 
-			font-size: clamp(1.6rem, 3.2vw + 1rem, 2.25rem);
+			font-size: clamp(1.6rem, 3.2vw + 1rem, 2rem);
 
 			display: flex;
 			align-items: center;
@@ -37,5 +27,26 @@
 				height: 3.5rem;
 			}
 		}
+
+		a {
+			@extend %u-boxLink;
+		}
+	}
+
+	&__projectGoplay {
+		@include order.pos(3);
+
+		@include grid.width(1);
+		@include grid.width(2, "ts");
+
+		@include grid.height(2);
+	}
+
+	&__projectSinksen {
+		@include order.pos(4);
+
+		@include grid.width(1);
+
+		@include grid.height(2);
 	}
 }
