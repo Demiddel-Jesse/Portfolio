@@ -107,9 +107,8 @@ const config = {
 					appleIcon: [
 						"apple-touch-icon-57x57.png",
 						"apple-touch-icon-76x76.png",
-						"apple-touch-icon-180x180.png",
-						,
 						"apple-touch-icon-120x120.png",
+						"apple-touch-icon-180x180.png",
 					],
 					favicons: [
 						"favicon-16x16.png",
@@ -117,8 +116,11 @@ const config = {
 						"favicon-48x48.png",
 						"favicon.ico",
 					],
+					// android: true,
+					// appleIcon: true,
+					// favicons: true
 					appleStartup: false,
-					windows: ["mstile-144x144.png", "mstile-70x70.png"],
+					windows: false,
 					yandex: false,
 				},
 			},
@@ -225,6 +227,35 @@ module.exports = () => {
 					},
 					{
 						from: path.resolve(__dirname, "./Goplay", "*.webmanifest"),
+						to: "./",
+					},
+					// copy sinksen project
+					{
+						from: path.resolve(__dirname, "./Sinksen2022", "*.html"),
+						to: "./",
+					},
+					{
+						from: path.resolve(__dirname, "./Sinksen2022/css", "*.css"),
+						to: "./",
+					},
+					{
+						from: path.resolve(__dirname, "./Sinksen2022/img", "*.png"),
+						to: "./",
+					},
+					{
+						from: path.resolve(__dirname, "./Sinksen2022/img", "*.svg"),
+						to: "./",
+					},
+					{
+						from: path.resolve(__dirname, "./Sinksen2022/img", "*.gif"),
+						to: "./",
+					},
+					{
+						from: path.resolve(__dirname, "./Sinksen2022/img", "*.jpg"),
+						to: "./",
+					},
+					{
+						from: path.resolve(__dirname, "./Sinksen2022/script", "*.js"),
 						to: "./",
 					},
 				],
