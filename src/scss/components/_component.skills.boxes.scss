@@ -6,6 +6,8 @@
 
 .c-skills {
 	&__programmingLanguages {
+		animation-delay: 550ms;
+
 		@include order.pos(3);
 
 		@include grid.width(1);
@@ -32,6 +34,8 @@
 	}
 
 	&__other {
+		animation-delay: 850ms;
+
 		@include order.pos(4);
 
 		@include grid.width(1);
@@ -42,6 +46,8 @@
 	}
 
 	&__databases {
+		animation-delay: 950ms;
+
 		@include order.pos(5);
 		@include order.pos(6, "ls");
 		@include order.pos(7, "ll");
@@ -54,6 +60,8 @@
 	}
 
 	&__cms {
+		animation-delay: 750ms;
+
 		@include order.pos(6);
 		@include order.pos(7, "ls");
 		@include order.pos(8, "ll");
@@ -66,6 +74,8 @@
 	}
 
 	&__languages {
+		animation-delay: 1s;
+
 		@include order.pos(7);
 		@include order.pos(5, "ls");
 
@@ -77,6 +87,8 @@
 	}
 
 	&__graphicDesign {
+		animation-delay: 1.1s;
+
 		@include order.pos(9);
 
 		@include grid.width(1);
@@ -87,6 +99,8 @@
 	}
 
 	&__video {
+		animation-delay: 1.3s;
+
 		@include order.pos(8);
 		@include order.pos(6, "ll");
 
@@ -98,6 +112,8 @@
 	}
 
 	&__3d {
+		animation-delay: 1550ms;
+
 		@include order.pos(10);
 		@include order.pos(13, "ls");
 		@include order.pos(10, "ll");
@@ -110,6 +126,8 @@
 	}
 
 	&__animation {
+		animation-delay: 1250ms;
+
 		@include order.pos(11);
 		@include order.pos(12, "tl");
 		@include order.pos(14, "ll");
@@ -122,6 +140,8 @@
 	}
 
 	&__cssFrameworks {
+		animation-delay: 600ms;
+
 		@include order.pos(14);
 		@include order.pos(11, "ll");
 
@@ -133,6 +153,8 @@
 	}
 
 	&__jsFrameworks {
+		animation-delay: 750ms;
+
 		@include order.pos(11);
 		@include order.pos(10, "ls");
 		@include order.pos(12, "ll");
@@ -145,6 +167,8 @@
 	}
 
 	&__phpFrameworks {
+		animation-delay: 1200ms;
+
 		@include order.pos(11);
 		@include order.pos(13, "ll");
 

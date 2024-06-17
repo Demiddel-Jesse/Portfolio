@@ -6,6 +6,8 @@
 
 .c-project {
 	&__about {
+		animation-delay: 750ms;
+
 		@include order.pos(4);
 		@include order.pos(5, "ls");
 		@include order.pos(4, "ll");
@@ -50,10 +52,14 @@
 		@extend %u-box;
 
 		&--site {
+			animation-delay: 1.2s;
+
 			@include order.pos(6);
 		}
 
 		&--code {
+			animation-delay: 950ms;
+
 			@include order.pos(6);
 		}
 
@@ -84,6 +90,8 @@
 	}
 
 	&__tech {
+		animation-delay: 550ms;
+
 		@include order.pos(5);
 		@include order.pos(4, "ls");
 		@include order.pos(5, "ll");
@@ -104,6 +112,8 @@
 	}
 
 	&__image {
+		animation-delay: 800ms;
+
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
