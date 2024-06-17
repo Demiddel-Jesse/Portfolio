@@ -1,294 +1,274 @@
-@use '../settings/colors.scss' as color;
-@use '../tools/tools.breakpoints' as bp;
+@use "../settings/colors.scss" as color;
+@use "../tools/tools.breakpoints" as bp;
 
-.c-detailuser{
-    grid-area: 'content';
-    width: calc(100vw - 400px);
-    margin-left: 50px;
+.c-detailuser {
+	grid-area: "content";
+	width: calc(100vw - 400px);
+	margin-left: 50px;
 
+	&__welkomuser {
+		p {
+			color: color.$accent-00;
+		}
+	}
 
-    
-    &__titel{
-        font-size: 48px;
-        color: color.$accent-00;
-        
-    }
-    &__smalltitle{
-        color: color.$accent-00;
-        border-bottom: 2px solid color.$accent-00;
-        margin-bottom: 2rem;
+	&__titel {
+		font-size: 48px;
+		color: color.$accent-00;
+	}
+	&__smalltitle {
+		color: color.$accent-00;
+		border-bottom: 2px solid color.$accent-00;
+		margin-bottom: 2rem;
 
-        @include bp.down(tl){
-            min-width: 300px;
-        }
+		@include bp.down(tl) {
+			min-width: 300px;
+		}
+	}
+	&__text {
+		color: white;
+	}
+	&__avatar {
+		border-right: 2px solid color.$accent-00;
+		font-size: 64px;
+		max-width: 100%;
 
+		padding-right: 1rem;
 
-    }
-    &__text{
-        color: white;
-    }
-    &__avatar{
-        border-right: 2px solid color.$accent-00;
-        font-size: 64px;
-        max-width: 100%;
-        @include bp.down(tl){
-            border: none;
+		@include bp.down(tl) {
+			border: none;
+		}
+	}
 
+	&__tabs {
+		display: flex;
 
-        }
-    }
+		list-style-type: none;
+		margin: 0;
+		width: 20vh;
+		padding: 0;
+		border-bottom: 1px solid black;
+	}
 
-    &__tabs {
-        display: flex;
-      
-        list-style-type: none;
-        margin: 0;
-        width: 20vh;
-        padding: 0;
-        border-bottom: 1px solid black;
-    }
-    &__tab {
-        cursor: pointer;
-        padding: 10px;
-        &--active {
-            background-color: color.$accent-00;
-            cursor: pointer;
-        }
-    }
-    
-    &__tabcontent {
-        margin-top: 2rem;
-        margin-right: 20px;
-        width: 50%;
-    }
-    .active[data-tab-content] {
-        display: block;
-      }
-     
+	&__tab {
+		cursor: pointer;
+		padding: 10px;
 
-    [data-tab-content] {
-     display: none;
+		color: color.$accent-00;
 
-    }
-    &__contactcontainer{
-        display: flex;
+		&--active {
+			color: color.$accent-300;
 
-        @include bp.down(tl){
-            display: flex;
-            flex-direction: column;
-            
-        }
-        @include bp.down(ls){
-            display: flex;
-            flex-direction: column;
-        }
-        @include bp.down(ls){
-            display: flex;
-            flex-direction: column;
-        }
-    }
-    &__tabs{
-        margin-left: 1.2rem;
-    }
-    &__contactsvg{
-        margin-right: 1rem;
-        max-width: 200%;
-        margin-top: 0.5rem;
-        width: 136.57px;
-        height: 147.072px;
+			background-color: color.$accent-00;
+			cursor: pointer;
+		}
+	}
 
-        
-        @include bp.down(tl){
-            max-width: 400px;
-            min-width: 50%;
-            width: 136.57px;
-            height: 147.072px;
-        }
-    }
-    &__contactsvgpath{
-        width: 200%;
-    }
-    &__gebruikerkolomcontainer::after{
-        content: "";
-        display: table;
-        clear: both;
-        width: 100%;
-    }
-    &__formcontainers{
-        @include bp.down(tl){
-            display: flex;
-            flex-direction: column;
-        }
-    }
-    &__gobacklink{
-        text-decoration: none;
-        text-align: center;
-        color:color.$neutral-900;
-        font-weight: 600;
-        
-    }
-    &__gobacktext{
-        max-width: 100px;
-        border-radius: 10px;
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-        background-color: color.$accent-00;
-        text-decoration: none;
-        @include bp.down(tl){
-            min-width:30% ;
-            width: 100px;
-            
-        }
-        @include bp.down(ls){
-            min-width: 30%;
-            width: 150px;
-        }
+	&__tabcontent {
+		margin-top: 2rem;
+		margin-right: 20px;
+		width: 50%;
+	}
+	.active[data-tab-content] {
+		display: block;
+	}
 
-    }
-    &__label{
-        color: color.$shades-00;
-    }
+	[data-tab-content] {
+		display: none;
+	}
+	&__contactcontainer {
+		display: flex;
 
-    &__input{
-        max-width: 300%;
-        min-width: 100%;
-        width: 100%;
-        border: none;
-        background-color:color.$neutral-900 ;
-        border: 2px solid color.$accent-00;
-        justify-content: center;
-        box-shadow: none;
-        color: color.$text-color-a;
-        margin-top: 0.5rem;
-        &:active{
-            box-shadow: none;
-            border: 2px solid color.$accent-00;
-        }
-        
-        &:focus{
-            box-shadow: none;
-            border: 2px solid color.$accent-00;
-        }
-        &::placeholder{
-            color: color.$text-color-a;
-            box-shadow: none;
-        }
-        &:disabled{
-            border: none;
-            background-color: transparent;
-            color: grey;
-        }
-        
-        width: 100% !important;
-        @include bp.down(tl){
-            min-width: 150px;
-            width: 300% !important;
-        }
-        
-        
-    }
+		@include bp.down(tl) {
+			display: flex;
+			flex-direction: column;
+		}
+		@include bp.down(ls) {
+			display: flex;
+			flex-direction: column;
+		}
+		@include bp.down(ls) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	&__tabs {
+		margin-left: 1.2rem;
+	}
+	&__contactsvg {
+		margin-right: 1rem;
+		max-width: 200%;
+		margin-top: 0.5rem;
+		width: 60px;
+		height: 60px;
 
-    &__gebruikerkolom{
-        float: left;
-        width: 25%;
-        margin-right: 2rem;
-        @include bp.down(tl){
-            width: 100%;
-        }
+		@include bp.down(tl) {
+			max-width: 400px;
+			min-width: 50%;
+		}
+	}
+	&__contactsvgpath {
+		width: 200%;
+	}
+	&__gebruikerkolomcontainer::after {
+		content: "";
+		display: table;
+		clear: both;
+		width: 100%;
+	}
+	&__formcontainers {
+		@include bp.down(tl) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	&__gobacklink {
+		text-decoration: none;
+		text-align: center;
+		color: color.$neutral-900;
+		font-weight: 600;
+	}
+	&__gobacktext {
+		max-width: 100px;
+		border-radius: 10px;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+		background-color: color.$accent-00;
+		text-decoration: none;
+		@include bp.down(tl) {
+			min-width: 30%;
+			width: 100px;
+		}
+		@include bp.down(ls) {
+			min-width: 30%;
+			width: 150px;
+		}
+	}
+	&__label {
+		color: color.$shades-00;
+	}
 
-    }
-    &__gebruikerkolomlast{
-        float: left;
-        width: 15%;
-    }
-    &__buttonscontainer{
-        display: flex;
+	&__input {
+		max-width: 300%;
+		min-width: 100%;
+		width: 100%;
+		border: none;
+		background-color: color.$neutral-900;
+		border: 2px solid color.$accent-00;
+		justify-content: center;
+		box-shadow: none;
+		color: color.$text-color-a;
+		margin-top: 0.5rem;
+		&:active {
+			box-shadow: none;
+			border: 2px solid color.$accent-00;
+		}
 
-        @include bp.down(tl){
-            display: flex;
-            flex-direction: column;
-        }
-    }
-    &__editbuttoncontainer{
-        
-        display: flex;      
-        cursor: pointer;
+		&:focus {
+			box-shadow: none;
+			border: 2px solid color.$accent-00;
+		}
+		&::placeholder {
+			color: color.$text-color-a;
+			box-shadow: none;
+		}
+		&:disabled {
+			border: none;
+			background-color: transparent;
+			color: grey;
+		}
 
-        
-    }
-    &__editbuttonsvg{
-        margin-top: 1rem;
-        margin-right: 1rem;
-        color: color.$shades-00;
+		width: 100% !important;
+		@include bp.down(tl) {
+			min-width: 150px;
+			width: 300% !important;
+		}
+	}
 
-        @include bp.down(tl){
-            min-width: 15px;
-        }
-    }
-    &__bewerkentext{
-        color: color.$shades-00;
-    }
-    &__verwijderentext{
-        color: color.$shades-00;
-    }
-    &__deletebuttoncontainer{
-        display: flex;
-        margin-left: 2rem;
-        cursor: pointer;
+	&__gebruikerkolom {
+		float: left;
+		width: 25%;
+		margin-right: 2rem;
+		@include bp.down(tl) {
+			width: 100%;
+		}
+	}
+	&__gebruikerkolomlast {
+		float: left;
+		width: 15%;
+	}
+	&__buttonscontainer {
+		display: flex;
 
-        @include bp.down(tl){
-            margin-left: 0;
-        }
-    }
-    &__deletebuttonsvg{
-        margin-top: 1rem;
-        margin-right: 1rem;
-        color: color.$shades-00;
+		@include bp.down(tl) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	&__editbuttoncontainer {
+		display: flex;
+		cursor: pointer;
+	}
+	&__editbuttonsvg {
+		margin-top: 1rem;
+		margin-right: 1rem;
+		color: color.$shades-00;
 
-        @include bp.down(tl){
-            min-width: 15px;
-        }
-    }
-    &__button{
-        color: color.$shades-00;
-    }
-    &__contacttitel{
-        color: color.$accent-00;
-    }
-    &__detailform{
-        margin-bottom: 2rem;
+		@include bp.down(tl) {
+			min-width: 15px;
+		}
+	}
+	&__bewerkentext {
+		color: color.$shades-00;
+	}
+	&__verwijderentext {
+		color: color.$shades-00;
+	}
+	&__deletebuttoncontainer {
+		display: flex;
+		margin-left: 2rem;
+		cursor: pointer;
 
-        @include bp.down(tl){
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-            width: 100%;
-            overflow:visible;
-        }
-      
-    }
+		@include bp.down(tl) {
+			margin-left: 0;
+		}
+	}
+	&__deletebuttonsvg {
+		margin-top: 1rem;
+		margin-right: 1rem;
+		color: color.$shades-00;
 
-    &__basicinformatieform{
-        margin-top: 1rem;
-        margin-left: 1rem;
-        
-        @include bp.down(tl){
-            margin-left: 0;
-        }
-    }
+		@include bp.down(tl) {
+			min-width: 15px;
+		}
+	}
+	&__button {
+		color: color.$shades-00;
+	}
+	&__contacttitel {
+		color: color.$accent-00;
+	}
+	&__detailform {
+		margin-bottom: 2rem;
 
+		@include bp.down(tl) {
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+			width: 100%;
+			overflow: visible;
+		}
+	}
 
+	&__basicinformatieform {
+		margin-top: 1rem;
+		margin-left: 1rem;
 
+		@include bp.down(tl) {
+			margin-left: 0;
+		}
+	}
 
-
-
-
-
-
-
-
-.tab:hover {
-  background-color: #AAA;
-}
- 
- 
+	.tab:hover {
+		background-color: #aaa;
+	}
 }

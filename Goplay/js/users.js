@@ -6,26 +6,20 @@ let users;
 let list = [];
 
 const loadJson = function () {
-
-
-
-	fetch("../json/users.json")
+	fetch("../Goplay/json/users.json")
 		.then((response) => response.json())
 		.then((json) => {
 			users = json.users;
-			list = users; 
-			ShowTable(users)
+			list = users;
+			ShowTable(users);
 
-		
-		
-
-			return json;
+			// return json;
 		});
 };
 
-const ShowTable = function(users){
+const ShowTable = function (users) {
 	const getElement = document.getElementById("menu");
-	let htmlString = ``; 
+	let htmlString = ``;
 	const htmlheaders = `<tr class="c-users__tablemainrow">
 		<th class="c-users__id c-users__id--active js-filterid">
 			Id
@@ -45,7 +39,7 @@ const ShowTable = function(users){
 			<span class="c-users__active "><svg xmlns="http://www.w3.org/2000/svg" class="c-users__activesvg js-filtersvg" viewBox="0 0 24 24"><path class="c-users__activesvgpath" d="M7,10L12,15L17,10H7Z" /></svg></span>
 		</th>
 		<th class="c-users__expand js-filter"></th>
-	</tr>`; 
+	</tr>`;
 	for (let user of users) {
 		id = user.UID;
 		const voornaam = user.voornaam;
@@ -73,82 +67,77 @@ const ShowTable = function(users){
 				</div>
 			</tr>
 			`;
-
-		
-
-
-
 	}
 	getElement.innerHTML = htmlheaders + htmlString;
 
-	listenToFilterId()
-	listenToFilterAchternaam()
-	listenToFilterVoornaamButton()
-	listenToFilterMailButton()
-}
+	listenToFilterId();
+	listenToFilterAchternaam();
+	listenToFilterVoornaamButton();
+	listenToFilterMailButton();
+};
 
-const sortById = function(){
-	let sortedIdsList = list.sort(
-		(p1, p2) => (p1.UID < p2.UID) ? 1 : (p1.UID > p2.UID) ? -1 : 0);
-	console.log(sortedIdsList)
-	ShowTable(sortedIdsList)
-}
-const sortByAchternaam = function(){
+const sortById = function () {
+	let sortedIdsList = list.sort((p1, p2) =>
+		p1.UID < p2.UID ? 1 : p1.UID > p2.UID ? -1 : 0
+	);
+	console.log(sortedIdsList);
+	ShowTable(sortedIdsList);
+};
+const sortByAchternaam = function () {
+	let sortedAchternaamlist = list.sort((p1, p2) =>
+		p1.achternaam < p2.achternaam ? 1 : p1.achternaam > p2.achternaam ? -1 : 0
+	);
+	console.log(sortedAchternaamlist);
+	ShowTable(sortedAchternaamlist);
+};
 
-	let sortedAchternaamlist = list.sort(
-		(p1,p2) => (p1.achternaam < p2.achternaam) ? 1 : (p1.achternaam > p2.achternaam) ? -1 : 0);
-	console.log(sortedAchternaamlist)
-	ShowTable(sortedAchternaamlist)
-}
+const sortByVoornaam = function () {
+	let sortedVoornaamList = list.sort((p1, p2) =>
+		p1.voornaam < p2.voornaam ? 1 : p1.voornaam > p2.voornaam ? -1 : 0
+	);
+	console.log(sortedVoornaamList);
+	ShowTable(sortedVoornaamList);
+};
 
-const sortByVoornaam = function(){
-	let sortedVoornaamList = list.sort(
-		(p1,p2) => (p1.voornaam < p2.voornaam) ? 1 : (p1.voornaam > p2.voornaam) ? -1 : 0);
-	console.log(sortedVoornaamList)
-	ShowTable(sortedVoornaamList)
-}
+const sortByMail = function () {
+	let sortedMailList = list.sort((p1, p2) =>
+		p1.mail < p2.mail ? 1 : p1.mail > p2.mail ? -1 : 0
+	);
+	console.log(sortedMailList);
+	ShowTable(sortedMailList);
+};
 
-const sortByMail = function(){
-	let sortedMailList = list.sort(
-		(p1,p2) => (p1.mail < p2.mail) ? 1 : (p1.mail > p2.mail) ? -1 : 0);
-	console.log(sortedMailList)
-	ShowTable(sortedMailList)
-}
+const listenToFilterMailButton = function () {
+	const filterMailButton = document.querySelector(".js-filtermail");
 
-const listenToFilterMailButton = function(){
-	const filterMailButton = document.querySelector(".js-filtermail")
+	filterMailButton.addEventListener("click", function () {
+		sortByMail();
+	});
+};
 
-	filterMailButton.addEventListener("click",function(){
-		sortByMail()
-	})
-}
+const listenToFilterVoornaamButton = function () {
+	const filterVoornaamButton = document.querySelector(".js-filtervnaam");
 
-const listenToFilterVoornaamButton = function(){
-	const filterVoornaamButton = document.querySelector(".js-filtervnaam")
-	
-	filterVoornaamButton.addEventListener("click",function(){
-		sortByVoornaam()
-	})
-	
-}
+	filterVoornaamButton.addEventListener("click", function () {
+		sortByVoornaam();
+	});
+};
 
+const listenToFilterAchternaam = function () {
+	const filterAchternaamButton = document.querySelector(".js-filteranaam");
 
-const listenToFilterAchternaam = function(){
-	const filterAchternaamButton = document.querySelector(".js-filteranaam")
+	filterAchternaamButton.addEventListener("click", function () {
+		sortByAchternaam();
+	});
+};
 
-	filterAchternaamButton.addEventListener("click",function(){
-		sortByAchternaam()
-	})
-}
+const listenToFilterId = function () {
+	const filterButton = document.querySelector(".js-filterid");
 
-const listenToFilterId = function(){
-	const filterButton = document.querySelector(".js-filterid")
-
-	filterButton.addEventListener("click",function(){
-		sortById()
-		
-	})
-}
+	filterButton.addEventListener("click", function () {
+		sortById();
+	});
+};
 
 function findInValues(arr, search) {
 	/** cast to string and lowercase to have non-dependant type and case search */
@@ -203,7 +192,7 @@ const searchBar = function () {
 	let bussen;
 	let tekst;
 
-	fetch("../json/users.json")
+	fetch("../Goplay/json/users.json")
 		.then((response) => response.json())
 		.then((json) => {
 			const user = json.users;
@@ -241,7 +230,7 @@ const searchBar = function () {
 					getElement.innerHTML = htmlString;
 					listenToGoBack();
 				}
- 
+
 				const htmlOption1 = `
 				<option value="ja" selected class="c-users__option">ja</option>
 				<option value="nee" class="c-users__option">nee</option>
@@ -271,7 +260,9 @@ const searchBar = function () {
 				for (const user of users) {
 					const uid = user.UID;
 
-					const nieuwsbriefSelector = document.querySelector(`[nieuwsbrief-id='${uid}']`);
+					const nieuwsbriefSelector = document.querySelector(
+						`[nieuwsbrief-id='${uid}']`
+					);
 					// console.log(nieuwsbriefSelector.getAttribute(`value`));
 					if (nieuwsbriefSelector.getAttribute(`value`) == 0) {
 						nieuwsbriefSelector.innerHTML = htmlOption2;
@@ -279,7 +270,9 @@ const searchBar = function () {
 						nieuwsbriefSelector.innerHTML = htmlOption1;
 					}
 
-					const reclameSelectors = document.querySelector(`[reclame-id='${uid}']`);
+					const reclameSelectors = document.querySelector(
+						`[reclame-id='${uid}']`
+					);
 					// console.log(reclameSelectors.getAttribute(`value`));
 					if (reclameSelectors.getAttribute(`value`) == 0) {
 						reclameSelectors.innerHTML = htmlOption2;
