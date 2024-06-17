@@ -30,5 +30,5 @@ if (document.querySelector(".js-carousel")) {
 				break;
 			}
 		}
-	}, 4000);
+	}, 8000);
 }
