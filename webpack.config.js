@@ -3,6 +3,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
+const RobotstxtPlugin = require("robotstxt-webpack-plugin");
+const SitemapPlugin = require("sitemap-webpack-plugin").default;
 var fs = require("fs");
 
 const isProduction = process.env.NODE_ENV == "production";
@@ -25,6 +27,38 @@ while (directories.length > 0) {
 		...dirContents.filter((file) => fs.statSync(file).isDirectory())
 	);
 }
+
+const robotstxtOptions = {
+	policy: [
+		{
+			userAgent: "*",
+			allow: "/",
+			disallow: ["/Goplay", "/Sinksen2022"],
+			crawlDelay: 2,
+		},
+	],
+};
+
+const paths = [
+	{
+		path: "/",
+		lastmod: "2024-06-17",
+		priority: 1,
+		changefreq: "monthly",
+	},
+	{
+		path: "/Goplay/",
+		lastmod: "2024-06-17",
+		priority: 0.1,
+		changefreq: "yearly",
+	},
+	{
+		path: "/Sinksen2022/",
+		lastmod: "2024-06-17",
+		priority: 0.1,
+		changefreq: "yearly",
+	},
+];
 
 const config = {
 	entry: "./src/index.js",
@@ -261,6 +295,19 @@ module.exports = () => {
 				],
 			})
 		);
+		config.plugins.push(
+			new SitemapPlugin({
+				base: "https://jesse-demiddels-portfolio.vercel.app",
+				paths,
+				options: {
+					filename: "sitemap.xml",
+					lastmod: true,
+					changefreq: "monthly",
+					priority: 1,
+				},
+			})
+		);
+		config.plugins.push(new RobotstxtPlugin(robotstxtOptions));
 	} else {
 		config.mode = "development";
 	}
