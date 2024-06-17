@@ -6,16 +6,15 @@
 
 .c-project {
 	&__about {
-		@include order.pos(3);
+		@include order.pos(4);
 
 		@include grid.width(2, "ts");
-		@include grid.width(3, "tl");
 
 		@include grid.height(11);
 		@include grid.height(9, "mm");
 		@include grid.height(8, "ml");
 		@include grid.height(5, "ts");
-		@include grid.height(4, "tl");
+		@include grid.height(6, "tl");
 
 		@extend %u-box;
 
@@ -49,7 +48,7 @@
 		@extend %u-box;
 
 		&--site {
-			@include order.pos(4);
+			@include order.pos(6);
 		}
 
 		&--code {
@@ -87,9 +86,17 @@
 
 		@include grid.width(1);
 
-		@include grid.height(2);
+		@include grid.height(3);
 
 		@extend %u-box;
+
+		a {
+			color: color.$text-color-emphasis;
+
+			&:hover {
+				color: color.$text-color__link-hover;
+			}
+		}
 	}
 
 	&__image {
@@ -98,12 +105,15 @@
 		justify-content: center;
 		align-content: center;
 
-		@include order.pos(6);
+		@include order.pos(3);
 
 		@include grid.width(1);
 		@include grid.width(2, "ts");
+		@include grid.width(3, "tl");
 
 		@include grid.height(2);
+		@include grid.height(3, "ts");
+		@include grid.height(4, "tl");
 
 		@extend %u-box;
 
