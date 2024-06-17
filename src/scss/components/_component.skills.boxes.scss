@@ -5,167 +5,181 @@
 @use "../utilities/utility.box";
 
 .c-skills {
-	&__webDev,
-	&__devLanguages,
-	&__languages,
-	&__graphics,
-	&__video,
-	&__3D {
-		display: flex;
-		align-items: center;
-		align-content: flex-start;
-		flex-wrap: wrap;
+	&__programmingLanguages {
+		@include order.pos(3);
 
-		> ul {
-			margin: 0;
+		@include grid.width(1);
+		@include grid.width(2, "ts");
 
-			padding-inline-start: 30px;
+		@include grid.height(5);
+		@include grid.height(5, "mm");
+		@include grid.height(4, "ml");
 
-			h4 {
-				margin-left: 0;
-				margin-top: 8px;
+		@extend %u-box;
+
+		div {
+			width: 50%;
+
+			@include mq.down(mm) {
+				width: 100%;
 			}
+		}
+
+		section {
+			display: flex;
+			flex-wrap: wrap;
 		}
 	}
 
-	&__webDev {
+	&__other {
+		@include order.pos(4);
+
 		@include grid.width(1);
 
-		@include grid.height(6);
-
-		@include order.pos(3);
+		@include grid.height(1);
 
 		@extend %u-box;
 	}
 
-	&__devLanguages {
+	&__databases {
+		@include order.pos(5);
+		@include order.pos(6, "ls");
+		@include order.pos(7, "ll");
+
 		@include grid.width(1);
 
-		@include grid.height(2);
+		@include grid.height(1);
 
-		@include order.pos(3);
+		@extend %u-box;
+	}
+
+	&__cms {
+		@include order.pos(6);
+		@include order.pos(7, "ls");
+		@include order.pos(8, "ll");
+
+		@include grid.width(1);
+
+		@include grid.height(1);
 
 		@extend %u-box;
 	}
 
 	&__languages {
+		@include order.pos(7);
+		@include order.pos(5, "ls");
+
 		@include grid.width(1);
 
 		@include grid.height(2);
 
-		@include order.pos(3);
-
 		@extend %u-box;
 	}
 
-	&__graphics {
+	&__graphicDesign {
+		@include order.pos(9);
+
 		@include grid.width(1);
 
-		@include grid.height(3);
-
-		@include order.pos(3);
+		@include grid.height(2);
 
 		@extend %u-box;
 	}
 
 	&__video {
-		@include grid.width(1);
+		@include order.pos(8);
+		@include order.pos(6, "ll");
 
-		@include grid.height(3);
-
-		@include order.pos(3);
-
-		@extend %u-box;
-	}
-
-	&__3D {
 		@include grid.width(1);
 
 		@include grid.height(2);
 
-		@include order.pos(3);
+		@extend %u-box;
+	}
+
+	&__3d {
+		@include order.pos(10);
+		@include order.pos(13, "ls");
+		@include order.pos(10, "ll");
+
+		@include grid.width(1);
+
+		@include grid.height(2);
 
 		@extend %u-box;
 	}
 
-	&__list {
-		list-style: none;
-		padding: 0;
+	&__animation {
+		@include order.pos(11);
+		@include order.pos(12, "tl");
+		@include order.pos(14, "ll");
 
-		&Item {
-			progress {
-				border: none;
-				border-radius: 20px;
+		@include grid.width(1);
 
-				width: 150px;
-				max-width: 150px;
+		@include grid.height(2);
 
-				height: 12px;
+		@extend %u-box;
+	}
 
-				background-color: white;
+	&__cssFrameworks {
+		@include order.pos(14);
+		@include order.pos(11, "ll");
 
-				appearance: none;
+		@include grid.width(1);
 
-				animation-name: progressBar;
-				animation-direction: normal;
-				animation-duration: 750ms;
-				animation-fill-mode: both;
-				animation-iteration-count: 1;
-				animation-timing-function: ease-in-out;
-				animation-delay: 1.5s;
+		@include grid.height(2);
 
-				&::-moz-progress-bar {
-					background-color: color.$text-color-emphasis;
-					background-image: linear-gradient(
-						45deg,
-						rgba(255, 255, 255, 0.15) 25%,
-						transparent 25%,
-						transparent 50%,
-						rgba(255, 255, 255, 0.15) 50%,
-						rgba(255, 255, 255, 0.15) 75%,
-						transparent 75%,
-						transparent
-					);
-					background-size: 1rem 1rem;
-				}
+		@extend %u-box;
+	}
 
-				&::-webkit-progress-bar {
-					border-radius: 20px;
-					background-color: white;
-					border: none;
-				}
+	&__jsFrameworks {
+		@include order.pos(11);
+		@include order.pos(10, "ls");
+		@include order.pos(12, "ll");
 
-				&::-webkit-progress-inner-element {
-					border-radius: 20px;
-					border: none;
-					color: white;
-				}
+		@include grid.width(1);
 
-				&::-webkit-progress-value {
-					border: none;
-					background-color: color.$text-color-emphasis;
-					background-image: linear-gradient(
-						45deg,
-						rgba(255, 255, 255, 0.15) 25%,
-						transparent 25%,
-						transparent 50%,
-						rgba(255, 255, 255, 0.15) 50%,
-						rgba(255, 255, 255, 0.15) 75%,
-						transparent 75%,
-						transparent
-					);
-					background-size: 1rem 1rem;
-					border-radius: 20px;
-				}
-			}
+		@include grid.height(2);
 
-			@for $i from 2 through 50 {
-				&:nth-child(#{$i}) {
-					progress {
-						animation-delay: 1.5s + (100ms * ($i - 1));
-					}
-				}
-			}
+		@extend %u-box;
+	}
+
+	&__phpFrameworks {
+		@include order.pos(11);
+		@include order.pos(13, "ll");
+
+		@include grid.width(1);
+
+		@include grid.height(2);
+
+		@extend %u-box;
+	}
+
+	h2 {
+		margin-top: 16px;
+
+		font-size: clamp(1.25rem, 1.5vw + 1rem, 1.75rem);
+
+		text-align: center;
+	}
+
+	h3 {
+		font-size: clamp(1rem, 1.25vw + 1rem, 1.5rem);
+
+		margin-top: 1rem;
+	}
+
+	a {
+		color: color.$text-color-emphasis;
+
+		&:hover {
+			color: color.$text-color__link-hover;
 		}
+	}
+
+	ul {
+		margin-top: 2px;
+
+		padding-left: 30px;
 	}
 }
