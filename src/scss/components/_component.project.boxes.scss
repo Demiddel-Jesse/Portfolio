@@ -76,6 +76,23 @@
 			font-weight: 700;
 
 			margin-top: 8px;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			.c-svgArrow {
+				width: 2rem;
+				height: 2rem;
+
+				stroke: color.$text-color-emphasis;
+
+				&__iconCarrier {
+					path {
+						stroke: color.$text-color-emphasis;
+					}
+				}
+			}
 		}
 
 		&:hover {
@@ -137,6 +154,18 @@
 
 			object-fit: cover;
 			object-position: right;
+		}
+
+		&--top {
+			object-position: top !important;
+		}
+
+		&--left {
+			object-position: left !important;
+		}
+
+		&--bottom {
+			object-position: bottom !important;
 		}
 	}
 }
