@@ -9,8 +9,6 @@ const removeActive = function (slide) {
 };
 
 if (document.querySelector(".js-carousel")) {
-	// console.log("carousel");
-	const carousel = document.querySelector(".js-carousel");
 	const slides = document.querySelectorAll(".js-carousel__item");
 
 	addActive(slides[0]);
