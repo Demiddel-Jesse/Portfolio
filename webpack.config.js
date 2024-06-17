@@ -2,6 +2,7 @@ const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 var fs = require("fs");
 
 const isProduction = process.env.NODE_ENV == "production";
@@ -49,7 +50,7 @@ const config = {
 					inject: true,
 					meta: {
 						// description: { name: "description", content: "..." },
-						keyword: { name: "keywords", content: "..." },
+						// keyword: { name: "keywords", content: "..." },
 						"og:title": {
 							property: "og:title",
 							content: "Jesse Demiddels Portfolio",
@@ -59,7 +60,11 @@ const config = {
 							content: "Portfolio of Jesse Demiddel",
 						},
 						"og:type": { property: "og:type", content: "website" },
-						"og:url": { property: "og:url", content: "..." },
+						"og:url": {
+							property: "og:url",
+							content:
+								"https://jesse-demiddels-portfolio-b7ikaqri8-demiddel-jesses-projects.vercel.app/index.html",
+						},
 						"og:image": { property: "og:image", content: "..." },
 						"twitter:card": {
 							name: "twitter:card",
@@ -74,6 +79,10 @@ const config = {
 							content: "Portfolio of Jesse Demiddel",
 						},
 						"twitter:image": { name: "twitter:image", content: "..." },
+						"twitter:image:alt": {
+							name: "twitter:image:alt",
+							content: "Alt text",
+						},
 					},
 				})
 		),
@@ -89,13 +98,30 @@ const config = {
 				background: "#000000",
 				theme_color: "#171717",
 				icons: {
-					//! need to make a more specific set for icons bc like 50 favicons is too much
-					android: true,
-					appleIcon: true,
-					appleStartup: true,
-					favicons: true,
-					windows: true,
-					yandex: true,
+					android: [
+						"android-chrome-144x144.png",
+						"android-chrome-192x192.png",
+						"android-chrome-256x256.png",
+						"android-chrome-512x512.png",
+					],
+					appleIcon: [
+						"apple-touch-icon-57x57.png",
+						"apple-touch-icon-76x76.png",
+						"apple-touch-icon-120x120.png",
+						"apple-touch-icon-180x180.png",
+					],
+					favicons: [
+						"favicon-16x16.png",
+						"favicon-32x32.png",
+						"favicon-48x48.png",
+						"favicon.ico",
+					],
+					// android: true,
+					// appleIcon: true,
+					// favicons: true
+					appleStartup: false,
+					windows: false,
+					yandex: false,
 				},
 			},
 		}),
@@ -155,6 +181,86 @@ module.exports = () => {
 		config.mode = "production";
 
 		config.plugins.push(new MiniCssExtractPlugin());
+		config.plugins.push(
+			new CopyPlugin({
+				patterns: [
+					// just to include only necessary files from Goplay folder
+					{
+						from: path.resolve(__dirname, "./Goplay/dist", "*.css"),
+						to: "./",
+					},
+					{
+						from: path.resolve(__dirname, "./Goplay/dist", "*.js"),
+						to: "./",
+					},
+					{
+						from: path.resolve(__dirname, "./Goplay/assets/img", "*"),
+						to: "./",
+					},
+					{
+						from: path.resolve(__dirname, "./Goplay/assets/svg", "*"),
+						to: "./",
+					},
+					{
+						from: path.resolve(__dirname, "./Goplay/json", "*"),
+						to: "./",
+					},
+					{
+						from: path.resolve(__dirname, "./Goplay", "*.html"),
+						to: "./",
+					},
+					{
+						from: path.resolve(__dirname, "./Goplay", "*.png"),
+						to: "./",
+					},
+					{
+						from: path.resolve(__dirname, "./Goplay", "*.ico"),
+						to: "./",
+					},
+					{
+						from: path.resolve(__dirname, "./Goplay", "*.svg"),
+						to: "./",
+					},
+					{
+						from: path.resolve(__dirname, "./Goplay", "*.xml"),
+						to: "./",
+					},
+					{
+						from: path.resolve(__dirname, "./Goplay", "*.webmanifest"),
+						to: "./",
+					},
+					// copy sinksen project
+					{
+						from: path.resolve(__dirname, "./Sinksen2022", "*.html"),
+						to: "./",
+					},
+					{
+						from: path.resolve(__dirname, "./Sinksen2022/css", "*.css"),
+						to: "./",
+					},
+					{
+						from: path.resolve(__dirname, "./Sinksen2022/img", "*.png"),
+						to: "./",
+					},
+					{
+						from: path.resolve(__dirname, "./Sinksen2022/img", "*.svg"),
+						to: "./",
+					},
+					{
+						from: path.resolve(__dirname, "./Sinksen2022/img", "*.gif"),
+						to: "./",
+					},
+					{
+						from: path.resolve(__dirname, "./Sinksen2022/img", "*.jpg"),
+						to: "./",
+					},
+					{
+						from: path.resolve(__dirname, "./Sinksen2022/script", "*.js"),
+						to: "./",
+					},
+				],
+			})
+		);
 	} else {
 		config.mode = "development";
 	}

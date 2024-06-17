@@ -17,9 +17,8 @@ const openTab = function () {
 	});
 };
 
-
 const showUser = function (user) {
-  console.log(user.voornaam)
+	console.log(user.voornaam);
 
 	let htmlString = `
   <div class="c-detailuser__tabcontent">
@@ -163,15 +162,12 @@ const showUser = function (user) {
 
   </div>`;
 
+	const userHtml = document.querySelector(".js-user");
+	userHtml.innerHTML = htmlString;
 
-  
-  const userHtml = document.querySelector(".js-user")
-  userHtml.innerHTML = htmlString
-
-  openTab();
-  editModal();
-  buttons();
-
+	openTab();
+	editModal();
+	buttons();
 };
 
 const buttons = function () {
@@ -205,7 +201,7 @@ const editModal = function () {
 	modalDelete.addEventListener("click", function () {
 		modal.classList.toggle("u-hidden");
 	});
-  
+
 	modalCancel.addEventListener("click", function () {
 		modal.classList.toggle("u-hidden");
 	});
@@ -213,7 +209,7 @@ const editModal = function () {
 
 const getUserById = function (id) {
 	console.log(id);
-	fetch("../json/users.json")
+	fetch("../Goplay/json/users.json")
 		.then((response) => response.json())
 		.then((json) => {
 			users = json.users;
@@ -234,9 +230,6 @@ const userdetailinit = function () {
 		const id = urlId.at(-1);
 
 		getUserById(id);
-
-
-
 	} else {
 		//do nothing cause not on the right page
 	}

@@ -1,0 +1,39 @@
+@use "../settings/color" as color;
+@use "../tools/tools.grid" as grid;
+@use "../tools/tools.order" as order;
+@use "../tools/tools.media-querries" as mq;
+@use "../utilities/utility.box";
+
+.c-playground {
+	&__fuzzyLamp {
+		animation-delay: 500ms;
+
+		@include order.pos(3);
+
+		@include grid.width(1);
+		@include grid.width(2, "ts");
+
+		@include grid.height(3);
+		@include grid.height(2, "ts");
+
+		@extend %u-box;
+
+		h2 {
+			margin-bottom: 0;
+		}
+
+		a {
+			color: color.$text-color-emphasis;
+
+			transition: all 250ms;
+
+			font-weight: 600;
+
+			margin-left: 12px;
+
+			&:hover {
+				color: color.$text-color__link-hover;
+			}
+		}
+	}
+}

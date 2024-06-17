@@ -6,9 +6,16 @@
 
 @forward "./component.project.boxes";
 
+@forward "./component.projects.boxes";
+
+@forward "./component.playground.boxes";
+
 @forward "./component.back";
 @forward "./component.header";
 @forward "./component.underConstruction";
+
+@forward "./component.tooltip";
+@forward "./component.carousel";
 
 @forward "./component.svg.arrow";
 @forward "./component.svg.mail";
