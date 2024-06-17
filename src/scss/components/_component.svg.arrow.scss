@@ -1,6 +1,8 @@
+@use "../settings/color" as color;
+
 .c-svgArrow {
 	fill: none;
-	stroke: #ffffff;
+	stroke: color.$text-color-a;
 	transform: rotate(0) matrix(1, 0, 0, 1, 0, 0);
 	width: 2rem;
 	height: 2rem;
@@ -21,7 +23,7 @@
 			stroke-linecap: round;
 			stroke-linejoin: round;
 			stroke-width: 2;
-			stroke: #ffffff;
+			stroke: color.$text-color-a;
 		}
 	}
 }
