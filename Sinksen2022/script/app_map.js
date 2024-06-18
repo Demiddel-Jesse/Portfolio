@@ -1,17 +1,22 @@
-'use strict';
+"use strict";
 
-let provider = 'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png';
+let provider = "https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png";
 let copyright = `&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a> `;
-let map, layerGroupLocation, layerGroupWC, layerGroupFiets, layerGroupTrash, layerGroupInfo;
+let map,
+	layerGroupLocation,
+	layerGroupWC,
+	layerGroupFiets,
+	layerGroupTrash,
+	layerGroupInfo;
 
 let markers = [];
 
-let type = '';
+let type = "";
 
 //#region show functions
 
 const showMap = function () {
-	map = L.map('js-map').setView([50.8194776, 3.2577263], 13);
+	map = L.map("js-map").setView([50.8194776, 3.2577263], 13);
 	L.tileLayer(provider, {
 		attribution: copyright,
 	}).addTo(map);
@@ -20,7 +25,7 @@ const showMap = function () {
 	layerGroupFiets = L.layerGroup().addTo(map);
 	layerGroupTrash = L.layerGroup().addTo(map);
 	layerGroupInfo = L.layerGroup().addTo(map);
-	console.log('showMap is active');
+	console.log("showMap is active");
 };
 
 const showLocations = function (jsonObjectMetContainer) {
@@ -75,7 +80,7 @@ const showLocations = function (jsonObjectMetContainer) {
 
 		const group = new L.featureGroup(markers);
 		map.fitBounds(group.getBounds());
-		document.querySelector('.js-legend').innerHTML = htmlContent;
+		document.querySelector(".js-legend").innerHTML = htmlContent;
 	} catch (error) {
 		console.error(error);
 	}
@@ -102,7 +107,10 @@ const showOrganisationLocations = function (jsonObjectMetContainer) {
 	}
 };
 
-const showOrganisationLocationsFiltered = function (jsonObjectMetContainer, type) {
+const showOrganisationLocationsFiltered = function (
+	jsonObjectMetContainer,
+	type
+) {
 	try {
 		const arrLocations = jsonObjectMetContainer.data;
 		// console.log(arrLocations)
@@ -116,7 +124,11 @@ const showOrganisationLocationsFiltered = function (jsonObjectMetContainer, type
             <h5>
                 ${omschrijving}
             </h5>`;
-			createOrganisationMarkerFiltered(coordinates, htmlPopupContent, omschrijving);
+			createOrganisationMarkerFiltered(
+				coordinates,
+				htmlPopupContent,
+				omschrijving
+			);
 		}
 		const group = new L.featureGroup(markers);
 		// map.fitBounds(group.getBounds());
@@ -133,7 +145,9 @@ const createLocationMarker = function (coordinates, popupContent, id) {
 	// console.log(coordinates);
 	let marker = L.marker([coordinates[0], coordinates[1]], {
 		icon: new L.divIcon({
-			html: `<img class="c-leaflet__loc--ico" src="img/icon-location.svg" height="50" width="50"/>` + `<h5 class="c-leaflet__loc--text">${id}</h5>`,
+			html:
+				`<img class="c-leaflet__loc--ico" src="img/icon-location.svg" height="50" width="50"/>` +
+				`<h5 class="c-leaflet__loc--text">${id}</h5>`,
 		}),
 	}).addTo(layerGroupLocation);
 	marker.bindPopup(popupContent);
@@ -142,87 +156,181 @@ const createLocationMarker = function (coordinates, popupContent, id) {
 
 const createOrganisationMarker = function (coordinates, popupContent, name) {
 	// console.log(coordinates);
-	if (name.toLowerCase() === 'wc') {
-		console.log('work');
-		let marker = L.marker([coordinates[0], coordinates[1]], {
-			icon: new L.divIcon({
-				html: `<img id="" class="c-leaflet__loc--ico" src="img/icon-${name}.svg" height="50" width="50"/>`,
-			}),
-		}).addTo(layerGroupWC);
-		marker.bindPopup(popupContent);
-		markers.push(marker);
-	} else if (name.toLowerCase() === 'fiets') {
-		console.log('work');
-		let marker = L.marker([coordinates[0], coordinates[1]], {
-			icon: new L.divIcon({
-				html: `<img id="" class="c-leaflet__loc--ico" src="img/icon-${name}.svg" height="50" width="50"/>`,
-			}),
-		}).addTo(layerGroupFiets);
-		marker.bindPopup(popupContent);
-		markers.push(marker);
-	} else if (name.toLowerCase() === 'infopunt') {
-		console.log('work');
-		let marker = L.marker([coordinates[0], coordinates[1]], {
-			icon: new L.divIcon({
-				html: `<img id="" class="c-leaflet__loc--ico" src="img/icon-${name}.svg" height="50" width="50"/>`,
-			}),
-		}).addTo(layerGroupInfo);
-		marker.bindPopup(popupContent);
-		markers.push(marker);
-	} else if (name.toLowerCase() === 'recyclagepunt') {
-		console.log('work');
-		let marker = L.marker([coordinates[0], coordinates[1]], {
-			icon: new L.divIcon({
-				html: `<img id="" class="c-leaflet__loc--ico" src="img/icon-${name}.svg" height="50" width="50"/>`,
-			}),
-		}).addTo(layerGroupTrash);
-		marker.bindPopup(popupContent);
-		markers.push(marker);
-	}
-};
+	// if (name.toLowerCase() === "wc") {
+	// 	console.log("work");
+	// 	let marker = L.marker([coordinates[0], coordinates[1]], {
+	// 		icon: new L.divIcon({
+	// 			html: `<img id="" class="c-leaflet__loc--ico" src="img/icon-${name}.svg" height="50" width="50"/>`,
+	// 		}),
+	// 	}).addTo(layerGroupWC);
+	// 	marker.bindPopup(popupContent);
+	// 	markers.push(marker);
+	// } else if (name.toLowerCase() === "fiets") {
+	// 	console.log("work");
+	// 	let marker = L.marker([coordinates[0], coordinates[1]], {
+	// 		icon: new L.divIcon({
+	// 			html: `<img id="" class="c-leaflet__loc--ico" src="img/icon-${name}.svg" height="50" width="50"/>`,
+	// 		}),
+	// 	}).addTo(layerGroupFiets);
+	// 	marker.bindPopup(popupContent);
+	// 	markers.push(marker);
+	// } else if (name.toLowerCase() === "infopunt") {
+	// 	console.log("work");
+	// 	let marker = L.marker([coordinates[0], coordinates[1]], {
+	// 		icon: new L.divIcon({
+	// 			html: `<img id="" class="c-leaflet__loc--ico" src="img/icon-${name}.svg" height="50" width="50"/>`,
+	// 		}),
+	// 	}).addTo(layerGroupInfo);
+	// 	marker.bindPopup(popupContent);
+	// 	markers.push(marker);
+	// } else if (name.toLowerCase() === "recyclagepunt") {
+	// 	console.log("work");
+	// 	let marker = L.marker([coordinates[0], coordinates[1]], {
+	// 		icon: new L.divIcon({
+	// 			html: `<img id="" class="c-leaflet__loc--ico" src="img/icon-${name}.svg" height="50" width="50"/>`,
+	// 		}),
+	// 	}).addTo(layerGroupTrash);
+	// 	marker.bindPopup(popupContent);
+	// 	markers.push(marker);
+	// }
 
-const createOrganisationMarkerFiltered = function (coordinates, popupContent, name) {
-	// console.log(coordinates);
-	if (name.toLowerCase() === type) {
-		if (name.toLowerCase() === 'wc') {
-			console.log('work');
-			let marker = L.marker([coordinates[0], coordinates[1]], {
+	let marker;
+
+	switch (name.toLowerCase) {
+		case "wc":
+			marker = L.marker([coordinates[0], coordinates[1]], {
 				icon: new L.divIcon({
 					html: `<img id="" class="c-leaflet__loc--ico" src="img/icon-${name}.svg" height="50" width="50"/>`,
 				}),
 			}).addTo(layerGroupWC);
 			marker.bindPopup(popupContent);
 			markers.push(marker);
-		} else if (name.toLowerCase() === 'fiets') {
-			console.log('work');
-			let marker = L.marker([coordinates[0], coordinates[1]], {
+			break;
+		case "fiets":
+			marker = L.marker([coordinates[0], coordinates[1]], {
 				icon: new L.divIcon({
 					html: `<img id="" class="c-leaflet__loc--ico" src="img/icon-${name}.svg" height="50" width="50"/>`,
 				}),
 			}).addTo(layerGroupFiets);
 			marker.bindPopup(popupContent);
 			markers.push(marker);
-		} else if (name.toLowerCase() === 'infopunt') {
-			console.log('work');
-			let marker = L.marker([coordinates[0], coordinates[1]], {
+			break;
+		case "infopunt":
+			marker = L.marker([coordinates[0], coordinates[1]], {
 				icon: new L.divIcon({
 					html: `<img id="" class="c-leaflet__loc--ico" src="img/icon-${name}.svg" height="50" width="50"/>`,
 				}),
 			}).addTo(layerGroupInfo);
 			marker.bindPopup(popupContent);
 			markers.push(marker);
-		} else if (name.toLowerCase() === 'recyclagepunt') {
-			console.log('work');
-			let marker = L.marker([coordinates[0], coordinates[1]], {
+			break;
+		case "recyclagepunt":
+			marker = L.marker([coordinates[0], coordinates[1]], {
 				icon: new L.divIcon({
 					html: `<img id="" class="c-leaflet__loc--ico" src="img/icon-${name}.svg" height="50" width="50"/>`,
 				}),
 			}).addTo(layerGroupTrash);
 			marker.bindPopup(popupContent);
 			markers.push(marker);
+			break;
+		default:
+			break;
+	}
+};
+
+const createOrganisationMarkerFiltered = function (
+	coordinates,
+	popupContent,
+	name
+) {
+	// console.log(coordinates);
+	// if (name.toLowerCase() === type) {
+	// 	if (name.toLowerCase() === "wc") {
+	// 		// console.log('work');
+	// 		let marker = L.marker([coordinates[0], coordinates[1]], {
+	// 			icon: new L.divIcon({
+	// 				html: `<img id="" class="c-leaflet__loc--ico" src="img/icon-${name}.svg" height="50" width="50"/>`,
+	// 			}),
+	// 		}).addTo(layerGroupWC);
+	// 		marker.bindPopup(popupContent);
+	// 		markers.push(marker);
+	// 	} else if (name.toLowerCase() === "fiets") {
+	// 		// console.log('work');
+	// 		let marker = L.marker([coordinates[0], coordinates[1]], {
+	// 			icon: new L.divIcon({
+	// 				html: `<img id="" class="c-leaflet__loc--ico" src="img/icon-${name}.svg" height="50" width="50"/>`,
+	// 			}),
+	// 		}).addTo(layerGroupFiets);
+	// 		marker.bindPopup(popupContent);
+	// 		markers.push(marker);
+	// 	} else if (name.toLowerCase() === "infopunt") {
+	// 		// console.log('work');
+	// 		let marker = L.marker([coordinates[0], coordinates[1]], {
+	// 			icon: new L.divIcon({
+	// 				html: `<img id="" class="c-leaflet__loc--ico" src="img/icon-${name}.svg" height="50" width="50"/>`,
+	// 			}),
+	// 		}).addTo(layerGroupInfo);
+	// 		marker.bindPopup(popupContent);
+	// 		markers.push(marker);
+	// 	} else if (name.toLowerCase() === "recyclagepunt") {
+	// 		// console.log('work');
+	// 		let marker = L.marker([coordinates[0], coordinates[1]], {
+	// 			icon: new L.divIcon({
+	// 				html: `<img id="" class="c-leaflet__loc--ico" src="img/icon-${name}.svg" height="50" width="50"/>`,
+	// 			}),
+	// 		}).addTo(layerGroupTrash);
+	// 		marker.bindPopup(popupContent);
+	// 		markers.push(marker);
+	// 	}
+	// } else {
+	// 	console.log("not " + type);
+	// }
+
+	let marker;
+
+	if (name.toLowerCase() === type) {
+		switch (name.toLowerCase) {
+			case "wc":
+				marker = L.marker([coordinates[0], coordinates[1]], {
+					icon: new L.divIcon({
+						html: `<img id="" class="c-leaflet__loc--ico" src="img/icon-${name}.svg" height="50" width="50"/>`,
+					}),
+				}).addTo(layerGroupWC);
+				marker.bindPopup(popupContent);
+				markers.push(marker);
+				break;
+			case "fiets":
+				marker = L.marker([coordinates[0], coordinates[1]], {
+					icon: new L.divIcon({
+						html: `<img id="" class="c-leaflet__loc--ico" src="img/icon-${name}.svg" height="50" width="50"/>`,
+					}),
+				}).addTo(layerGroupFiets);
+				marker.bindPopup(popupContent);
+				markers.push(marker);
+				break;
+			case "infopunt":
+				marker = L.marker([coordinates[0], coordinates[1]], {
+					icon: new L.divIcon({
+						html: `<img id="" class="c-leaflet__loc--ico" src="img/icon-${name}.svg" height="50" width="50"/>`,
+					}),
+				}).addTo(layerGroupInfo);
+				marker.bindPopup(popupContent);
+				markers.push(marker);
+				break;
+			case "recyclagepunt":
+				marker = L.marker([coordinates[0], coordinates[1]], {
+					icon: new L.divIcon({
+						html: `<img id="" class="c-leaflet__loc--ico" src="img/icon-${name}.svg" height="50" width="50"/>`,
+					}),
+				}).addTo(layerGroupTrash);
+				marker.bindPopup(popupContent);
+				markers.push(marker);
+				break;
+			default:
+				break;
 		}
 	} else {
-		console.log('not ' + type);
+		console.log("not " + type);
 	}
 };
 
@@ -231,15 +339,24 @@ const createOrganisationMarkerFiltered = function (coordinates, popupContent, na
 //#region get functions
 
 const getLocationCoordinates = function () {
-	handleData('https://dv-sinksen.herokuapp.com/api/v1/locaties/?nopagination=true&page=1', showLocations);
+	handleData(
+		"https://dv-sinksen.herokuapp.com/api/v1/locaties/?nopagination=true&page=1",
+		showLocations
+	);
 };
 
 const getOrganisationLocations = function () {
-	handleData('https://dv-sinksen.herokuapp.com/api/v1/locaties/organisatie/?nopagination=true&page=1', showOrganisationLocations);
+	handleData(
+		"https://dv-sinksen.herokuapp.com/api/v1/locaties/organisatie/?nopagination=true&page=1",
+		showOrganisationLocations
+	);
 };
 
 const getOrganisationLocationsFiltered = function () {
-	handleData('https://dv-sinksen.herokuapp.com/api/v1/locaties/organisatie/?nopagination=true&page=1', showOrganisationLocationsFiltered);
+	handleData(
+		"https://dv-sinksen.herokuapp.com/api/v1/locaties/organisatie/?nopagination=true&page=1",
+		showOrganisationLocationsFiltered
+	);
 };
 
 //#endregion
@@ -247,60 +364,70 @@ const getOrganisationLocationsFiltered = function () {
 //#region listen functions
 
 const listenToChecks = function () {
-	document.querySelector('.js-filter-recycle').addEventListener('change', function () {
-		if (this.checked) {
-			type = 'recyclagepunt';
-			getOrganisationLocationsFiltered();
-		} else {
-			layerGroupTrash.clearLayers();
-		}
-	});
+	document
+		.querySelector(".js-filter-recycle")
+		.addEventListener("change", function () {
+			if (this.checked) {
+				type = "recyclagepunt";
+				getOrganisationLocationsFiltered();
+			} else {
+				layerGroupTrash.clearLayers();
+			}
+		});
 
-	document.querySelector('.js-filter-location').addEventListener('click', function () {
-		if (this.checked) {
-			getLocationCoordinates();
-		} else {
-			layerGroupLocation.clearLayers();
-		}
-	});
+	document
+		.querySelector(".js-filter-location")
+		.addEventListener("click", function () {
+			if (this.checked) {
+				getLocationCoordinates();
+			} else {
+				layerGroupLocation.clearLayers();
+			}
+		});
 
-	document.querySelector('.js-filter-info').addEventListener('click', function () {
-		if (this.checked) {
-			type = 'infopunt';
-			getOrganisationLocationsFiltered();
-		} else {
-			layerGroupInfo.clearLayers();
-		}
-	});
+	document
+		.querySelector(".js-filter-info")
+		.addEventListener("click", function () {
+			if (this.checked) {
+				type = "infopunt";
+				getOrganisationLocationsFiltered();
+			} else {
+				layerGroupInfo.clearLayers();
+			}
+		});
 
-	document.querySelector('.js-filter-fiets').addEventListener('click', function () {
-		if (this.checked) {
-			type = 'fiets';
-			getOrganisationLocationsFiltered();
-		} else {
-			layerGroupFiets.clearLayers();
-		}
-	});
+	document
+		.querySelector(".js-filter-fiets")
+		.addEventListener("click", function () {
+			if (this.checked) {
+				type = "fiets";
+				getOrganisationLocationsFiltered();
+			} else {
+				layerGroupFiets.clearLayers();
+			}
+		});
 
-	document.querySelector('.js-filter-wc').addEventListener('click', function () {
-		if (this.checked) {
-			type = 'wc';
-			getOrganisationLocationsFiltered();
-		} else {
-			layerGroupWC.clearLayers();
-		}
-	});
+	document
+		.querySelector(".js-filter-wc")
+		.addEventListener("click", function () {
+			if (this.checked) {
+				type = "wc";
+				getOrganisationLocationsFiltered();
+			} else {
+				layerGroupWC.clearLayers();
+			}
+		});
 };
 
 //#endregion
 
 // Init / DOMcontentLoaded
 const init_map = function () {
-	console.log('🚀 DOM-map geladen');
+	console.log("🚀 DOM-map geladen");
 	getLocationCoordinates();
 	getOrganisationLocations();
 	showMap();
 	listenToChecks();
 };
 
-document.addEventListener('DOMContentLoaded', init_map);
+document.addEventListener("DOMContentLoaded", init_map);
