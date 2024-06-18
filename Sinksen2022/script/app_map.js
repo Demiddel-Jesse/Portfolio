@@ -339,24 +339,24 @@ const createOrganisationMarkerFiltered = function (
 //#region get functions
 
 const getLocationCoordinates = function () {
-	handleData(
-		"https://dv-sinksen.herokuapp.com/api/v1/locaties/?nopagination=true&page=1",
-		showLocations
-	);
+	// handleData(
+	// 	"https://dv-sinksen.herokuapp.com/api/v1/locaties/?nopagination=true&page=1",
+	// 	showLocations
+	// );
 };
 
 const getOrganisationLocations = function () {
-	handleData(
-		"https://dv-sinksen.herokuapp.com/api/v1/locaties/organisatie/?nopagination=true&page=1",
-		showOrganisationLocations
-	);
+	// handleData(
+	// 	"https://dv-sinksen.herokuapp.com/api/v1/locaties/organisatie/?nopagination=true&page=1",
+	// 	showOrganisationLocations
+	// );
 };
 
 const getOrganisationLocationsFiltered = function () {
-	handleData(
-		"https://dv-sinksen.herokuapp.com/api/v1/locaties/organisatie/?nopagination=true&page=1",
-		showOrganisationLocationsFiltered
-	);
+	// handleData(
+	// 	"https://dv-sinksen.herokuapp.com/api/v1/locaties/organisatie/?nopagination=true&page=1",
+	// 	showOrganisationLocationsFiltered
+	// );
 };
 
 //#endregion
