@@ -1,0 +1,5 @@
+@use "../settings/color" as color;
+
+.u-highlight {
+	color: color.$text-color-emphasis--light;
+}

@@ -9,6 +9,7 @@
 	--text-color-c: #aaaaaa;
 	--text-color-d: #cfcfcf;
 	--text-color-emphasis: #ad0000;
+	--text-color-emphasis--light: #e70000;
 	--text-color__link-hover: #800002;
 
 	--box__background-color: #171717;
@@ -31,6 +32,7 @@ $text-color-b: var(--text-color-b);
 $text-color-c: var(--text-color-c);
 $text-color-d: var(--text-color-d);
 $text-color-emphasis: var(--text-color-emphasis);
+$text-color-emphasis--light: var(--text-color-emphasis--light);
 $text-color__link-hover: var(--text-color__link-hover);
 
 $box__bg-color: var(--box__background-color);
