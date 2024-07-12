@@ -36,4 +36,36 @@
 			}
 		}
 	}
+
+	&__movieDatabase {
+		animation-delay: 750ms;
+
+		@include order.pos(4);
+
+		@include grid.width(1);
+		@include grid.width(2, "ts");
+
+		@include grid.height(3);
+		@include grid.height(2, "ts");
+
+		@extend %u-box;
+
+		h2 {
+			margin-bottom: 0;
+		}
+
+		a {
+			color: color.$text-color-emphasis;
+
+			transition: all 250ms;
+
+			font-weight: 600;
+
+			margin-left: 12px;
+
+			&:hover {
+				color: color.$text-color__link-hover;
+			}
+		}
+	}
 }

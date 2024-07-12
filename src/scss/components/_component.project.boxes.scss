@@ -37,6 +37,14 @@
 				color: color.$text-color__link-hover;
 			}
 		}
+
+		&--smallProjectMovieDatabase {
+			@include grid.height(12);
+			@include grid.height(10, "mm");
+			@include grid.height(9, "ml");
+			@include grid.height(6, "ts");
+			@include grid.height(7, "tl");
+		}
 	}
 
 	&__links {
@@ -149,7 +157,6 @@
 		@extend %u-box;
 
 		img {
-			width: 100%;
 			height: 100%;
 
 			object-fit: cover;

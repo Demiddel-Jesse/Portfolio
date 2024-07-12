@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Movie database Project</title>
+	</head>
+	<body class="u-background">
+		<main class="o-grid">
+			<section class="c-back">
+				<a href="./smallProjects.html">Back</a>
+				<h2>
+					Back to projects
+					<svg
+						class="c-svgArrow"
+						width="32px"
+						height="32px"
+						viewBox="-2.4 -2.4 32 32"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<g id="SVGRepo_bgCarrier" class="c-svgArrow__bgCarrier"></g>
+						<g id="SVGRepo_tracerCarrier" class="c-svgArrow__tracerCarrier"></g>
+						<g id="SVGRepo_iconCarrier" class="c-svgArrow__iconCarrier">
+							<path d="M7 17L17 7M17 7H8M17 7V16"></path>
+						</g>
+					</svg>
+				</h2>
+			</section>
+			<header class="c-header">
+				<h1>Movie database project</h1>
+			</header>
+			<section
+				class="c-project__about c-project__about--smallProjectMovieDatabase"
+			>
+				<p>
+					This is my very first full fledged PHP site. Since this was meant as a
+					test to assess that I am able to create a functional site in PHP and
+					keep the code readable for my course at the VDAB.
+					<br /><br />
+					I created the site according to the MVC design pattern and had to use
+					MySQL for the database. I started with creating the database and
+					filled in the data with chatGPT. While creating the database I decided
+					to Use paths and locally stored images for the film posters but when
+					it came to the images of actors and directors I wanted a bit of a
+					challenge since these were optional in my description of the task so I
+					saved them as blobs in the database.
+					<br /><br />
+					I had a couple of problems while reading the blobs from the database
+					and setting them in img tags and also while saving images. Since this
+					site was meant to have all basic CRUD operations Admins had both the
+					ability to create and edit films and actors/directors, while users
+					only could create a list for which movies they wanted to watch / have
+					watched and give them scores.
+					<br /><br />
+					My biggest problem came when I wanted to put the site online since I
+					decided to use vercel since it's a free platform with little
+					restrictions for simple sites. As I put the site online I had to deal
+					with routes for the first time and those caused me a lot of headaches
+					since there isn't a lot of proper documentation on hosting a PHP site
+					on vercel. After figuring it out i had to translate a lot of the sql
+					script for the database since I used a lot of things which caused
+					errors in PostgreSQL.
+				</p>
+			</section>
+			<section class="c-project__links c-project__links--site">
+				<a
+					href="https://simple-php-movie-database.vercel.app/"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					link to website
+				</a>
+				<h3>
+					See Site
+					<svg
+						class="c-svgArrow"
+						width="32px"
+						height="32px"
+						viewBox="-2.4 -2.4 32 32"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<g id="SVGRepo_bgCarrier" class="c-svgArrow__bgCarrier"></g>
+						<g id="SVGRepo_tracerCarrier" class="c-svgArrow__tracerCarrier"></g>
+						<g id="SVGRepo_iconCarrier" class="c-svgArrow__iconCarrier">
+							<path d="M7 17L17 7M17 7H8M17 7V16"></path>
+						</g>
+					</svg>
+				</h3>
+			</section>
+			<section class="c-project__tech">
+				<h2>Tech used</h2>
+				<ul>
+					<li>PHP</li>
+					<li>Twig</li>
+					<li>SQL</li>
+					<li>PostgreSQL</li>
+				</ul>
+			</section>
+			<section class="c-project__image">
+				<div class="js-carousel c-carousel">
+					<div
+						class="c-carousel__item c-carousel__item--active js-carousel__item"
+					>
+						<img
+							src="./assets/img/MovieDatabaseHome.png"
+							alt="project image1"
+						/>
+					</div>
+					<div
+						class="c-carousel__item c-carousel__item--active js-carousel__item"
+					>
+						<img
+							src="./assets/img/MovieDatabaseMovieDetail.png"
+							alt="project image2"
+						/>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>
