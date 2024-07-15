@@ -139,6 +139,8 @@
 	&__image {
 		animation-delay: 800ms;
 
+		position: relative;
+
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
@@ -174,5 +176,17 @@
 		&--bottom {
 			object-position: bottom !important;
 		}
+	}
+
+	&__imageCTA {
+		position: absolute;
+		bottom: 10%;
+		left: 10%;
+
+		border-radius: 0 12px 0 0;
+
+		background-color: rgba($color: #000000, $alpha: 0.4);
+
+		z-index: 500;
 	}
 }
