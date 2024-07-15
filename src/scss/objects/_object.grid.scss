@@ -9,6 +9,8 @@ $breakpoint-names: map-keys(bp.$breakpoints);
 	padding: 1rem;
 	margin: auto;
 
+	position: relative;
+
 	display: grid;
 	grid-column-gap: grid.$columnGap;
 	grid-row-gap: grid.$rowGap;
