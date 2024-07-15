@@ -17,7 +17,7 @@ if (document.querySelector(".js-carousel")) {
 		for (let i = 0; i < slides.length; i++) {
 			if (i + 1 == slides.length) {
 				addActive(slides[0]);
-				slides[0].style.zIndex = 100;
+				slides[0].style.zIndex = 1;
 				setTimeout(removeActive, 350, slides[i]);
 				break;
 			}

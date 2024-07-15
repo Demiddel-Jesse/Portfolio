@@ -1,3 +1,4 @@
+@use "../settings/color" as color;
 @use "../utilities/utility.box";
 
 .c-modal {
@@ -27,15 +28,17 @@
 }
 
 .js-close {
-	color: #aaa;
+	color: color.$text-color-d;
 	position: absolute;
 	font-size: 28px;
 	font-weight: bold;
 	right: 12px;
 
+	transition: 250ms;
+
 	&:hover,
 	&:focus {
-		color: black;
+		color: color.$text-color-emphasis;
 		text-decoration: none;
 		cursor: pointer;
 	}
