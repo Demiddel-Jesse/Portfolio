@@ -28,5 +28,5 @@ if (document.querySelector(".js-carousel")) {
 				break;
 			}
 		}
-	}, 8000);
+	}, 5000);
 }
