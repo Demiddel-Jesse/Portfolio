@@ -60,8 +60,9 @@
 
 		@include order.pos(5);
 
-		@include grid.width(2);
+		@include grid.width(2, "ts");
 
-		@include grid.height(2);
+		@include grid.height(4);
+		@include grid.height(2, "ts");
 	}
 }
