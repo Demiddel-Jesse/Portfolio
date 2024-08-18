@@ -6,7 +6,8 @@
 
 .c-projects {
 	&__projectGoplay,
-	&__projectSinksen {
+	&__projectSinksen,
+	&__projectMiniMuse {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -48,6 +49,16 @@
 		animation-delay: 750ms;
 
 		@include order.pos(4);
+
+		@include grid.width(1);
+
+		@include grid.height(2);
+	}
+
+	&__projectMiniMuse {
+		animation-delay: 650ms;
+
+		@include order.pos(5);
 
 		@include grid.width(1);
 
