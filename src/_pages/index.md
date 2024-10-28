@@ -1,7 +1,7 @@
 ---
 layout: HomePage.ejs
 permalink: /
-draft: true
+draft: false
 fmContentType: default
 slug: jesse-portfolio
 ---
