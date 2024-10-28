@@ -4,12 +4,15 @@
 	"description": "Repo to have a backup of my Portfolio code",
 	"main": "./src/index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"build:site": "ELEVENTY_ENV=production npx eleventy",
+		"dev:site": "ELEVENTY_ENV=development npx eleventy --serve"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
-		"@11ty/eleventy": "3.0.0"
+		"@11ty/eleventy": "3.0.0",
+		"@11ty/eleventy-plugin-ejs": "^1.0.0",
+		"ejs": "^3.1.10"
 	}
 }
