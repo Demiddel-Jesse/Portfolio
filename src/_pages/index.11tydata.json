@@ -1,0 +1,43 @@
+{
+	"contact": [
+		{
+			"way": "mail",
+			"info": "Jesse.demiddel19@gmail.com",
+			"link": "mailto:jesse.demiddel19@gmail.com"
+		},
+		{
+			"way": "linkedIn",
+			"info": "linkedIn.com/jesse-demiddel",
+			"link": "https://www.linkedin.com/in/jesse-demiddel-376aa6246/"
+		},
+		{
+			"way": "github",
+			"info": "github.com/Demiddel-Jesse",
+			"link": "https://github.com/Demiddel-Jesse"
+		}
+	],
+	"currentOccupation": {
+		"title": "Student at VDAB",
+		"description": "Full stack developer PHP"
+	},
+	"techList": [
+		"HTML5",
+		"SCSS",
+		"JavaScript",
+		"SQL",
+		"PHP",
+		"Webpack",
+		"Git",
+		"..."
+	],
+	"softwareList": [
+		"Figma",
+		"Adobe XD",
+		"Photoshop",
+		"Illustrator",
+		"Premiere Pro",
+		"After Effects",
+		"Davinci Resolve",
+		"..."
+	]
+}

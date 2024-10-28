@@ -2,12 +2,6 @@
 	"frontMatter.framework.id": "11ty",
 	"frontMatter.preview.host": "http://localhost:8080",
 	"frontMatter.git.enabled": true,
-	"frontMatter.content.pageFolders": [
-		{
-			"title": "content",
-			"path": "[[workspace]]/content"
-		}
-	],
 	"[markdown]": {
 		"editor.fontSize": 14,
 		"editor.lineHeight": 26,
@@ -20,5 +14,6 @@
 			"other": "off"
 		},
 		"editor.minimap.enabled": false
-	}
+	},
+	"frontMatter.dashboard.openOnStart": true
 }
