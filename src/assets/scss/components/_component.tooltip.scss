@@ -1,0 +1,41 @@
+@use "../settings/color" as color;
+
+.c-tooltip {
+	position: relative;
+
+	&__text {
+		visibility: hidden;
+		position: absolute;
+		width: 120px;
+		background-color: color.$background__tooltip-color;
+		color: color.$text-color-a;
+		text-align: center;
+		padding: 5px 0;
+		border-radius: 6px;
+		z-index: 1;
+		opacity: 0;
+		transition: opacity 0.3s;
+
+		top: 40%;
+		left: 45%;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 100%;
+			margin-top: -5px;
+			border-width: 5px;
+			border-style: solid;
+			border-color: transparent color.$background__tooltip-color transparent
+				transparent;
+		}
+	}
+
+	&:hover {
+		.c-tooltip__text {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+}

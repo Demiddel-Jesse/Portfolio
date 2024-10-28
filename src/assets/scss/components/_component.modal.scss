@@ -1,0 +1,45 @@
+@use "../settings/color" as color;
+@use "../utilities/utility.box";
+
+.c-modal {
+	display: none;
+	position: absolute;
+	z-index: 1;
+
+	width: 100%;
+	height: fit-content;
+
+	margin: auto;
+	margin-top: 8rem;
+
+	animation: none;
+
+	@extend %u-box;
+
+	justify-content: center;
+
+	&__img {
+		padding: 2rem;
+
+		width: 100%;
+
+		object-fit: contain;
+	}
+}
+
+.js-close {
+	color: color.$text-color-d;
+	position: absolute;
+	font-size: 28px;
+	font-weight: bold;
+	right: 12px;
+
+	transition: 250ms;
+
+	&:hover,
+	&:focus {
+		color: color.$text-color-emphasis;
+		text-decoration: none;
+		cursor: pointer;
+	}
+}

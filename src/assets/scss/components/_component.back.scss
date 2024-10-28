@@ -1,0 +1,39 @@
+@use "../settings/color" as color;
+@use "../tools/tools.grid" as grid;
+@use "../tools/tools.order" as order;
+@use "../tools/tools.media-querries" as mq;
+@use "../utilities/utility.box";
+
+.c-back {
+	display: flex;
+	align-items: center;
+
+	animation-delay: 250ms;
+
+	@include order.pos(1);
+
+	@include grid.width(1);
+
+	@include grid.height(1);
+
+	@extend %u-box;
+
+	h2 {
+		margin-top: 8px;
+
+		font-size: clamp(1rem, 3.2vw + 1rem, 1.5rem);
+
+		display: flex;
+		align-items: center;
+		gap: 8px;
+
+		.c-svgArrow {
+			width: 2.5rem;
+			height: 2.5rem;
+		}
+	}
+
+	a {
+		@extend %u-boxLink;
+	}
+}

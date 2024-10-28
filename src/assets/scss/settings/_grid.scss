@@ -1,0 +1,101 @@
+$rowGap: 16px;
+$columnGap: 16px;
+
+$columns: (
+	xs: 1,
+	//0px /* extra small */
+	ms: 1,
+	//320px /* mobile small */
+	mm: 1,
+	//375px /* mobile medium */
+	ml: 1,
+	//425px /* mobile large */
+	ts: 2,
+	//577px /* tablet small */
+	tl: 3,
+	//768px /* tablet large */
+	ls: 4,
+	//1024px /* laptop small */
+	hd: 4,
+	//1240px /* 720p */
+	ll: 5,
+	//1440px /* laptop large */
+	fhd: 5,
+	//1920px /* 1080p */
+	uhd: 5,
+	//2560px /* 4K */
+);
+$columnSize: (
+	xs: 250px,
+	//0px /* extra small */
+	ms: 250px,
+	//320px /* mobile small */
+	mm: 300px,
+	//375px /* mobile medium */
+	ml: clamp(325px, 80vw, 450px),
+	//425px /* mobile large */
+	ts: clamp(217px, 45vw, 320px),
+	//577px /* tablet small */
+	tl: 217px,
+	//768px /* tablet large */
+	ls: 217px,
+	//1024px /* laptop small */
+	hd: 217px,
+	//1280px /* 720p */
+	ll: 217px,
+	//1440px /* laptop large */
+	fhd: 217px,
+	//1920px /* 1080p */
+	uhd: 217px,
+	//2560px /* 4K */
+);
+
+$rows: (
+	//! currently not used because rows are done with grid-auto-rows instead of grid-template-rows.
+	xs: auto,
+	//0px /* extra small */
+	ms: auto,
+	//320px /* mobile small */
+	mm: auto,
+	//375px /* mobile medium */
+	ml: auto,
+	//425px /* mobile large */
+	ts: 8,
+	//577px /* tablet small */
+	tl: 8,
+	//768px /* tablet large */
+	ls: 8,
+	//1024px /* laptop small */
+	hd: 8,
+	//1280px /* 720p */
+	ll: 8,
+	//1440px /* laptop large */
+	fhd: 8,
+	//1920px /* 1080p */
+	uhd: 8,
+	//2560px /* 4K */
+);
+$rowSize: (
+	xs: 80px,
+	//0px /* extra small */
+	ms: 80px,
+	//320px /* mobile small */
+	mm: 80px,
+	//375px /* mobile medium */
+	ml: 80px,
+	//425px /* mobile large */
+	ts: 90px,
+	//577px /* tablet small */
+	tl: 90px,
+	//768px /* tablet large */
+	ls: 90px,
+	//1024px /* laptop small */
+	hd: 90px,
+	//1280px /* 720p */
+	ll: 90px,
+	//1440px /* laptop large */
+	fhd: 90px,
+	//1920px /* 1080p */
+	uhd: 90px,
+	//2560px /* 4K */
+);

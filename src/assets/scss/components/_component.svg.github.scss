@@ -1,0 +1,21 @@
+@use "../settings/color" as color;
+
+.c-svgGithub {
+	fill: color.$text-color-a;
+
+	width: 24px;
+	height: 24px;
+
+	padding-right: 8px;
+
+	transition: 250ms all;
+
+	&__bgCarrier {
+		stroke-width: 0;
+	}
+
+	&__tracerCarrier {
+		stroke-linecap: round;
+		stroke-linejoin: round;
+	}
+}

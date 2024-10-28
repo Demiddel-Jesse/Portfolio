@@ -1,0 +1,11 @@
+@use "../settings/background" as bg;
+
+@keyframes backgroundMovement {
+	from {
+		background-position: 0 0;
+	}
+
+	to {
+		background-position: bg.$gridSize bg.$gridSize;
+	}
+}

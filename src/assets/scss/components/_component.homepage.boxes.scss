@@ -1,0 +1,331 @@
+@use "../settings/color" as color;
+@use "../tools/tools.grid" as grid;
+@use "../tools/tools.order" as order;
+@use "../tools/tools.media-querries" as mq;
+@use "../utilities/utility.box";
+
+.c-homepage {
+	&__about {
+		animation-delay: 250ms;
+
+		@include order.pos(1);
+
+		@include grid.width(1);
+		@include grid.width(2, "ts");
+		@include grid.width(3, "tl");
+
+		@include grid.height(6);
+		@include grid.height(5, "mm");
+		@include grid.height(4, "ts");
+		@include grid.height(3, "tl");
+		@include grid.height(4, "ls");
+
+		@extend %u-box;
+
+		h1 {
+			font-size: clamp(1.5rem, 3vw + 1rem, 2.25rem);
+			font-weight: 400;
+			letter-spacing: -1px;
+
+			b {
+				font-weight: 600;
+			}
+		}
+	}
+
+	&__contact {
+		animation-delay: 650ms;
+
+		@include order.pos(2);
+		@include order.pos(3, "tl");
+		@include order.pos(2, "ll");
+
+		@include grid.width(2, "ts");
+		@include grid.height(2);
+
+		@extend %u-box;
+
+		&__link {
+			display: flex;
+			align-items: center;
+
+			padding-left: 12px;
+
+			text-decoration: none;
+
+			color: color.$text-color-a;
+
+			transition: all 250ms;
+
+			width: fit-content;
+
+			@include mq.down(ml) {
+				font-size: 14px;
+			}
+
+			@include mq.down(mm) {
+				font-size: 13px;
+			}
+
+			&--mail {
+				padding-bottom: 8px;
+				&:hover {
+					color: color.$text-color__link-hover;
+
+					.c-svgMail__iconCarrier path {
+						stroke: color.$text-color__link-hover;
+					}
+				}
+			}
+
+			&--linkedIn {
+				padding-bottom: 8px;
+				&:hover {
+					color: color.$linkedIn-color;
+
+					.c-svgLinkedIn__path1 {
+						fill: color.$linkedIn-color;
+					}
+				}
+			}
+
+			&--github {
+				&:hover {
+					color: color.$github-color;
+
+					.c-svgGithub {
+						fill: color.$github-color;
+					}
+				}
+			}
+		}
+	}
+
+	&__copyright {
+		animation-delay: 1.6s;
+
+		@include order.pos(9);
+		@include order.pos(8, "ts");
+		@include order.pos(9, "tl");
+
+		@include grid.width(1, "ls");
+		@include grid.height(1);
+
+		@extend %u-box;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		h2 {
+			margin-top: 8px;
+
+			font-size: 1rem;
+			font-weight: 200;
+		}
+	}
+
+	&__currentOccupation {
+		animation-delay: 750ms;
+
+		@include order.pos(3);
+		@include order.pos(1, "tl");
+		@include order.pos(3, "ls");
+
+		@include grid.width(1, "ls");
+		@include grid.height(1);
+
+		@extend %u-box;
+
+		h2 {
+			font-size: 1rem;
+			margin-top: 16px;
+
+			@include mq.down(ts) {
+				margin-top: 8px;
+			}
+		}
+
+		p {
+			font-size: 0.688rem;
+		}
+
+		&__explain {
+			font-size: 0.5rem;
+			color: color.$text-color-b;
+			// should eventually have a popover dialog with location information
+		}
+	}
+
+	&__highlightedProject {
+		display: flex;
+		align-items: center;
+
+		animation-delay: 1.1s;
+
+		@include order.pos(8);
+		@include order.pos(9, "ts");
+		@include order.pos(8, "ls");
+
+		@include grid.width(2, "ts");
+		@include grid.width(3, "ls");
+
+		@include grid.height(2);
+
+		@extend %u-box;
+
+		h2 {
+			margin-top: 8px;
+
+			font-size: clamp(1.4rem, 3vw + 1rem, 2.25rem);
+
+			display: flex;
+			align-items: center;
+			gap: 8px;
+
+			.c-svgArrow {
+				width: 3rem;
+				height: 3rem;
+			}
+		}
+
+		a {
+			@extend %u-boxLink;
+		}
+	}
+
+	&__moreAbout {
+		display: flex;
+		justify-content: left;
+		align-items: center;
+
+		animation-delay: 400ms;
+
+		@include order.pos(5);
+		@include order.pos(1, "tl");
+		@include order.pos(5, "ls");
+
+		@include grid.width(1, "ls");
+
+		@include grid.height(1);
+
+		@extend %u-box;
+
+		h2 {
+			font-size: 1.25rem;
+			margin-top: 8px;
+
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+
+		a {
+			@extend %u-boxLink;
+		}
+	}
+
+	&__playground {
+		display: flex;
+		align-items: center;
+
+		animation-delay: 1.5s;
+
+		@include order.pos(7);
+		@include order.pos(9, "tl");
+		@include order.pos(7, "ls");
+
+		@include grid.width(1, "ls");
+
+		@include grid.height(1);
+
+		@extend %u-box;
+
+		h2 {
+			margin-top: 8px;
+
+			font-size: 1.25rem;
+
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+
+		a {
+			@extend %u-boxLink;
+		}
+	}
+
+	&__projects {
+		display: flex;
+		align-items: center;
+
+		animation-delay: 1s;
+
+		@include order.pos(6);
+
+		@include grid.width(2, "tl");
+		@include grid.width(4, "ls");
+
+		@include grid.height(2);
+
+		@extend %u-box;
+
+		h2 {
+			margin-top: 8px;
+
+			font-size: clamp(1.6rem, 3.2vw + 1rem, 2.25rem);
+
+			display: flex;
+			align-items: center;
+			gap: 8px;
+
+			.c-svgArrow {
+				width: 3.5rem;
+				height: 3.5rem;
+			}
+		}
+
+		a {
+			@extend %u-boxLink;
+		}
+	}
+
+	&__skills {
+		position: relative;
+
+		animation-delay: 1.25s;
+
+		@include order.pos(4);
+		@include order.pos(2, "tl");
+		@include order.pos(4, "ll");
+
+		@include grid.width(1, "ls");
+
+		@include grid.height(6);
+		@include grid.height(5, "tl");
+		@include grid.height(6, "ls");
+
+		@extend %u-box;
+
+		h2 {
+			font-size: 1.5rem;
+			text-align: center;
+		}
+
+		h3 {
+			position: absolute;
+			bottom: 0;
+
+			margin-bottom: 1.5rem;
+
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+
+		a {
+			@extend %u-boxLink;
+		}
+	}
+}
