@@ -13,21 +13,6 @@ const stylesHandler = isProduction
 	? MiniCssExtractPlugin.loader
 	: "style-loader";
 
-var htmlFiles = [];
-var directories = ["src"];
-
-while (directories.length > 0) {
-	var directory = directories.pop();
-	var dirContents = fs
-		.readdirSync(directory)
-		.map((file) => path.join(directory, file));
-
-	htmlFiles.push(...dirContents.filter((file) => file.endsWith(".html")));
-	directories.push(
-		...dirContents.filter((file) => fs.statSync(file).isDirectory())
-	);
-}
-
 const robotstxtOptions = {
 	policy: [
 		{
@@ -76,50 +61,6 @@ const config = {
 		host: "localhost",
 	},
 	plugins: [
-		...htmlFiles.map(
-			(htmlFile) =>
-				new HtmlWebpackPlugin({
-					template: htmlFile,
-					filename: htmlFile.replace(path.normalize("src/"), ""),
-					inject: true,
-					meta: {
-						// description: { name: "description", content: "..." },
-						// keyword: { name: "keywords", content: "..." },
-						"og:title": {
-							property: "og:title",
-							content: "Jesse Demiddels Portfolio",
-						},
-						"og:description": {
-							property: "og:description",
-							content: "Portfolio of Jesse Demiddel",
-						},
-						"og:type": { property: "og:type", content: "website" },
-						"og:url": {
-							property: "og:url",
-							content:
-								"https://jesse-demiddels-portfolio-b7ikaqri8-demiddel-jesses-projects.vercel.app/index.html",
-						},
-						"og:image": { property: "og:image", content: "..." },
-						"twitter:card": {
-							name: "twitter:card",
-							content: "summary_large_image",
-						},
-						"twitter:title": {
-							name: "twitter:title",
-							content: "Jesse Demiddels Portfolio",
-						},
-						"twitter:description": {
-							name: "twitter:description",
-							content: "Portfolio of Jesse Demiddel",
-						},
-						"twitter:image": { name: "twitter:image", content: "..." },
-						"twitter:image:alt": {
-							name: "twitter:image:alt",
-							content: "Alt text",
-						},
-					},
-				})
-		),
 		new FaviconsWebpackPlugin({
 			logo: "src/assets/img/favicon.png",
 			cache: true,
@@ -215,86 +156,86 @@ module.exports = () => {
 		config.mode = "production";
 
 		config.plugins.push(new MiniCssExtractPlugin());
-		config.plugins.push(
-			new CopyPlugin({
-				patterns: [
-					// just to include only necessary files from Goplay folder
-					{
-						from: path.resolve(__dirname, "./Goplay/dist", "*.css"),
-						to: "./",
-					},
-					{
-						from: path.resolve(__dirname, "./Goplay/dist", "*.js"),
-						to: "./",
-					},
-					{
-						from: path.resolve(__dirname, "./Goplay/assets/img", "*"),
-						to: "./",
-					},
-					{
-						from: path.resolve(__dirname, "./Goplay/assets/svg", "*"),
-						to: "./",
-					},
-					{
-						from: path.resolve(__dirname, "./Goplay/json", "*"),
-						to: "./",
-					},
-					{
-						from: path.resolve(__dirname, "./Goplay", "*.html"),
-						to: "./",
-					},
-					{
-						from: path.resolve(__dirname, "./Goplay", "*.png"),
-						to: "./",
-					},
-					{
-						from: path.resolve(__dirname, "./Goplay", "*.ico"),
-						to: "./",
-					},
-					{
-						from: path.resolve(__dirname, "./Goplay", "*.svg"),
-						to: "./",
-					},
-					{
-						from: path.resolve(__dirname, "./Goplay", "*.xml"),
-						to: "./",
-					},
-					{
-						from: path.resolve(__dirname, "./Goplay", "*.webmanifest"),
-						to: "./",
-					},
-					// copy sinksen project
-					{
-						from: path.resolve(__dirname, "./Sinksen2022", "*.html"),
-						to: "./",
-					},
-					{
-						from: path.resolve(__dirname, "./Sinksen2022/css", "*.css"),
-						to: "./",
-					},
-					{
-						from: path.resolve(__dirname, "./Sinksen2022/img", "*.png"),
-						to: "./",
-					},
-					{
-						from: path.resolve(__dirname, "./Sinksen2022/img", "*.svg"),
-						to: "./",
-					},
-					{
-						from: path.resolve(__dirname, "./Sinksen2022/img", "*.gif"),
-						to: "./",
-					},
-					{
-						from: path.resolve(__dirname, "./Sinksen2022/img", "*.jpg"),
-						to: "./",
-					},
-					{
-						from: path.resolve(__dirname, "./Sinksen2022/script", "*.js"),
-						to: "./",
-					},
-				],
-			})
-		);
+		// config.plugins.push(
+		// 	new CopyPlugin({
+		// 		patterns: [
+		// 			// just to include only necessary files from Goplay folder
+		// 			{
+		// 				from: path.resolve(__dirname, "./Goplay/dist", "*.css"),
+		// 				to: "./",
+		// 			},
+		// 			{
+		// 				from: path.resolve(__dirname, "./Goplay/dist", "*.js"),
+		// 				to: "./",
+		// 			},
+		// 			{
+		// 				from: path.resolve(__dirname, "./Goplay/assets/img", "*"),
+		// 				to: "./",
+		// 			},
+		// 			{
+		// 				from: path.resolve(__dirname, "./Goplay/assets/svg", "*"),
+		// 				to: "./",
+		// 			},
+		// 			{
+		// 				from: path.resolve(__dirname, "./Goplay/json", "*"),
+		// 				to: "./",
+		// 			},
+		// 			{
+		// 				from: path.resolve(__dirname, "./Goplay", "*.html"),
+		// 				to: "./",
+		// 			},
+		// 			{
+		// 				from: path.resolve(__dirname, "./Goplay", "*.png"),
+		// 				to: "./",
+		// 			},
+		// 			{
+		// 				from: path.resolve(__dirname, "./Goplay", "*.ico"),
+		// 				to: "./",
+		// 			},
+		// 			{
+		// 				from: path.resolve(__dirname, "./Goplay", "*.svg"),
+		// 				to: "./",
+		// 			},
+		// 			{
+		// 				from: path.resolve(__dirname, "./Goplay", "*.xml"),
+		// 				to: "./",
+		// 			},
+		// 			{
+		// 				from: path.resolve(__dirname, "./Goplay", "*.webmanifest"),
+		// 				to: "./",
+		// 			},
+		// 			// copy sinksen project
+		// 			{
+		// 				from: path.resolve(__dirname, "./Sinksen2022", "*.html"),
+		// 				to: "./",
+		// 			},
+		// 			{
+		// 				from: path.resolve(__dirname, "./Sinksen2022/css", "*.css"),
+		// 				to: "./",
+		// 			},
+		// 			{
+		// 				from: path.resolve(__dirname, "./Sinksen2022/img", "*.png"),
+		// 				to: "./",
+		// 			},
+		// 			{
+		// 				from: path.resolve(__dirname, "./Sinksen2022/img", "*.svg"),
+		// 				to: "./",
+		// 			},
+		// 			{
+		// 				from: path.resolve(__dirname, "./Sinksen2022/img", "*.gif"),
+		// 				to: "./",
+		// 			},
+		// 			{
+		// 				from: path.resolve(__dirname, "./Sinksen2022/img", "*.jpg"),
+		// 				to: "./",
+		// 			},
+		// 			{
+		// 				from: path.resolve(__dirname, "./Sinksen2022/script", "*.js"),
+		// 				to: "./",
+		// 			},
+		// 		],
+		// 	})
+		// );
 		config.plugins.push(
 			new SitemapPlugin({
 				base: "https://jesse-demiddels-portfolio.vercel.app",
