@@ -5,7 +5,11 @@
 	"main": "./src/index.js",
 	"scripts": {
 		"build:site": "ELEVENTY_ENV=production npx eleventy",
-		"dev:site": "ELEVENTY_ENV=development npx eleventy --serve"
+		"dev:site": "ELEVENTY_ENV=development npx eleventy --serve",
+		"build:assets": "webpack --mode=production",
+		"dev:assets": "webpack  --mode=development",
+		"build": "",
+		"dev": ""
 	},
 	"keywords": [],
 	"author": "",
@@ -14,7 +18,7 @@
 		"@11ty/eleventy": "3.0.0",
 		"@11ty/eleventy-plugin-ejs": "^1.0.0",
 		"ejs": "^3.1.10",
-    "@hail2u/css-mqpacker": "github:hail2u/node-css-mqpacker#v9.0.1",
+		"@hail2u/css-mqpacker": "github:hail2u/node-css-mqpacker#v9.0.1",
 		"@webpack-cli/generators": "^3.0.7",
 		"autoprefixer": "^10.4.19",
 		"copy-webpack-plugin": "^12.0.2",

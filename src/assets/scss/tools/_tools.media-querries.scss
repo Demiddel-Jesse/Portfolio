@@ -1,4 +1,5 @@
 @use "../settings/breakpoints" as bp;
+@use "sass:map";
 // Name of the next breakpoint, or null for the last breakpoint.
 @function bp-next(
 	$name,
@@ -18,13 +19,13 @@
 
 // Minimum breakpoint width. Null for the smallest (first) breakpoint.
 @function bp-min($name, $breakpoints: bp.$breakpoints) {
-	$min: map-get($breakpoints, $name);
+	$min: map.get($breakpoints, $name);
 	@return if($min != 0, $min, null);
 }
 
 // Maximum breakpoint width.
 @function bp-max($name, $breakpoints: bp.$breakpoints) {
-	$max: map-get($breakpoints, $name);
+	$max: map.get($breakpoints, $name);
 	@return if($max and $max > 0, $max - 0.02, null);
 }
 

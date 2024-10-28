@@ -1,8 +1,9 @@
 @use "../tools/tools.media-querries" as mq;
 @use "../settings/grid" as grid;
+@use "sass:map";
 
 @mixin height($height, $bp: "xs") {
-	@if map-get($map: grid.$rows, $key: $bp) == auto {
+	@if map.get($map: grid.$rows, $key: $bp) == auto {
 		@if $bp == "xs" {
 			grid-row-start: span $height;
 		} @else {
@@ -11,7 +12,7 @@
 			}
 		}
 	} @else {
-		@if $height > map-get(grid.$rows, $bp) {
+		@if $height > map.get(grid.$rows, $bp) {
 			@warn 'too many rows defined';
 		} @else {
 			@if $bp == "xs" {
@@ -26,7 +27,7 @@
 }
 
 @mixin width($width, $bp: "xs") {
-	@if $width > map-get(grid.$columns, $bp) {
+	@if $width > map.get(grid.$columns, $bp) {
 		@warn 'too many columns defined';
 	} @else {
 		@if $bp == "xs" {
