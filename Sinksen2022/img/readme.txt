@@ -1,1 +1,0 @@
-Plaats hier je afbeeldingen die je gebruikt in het project.

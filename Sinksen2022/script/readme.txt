@@ -1,1 +1,0 @@
-Lees alle uitleg over de API op Leho
