@@ -1,0 +1,178 @@
+{
+	"ProgrammingLanguages": [
+		{
+			"title": "Web front",
+			"skills": [
+				{
+					"name": "HTML",
+					"learning": "false"
+				},
+				{
+					"name": "CSS3",
+					"learning": "false"
+				},
+				{
+					"name": "SCSS",
+					"learning": "false"
+				},
+				{
+					"name": "JavaScript",
+					"learning": "false"
+				},
+				{
+					"name": "JQuery",
+					"learning": "false"
+				},
+				{
+					"name": "TypeScript",
+					"learning": "true"
+				}
+			]
+		},
+		{
+			"title": "Web back",
+			"skills": [
+				{
+					"name": "PHP",
+					"learning": "false"
+				},
+				{
+					"name": "Twig",
+					"learning": "false"
+				}
+			]
+		},
+		{
+			"title": "Other",
+			"skills": [
+				{
+					"name": "Python",
+					"learning": "false"
+				},
+				{
+					"name": "Processing",
+					"learning": "false",
+					"link": "https://www.processing.org"
+				}
+			]
+		}
+	],
+	"JSFrameworks": [
+		{
+			"name": "React",
+			"learning": "true"
+		},
+		{
+			"name": "Angular",
+			"learning": "true"
+		}
+	],
+	"PHPFrameworks": [
+		{
+			"name": "Laravel",
+			"learning": "true"
+		}
+	],
+	"CSSFrameworks": [
+		{
+			"name": "Bootstrap",
+			"learning": "false"
+		},
+		{
+			"name": "Tailwind",
+			"learning": "false"
+		}
+	],
+	"Other": [
+		{
+			"name": "Git",
+			"learning": "false"
+		}
+	],
+	"Databases": [
+		{
+			"name": "SQL",
+			"learning": "false"
+		},
+		{
+			"name": "SQLite",
+			"learning": "true"
+		}
+	],
+	"CMS": [
+		{
+			"name": "WordPress",
+			"learning": "false"
+		}
+	],
+	"GraphicDesign": [
+		{
+			"name": "Figma",
+			"learning": "false"
+		},
+		{
+			"name": "Adobe Photoshop",
+			"learning": "false"
+		},
+		{
+			"name": "Adobe Illustrator",
+			"learning": "false"
+		},
+		{
+			"name": "Adobe XD",
+			"learning": "false"
+		}
+	],
+	"3DDesign": [
+		{
+			"name": "Blender",
+			"learning": "false"
+		},
+		{
+			"name": "SolidWorks",
+			"learning": "false"
+		},
+		{
+			"name": "Autodesk 3DS Max",
+			"learning": "false"
+		}
+	],
+	"VideoEditing": [
+		{
+			"name": "Davinci Resolve",
+			"learning": "false"
+		},
+		{
+			"name": "After Effects",
+			"learning": "false"
+		},
+		{
+			"name": "Premiere Pro",
+			"learning": "false"
+		}
+	],
+	"3DAnimation": [
+		{
+			"name": "Blender",
+			"learning": "false"
+		},
+		{
+			"name": "Autodesk Maya",
+			"learning": "false"
+		}
+	],
+	"Languages": [
+		{
+			"name": "Dutch",
+			"level": "native"
+		},
+		{
+			"name": "English",
+			"level": "native"
+		},
+		{
+			"name": "French",
+			"level": "high-school"
+		}
+	]
+}

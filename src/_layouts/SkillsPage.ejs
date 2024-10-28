@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title><%= locals.title ? locals.title : site.title %></title>
+		<meta
+			name="description"
+			content="<% if (locals.description) { %>
+						<% locals.description %>
+					<% } else { %>
+						<% site.description %>
+					<% } %> "
+		/>
+
+		<!-- Open Graph Meta Tags -->
+		<meta
+			property="og:title"
+			content="<%= locals.meta && locals.meta['og:title'] ? locals.meta['og:title'].content : site.meta['og:title'].content %>"
+		/>
+		<meta
+			property="og:description"
+			content="<%= locals.meta && locals.meta['og:description'] ? locals.meta['og:description'].content : site.meta['og:description'].content %>"
+		/>
+		<meta
+			property="og:type"
+			content="<%= locals.meta && locals.meta['og:type'] ? locals.meta['og:type'].content : site.meta['og:type'].content %>"
+		/>
+		<meta
+			property="og:url"
+			content="<%= locals.meta && locals.meta['og:url'] ? locals.meta['og:url'].content : site.meta['og:url'].content %>"
+		/>
+		<meta
+			property="og:image"
+			content="<%= locals.meta && locals.meta['og:image'] ? locals.meta['og:image'].content : site.meta['og:image'].content %>"
+		/>
+
+		<!-- Twitter Card Meta Tags -->
+		<meta
+			name="twitter:card"
+			content="<%= locals.meta && locals.meta['twitter:card'] ? locals.meta['twitter:card'].content : site.meta['twitter:card'].content %>"
+		/>
+		<meta
+			name="twitter:title"
+			content="<%= locals.meta && locals.meta['twitter:title'] ? locals.meta['twitter:title'].content : site.meta['twitter:title'].content %>"
+		/>
+		<meta
+			name="twitter:description"
+			content="<%= locals.meta && locals.meta['twitter:description'] ? locals.meta['twitter:description'].content : site.meta['twitter:description'].content %>"
+		/>
+		<meta
+			name="twitter:image"
+			content="<%= locals.meta && locals.meta['twitter:image'] ? locals.meta['twitter:image'].content : site.meta['twitter:image'].content %>"
+		/>
+		<meta
+			name="twitter:image:alt"
+			content="<%= locals.meta && locals.meta['twitter:image:alt'] ? locals.meta['twitter:image:alt'].content : site.meta['twitter:image:alt'].content %>"
+		/>
+
+		<link rel="stylesheet" href="./assets/main.css" />
+	</head>
+	<body class="u-background">
+		<main class="o-grid c-skills">
+			<section class="c-back">
+				<a href="/">Back</a>
+				<h2>
+					Go back
+					<svg
+						class="c-svgArrow"
+						width="32px"
+						height="32px"
+						viewBox="-2.4 -2.4 32 32"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<g id="SVGRepo_bgCarrier" class="c-svgArrow__bgCarrier"></g>
+						<g id="SVGRepo_tracerCarrier" class="c-svgArrow__tracerCarrier"></g>
+						<g id="SVGRepo_iconCarrier" class="c-svgArrow__iconCarrier">
+							<path d="M7 17L17 7M17 7H8M17 7V16"></path>
+						</g>
+					</svg>
+				</h2>
+			</section>
+			<header class="c-header"><%- locals.content %></header>
+		</main>
+	</body>
+</html>
