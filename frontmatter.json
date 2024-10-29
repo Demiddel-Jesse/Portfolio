@@ -7,39 +7,37 @@
       "previewPath": null,
       "fields": [
         {
-          "title": "Title",
+          "title": "title",
           "name": "title",
           "type": "string"
         },
         {
-          "title": "Description",
+          "title": "description",
           "name": "description",
           "type": "string"
         },
         {
-          "title": "Publishing date",
+          "title": "date",
           "name": "date",
-          "type": "datetime",
-          "default": "{{now}}",
-          "isPublishDate": true
+          "type": "datetime"
         },
         {
-          "title": "Content preview",
+          "title": "preview",
           "name": "preview",
-          "type": "image"
+          "type": "string"
         },
         {
-          "title": "Is in draft",
+          "title": "draft",
           "name": "draft",
           "type": "draft"
         },
         {
-          "title": "Tags",
+          "title": "tags",
           "name": "tags",
           "type": "tags"
         },
         {
-          "title": "Categories",
+          "title": "categories",
           "name": "categories",
           "type": "categories"
         },
@@ -54,8 +52,8 @@
           "type": "string"
         },
         {
-          "title": "fmContentType",
-          "name": "fmContentType",
+          "title": "link",
+          "name": "link",
           "type": "string"
         }
       ]
