@@ -10,7 +10,7 @@ if (document.querySelector(".c-homepage__about")) {
 	let resizeTimeout;
 	window.addEventListener("resize", () => {
 		clearTimeout(resizeTimeout);
-		resizeTimeout = setTimeout(updateRowCount(aboutElement), 100);
+		resizeTimeout = setTimeout(updateRowCount(aboutElement), 500);
 	});
 }
 
