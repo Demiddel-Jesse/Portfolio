@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./main.css" />
+		<!-- <script src="./vendor.js" defer></script> -->
+		<script src="./main.js" defer></script>
+	</head>
+	<body>
+		<main class="o-grid c-about">
+			<section class="c-back">
+				<a href="/">Back</a>
+				<h2>
+					Go back
+					<svg
+						class="c-svgArrow"
+						width="32px"
+						height="32px"
+						viewBox="-2.4 -2.4 32 32"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<g id="SVGRepo_bgCarrier" class="c-svgArrow__bgCarrier"></g>
+						<g id="SVGRepo_tracerCarrier" class="c-svgArrow__tracerCarrier"></g>
+						<g id="SVGRepo_iconCarrier" class="c-svgArrow__iconCarrier">
+							<path d="M7 17L17 7M17 7H8M17 7V16"></path>
+						</g>
+					</svg>
+				</h2>
+			</section>
+			<header class="c-header"><h1><%- locals.topTitle -%></h1></header>
+			<section class="c-about__studies">
+				<h2>Studies</h2>
+				<ul class="c-about__list">
+					<% studies.forEach(study => { %>
+					<li class="c-about__listItem">
+						<h3>
+							<%- study.startDate %> - <%- study.endDate %> -- <%- study.school
+							%>
+							<span><%- study.location %></span>
+						</h3>
+						<h4>
+							<span><%- study.degreeType %></span> - <%- study.degreeName %>
+						</h4>
+						<p><%- study.description %></p>
+					</li>
+					<% }); %>
+				</ul>
+			</section>
+			<section class="c-about__experience">
+				<h2>Experiences</h2>
+				<ul class="c-about__list">
+					<% experiences.forEach(experience => { %>
+					<li class="c-about__listItem">
+						<h3>
+							<%- experience.startDate %> - <%- experience.endDate %> -- <%-
+							experience.company %>
+							<span><%- experience.location %></span>
+						</h3>
+						<h4>
+							<span><%- experience.experienceType %></span> - <%-
+							experience.position %>
+						</h4>
+						<p><%- experience.description %></p>
+					</li>
+					<% }); %>
+				</ul>
+			</section>
+			<%- content %>
+		</main>
+	</body>
+</html>
