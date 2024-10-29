@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title><%= locals.title ? locals.title : site.title %></title>
+		<meta
+			name="description"
+			content="<% if (locals.description) { %>
+						<% locals.description %>
+					<% } else { %>
+						<% site.description %>
+					<% } %> "
+		/>
+
+		<!-- Open Graph Meta Tags -->
+		<meta
+			property="og:title"
+			content="<%= locals.meta && locals.meta['og:title'] ? locals.meta['og:title'].content : site.meta['og:title'].content %>"
+		/>
+		<meta
+			property="og:description"
+			content="<%= locals.meta && locals.meta['og:description'] ? locals.meta['og:description'].content : site.meta['og:description'].content %>"
+		/>
+		<meta
+			property="og:type"
+			content="<%= locals.meta && locals.meta['og:type'] ? locals.meta['og:type'].content : site.meta['og:type'].content %>"
+		/>
+		<meta
+			property="og:url"
+			content="<%= locals.meta && locals.meta['og:url'] ? locals.meta['og:url'].content : site.meta['og:url'].content %>"
+		/>
+		<meta
+			property="og:image"
+			content="<%= locals.meta && locals.meta['og:image'] ? locals.meta['og:image'].content : site.meta['og:image'].content %>"
+		/>
+
+		<!-- Twitter Card Meta Tags -->
+		<meta
+			name="twitter:card"
+			content="<%= locals.meta && locals.meta['twitter:card'] ? locals.meta['twitter:card'].content : site.meta['twitter:card'].content %>"
+		/>
+		<meta
+			name="twitter:title"
+			content="<%= locals.meta && locals.meta['twitter:title'] ? locals.meta['twitter:title'].content : site.meta['twitter:title'].content %>"
+		/>
+		<meta
+			name="twitter:description"
+			content="<%= locals.meta && locals.meta['twitter:description'] ? locals.meta['twitter:description'].content : site.meta['twitter:description'].content %>"
+		/>
+		<meta
+			name="twitter:image"
+			content="<%= locals.meta && locals.meta['twitter:image'] ? locals.meta['twitter:image'].content : site.meta['twitter:image'].content %>"
+		/>
+		<meta
+			name="twitter:image:alt"
+			content="<%= locals.meta && locals.meta['twitter:image:alt'] ? locals.meta['twitter:image:alt'].content : site.meta['twitter:image:alt'].content %>"
+		/>
+
+		<link rel="stylesheet" href="./assets/main.css" />
+	</head>
+	<body class="u-background">
+		<main class="o-grid c-about">
+			<section class="c-back">
+				<a href="/">Back</a>
+				<h2>
+					Go back
+					<svg
+						class="c-svgArrow"
+						width="32px"
+						height="32px"
+						viewBox="-2.4 -2.4 32 32"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<g id="SVGRepo_bgCarrier" class="c-svgArrow__bgCarrier"></g>
+						<g id="SVGRepo_tracerCarrier" class="c-svgArrow__tracerCarrier"></g>
+						<g id="SVGRepo_iconCarrier" class="c-svgArrow__iconCarrier">
+							<path d="M7 17L17 7M17 7H8M17 7V16"></path>
+						</g>
+					</svg>
+				</h2>
+			</section>
+			<header class="c-header"><%- locals.content %></header>
+			<section class="c-about__studies">
+				<h2>Studies</h2>
+				<ul class="c-about__list">
+					<% locals.studies.forEach(study => { %>
+					<li class="c-about__listItem">
+						<h3>
+							<%- study.startDate %> - <%- study.endDate %> -- <%- study.school
+							%>
+							<span><%- study.location %></span>
+						</h3>
+						<h4><span><%- study.degree %></span> - <%- study.study %></h4>
+						<p><%- study.description %></p>
+					</li>
+					<% }); %>
+				</ul>
+			</section>
+			<section class="c-about__experience">
+				<h2>Experiences</h2>
+				<ul class="c-about__list">
+					<li class="c-about__listItem">
+						<h3>
+							2016 - 2019 -- Speelpleinwerking
+							<span>Harelbeke</span>
+						</h3>
+						<h4><span>Volunteer</span> - Children's entertainer</h4>
+						<p>Organizing and executing games for children</p>
+					</li>
+					<li class="c-about__listItem">
+						<h3>
+							March - July 2023 -- CreatorGalaxy
+							<span>De Pinte</span>
+						</h3>
+						<h4><span>Internship</span> - Motion graphic designer</h4>
+						<p>
+							Creating of motion graphics and refactoring older ones to adhere
+							to specific standards to sell on Adobe
+						</p>
+					</li>
+				</ul>
+			</section>
+			<% interests.forEach((section) => { %>
+			<section class="c-about__<%= section.slug %>">
+				<h2><%= section.title %></h2>
+				<p>
+					<% section.content.forEach((item) => { %> <% if (typeof item ===
+					'string') { %> <%= item %> <% } else if (item.highlight) { %>
+					<span><%= item.highlight %></span>
+					<% } else if (item.break) { %>
+					<br /><br />
+					<% } %> <% }); %>
+				</p>
+			</section>
+			<% }); %>
+		</main>
+	</body>
+</html>

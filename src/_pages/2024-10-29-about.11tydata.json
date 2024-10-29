@@ -1,0 +1,104 @@
+{
+	"studies": [
+		{
+			"startDate": "2016",
+			"endDate": "2018",
+			"degree": "High school diploma",
+			"location": "Kortrijk",
+			"study": "Industrial electricity",
+			"school": "PTI",
+			"description": "learned how to wire electrical systems of industrial capacity"
+		},
+		{
+			"startDate": "2021",
+			"endDate": "2023",
+			"degree": "Graduates degree",
+			"location": "Kortrijk",
+			"study": "Digitale vormgeving",
+			"school": "Howest",
+			"description": "Learned frontend web-development and video editing"
+		},
+		{
+			"startDate": "Feb",
+			"endDate": "??? 2024",
+			"degree": "Course",
+			"location": "Wevelgem",
+			"study": "Full stack developer PHP",
+			"school": "VDAB",
+			"description": "Learned backend web-development with PHP"
+		}
+	],
+	"experiences": [
+		{
+			"startDate": "2016",
+			"endDate": "2019",
+			"type": "Volunteer",
+			"location": "Harelbeke",
+			"position": "Children's entertainer",
+			"Company": "Speelpleinwerking",
+			"what": "Organizing and executing games for children"
+		},
+		{
+			"startDate": "March",
+			"endDate": "July 2023",
+			"type": "Internship",
+			"location": "De Pinte",
+			"position": "Motion graphic designer",
+			"Company": "CreatorGalaxy",
+			"what": " Creating of motion graphics and refactoring older ones to adhere to specific standards to sell on Adobe "
+		}
+	],
+	"interests": [
+		{
+			"slug": "activities",
+			"title": "Activities",
+			"content": [
+				"While not being a fanatic about sports I've recently started playing badminton at a local club.",
+				"On other days I like to take walks around the local park which is always fun to walk between the trees and near the water."
+			]
+		},
+		{
+			"slug": "miniatures",
+			"title": "Miniature Painting",
+			"content": [
+				"About a year ago I started with painting a small starter kit of ",
+				{ "highlight": "Tyranids" },
+				" from 'Games Workshop' because I thought they looked cool and really wanted to try my hand at painting miniatures. Since then I've been working on painting ",
+				{ "highlight": "2 Warhammer 40K armies (Tyranids & space-marines)" },
+				", ",
+				{ "highlight": "a miniature tank" },
+				" and quite recently my ",
+				{ "highlight": "first gunpla model" },
+				". The biggest reason I like this hobby is that it's the first time I've attempted a creative hobby where I haven't gotten discouraged by being bad at it. ",
+				{ "highlight": "Every mini is special" },
+				" and while some are clearly a lot worse than others I still like to display them all next to each other."
+			]
+		},
+		{
+			"slug": "racing",
+			"title": "Racing",
+			"content": [
+				"I've been interested in racing since I can remember. Watching F1, and recently endurance racing, and learning about the physics around aerodynamics and the way the cars were built is what has really interested me but the best part about is the insanely close action at 300+kph between those drivers. ",
+				{ "break": true },
+				"Currently I'm driving karts monthly at",
+				{
+					"highlight": "Worldkarts Kortrijk"
+				},
+				" and have been steadily getting faster. While not possible at this time I would like to eventually start racing in either cars or open wheels or even just a national karting championship."
+			]
+		},
+		{
+			"slug": "media",
+			"title": "Media",
+			"content": [
+				"As an avid music enjoyer I really like to listen to music while programming or just doing random house tasks. ",
+				{ "break": true },
+				" I also like to read and am currently going through a couple fantasy series:",
+				{
+					"highlight": "A song of ice and fire, The witcher and lord of the rings"
+				},
+				". I truly love the fantasy genre but also have a soft spot for Science-fiction."
+			]
+		}
+	]
+}
