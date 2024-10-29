@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<%- include('../_components/headMeta.ejs') %>
+		<title><%= locals.title ? locals.title : site.title %></title>
 		<link rel="stylesheet" href="./main.css" />
 		<!-- <script src="./vendor.js" defer></script> -->
 		<script src="./main.js" defer></script>
