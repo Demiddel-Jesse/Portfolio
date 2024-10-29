@@ -1,0 +1,127 @@
+{
+	"frontMatter.taxonomy.contentTypes": [
+		{
+			"name": "default",
+			"pageBundle": false,
+			"previewPath": null,
+			"fields": [
+				{
+					"title": "Title",
+					"name": "title",
+					"type": "string"
+				},
+				{
+					"title": "Description",
+					"name": "description",
+					"type": "string"
+				},
+				{
+					"title": "Categories",
+					"name": "categories",
+					"type": "categories"
+				}
+			]
+		}
+	],
+	"frontMatter.framework.id": "11ty",
+	"frontMatter.preview.host": "http://localhost:8080",
+	"frontMatter.git.enabled": true,
+	"frontMatter.content.pageFolders": [
+		{
+			"title": "pages",
+			"path": "[[workspace]]/src/_pages"
+		}
+	],
+	"frontMatter.data.files": [
+		{
+			"id": "skills",
+			"title": "Skills",
+			"file": "[[workspace]]/src/_data/skills.json",
+			"fileType": "json",
+			"labelField": "name",
+			"schema": {
+				"title": "portfolio skills",
+				"type": "object",
+				"properties": {
+					"name": {
+						"type": "string",
+						"title": "Name"
+					},
+					"highlight": {
+						"type": "string",
+						"title": "Highlight"
+					},
+					"group": {
+						"type": "string",
+						"title": "Group"
+					},
+					"subgroup": {
+						"type": "string",
+						"title": "Subgroup"
+					},
+					"link": {
+						"type": "string",
+						"title": "Link"
+					},
+					"learning": {
+						"type": "boolean",
+						"title": "Learning",
+						"default": false
+					}
+				},
+				"required": ["name", "group"]
+			}
+		},
+		{
+			"id": "contactInfo",
+			"title": "Contact Info",
+			"file": "[[workspace]]/src/_data/contactInfo.json",
+			"fileType": "json",
+			"labelField": "name",
+			"schema": {
+				"title": "portfolio contact info",
+				"type": "object",
+				"properties": {
+					"name": {
+						"type": "string",
+						"title": "Name"
+					},
+					"value": {
+						"type": "string",
+						"title": "Value"
+					},
+					"link": {
+						"type": "string",
+						"title": "Link"
+					}
+				},
+				"required": ["name", "value", "link"]
+			}
+		},
+		{
+			"id": "currentOccupation",
+			"title": "Current Occupation",
+			"file": "[[workspace]]/src/_data/currentOccupation.json",
+			"fileType": "json",
+			"labelField": "name",
+			"singleEntry": true,
+			"schema": {
+				"title": "portfolio current occupation",
+				"type": "object",
+				"properties": {
+					"name": {
+						"type": "string",
+						"title": "Title"
+					},
+					"description": {
+						"type": "string",
+						"title": "Description"
+					}
+				},
+				"required": ["name", "description"]
+			}
+		}
+	],
+	"frontMatter.data.types": [],
+	"frontMatter.data.folders": []
+}
