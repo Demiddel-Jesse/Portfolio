@@ -8,8 +8,7 @@
 	&__about {
 		animation-delay: 250ms;
 
-		--row-height: 50px; /* or whatever the height of a single row is */
-		--row-count: calc(ceil(scrollHeight / var(--row-height)));
+		--row-count: 6;
 
 		@include order.pos(1);
 
