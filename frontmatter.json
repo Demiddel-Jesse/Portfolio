@@ -1745,5 +1745,111 @@
 			"default": "gpt-4o-mini",
 			"markdownDescription": "Specify the LLM family of the Copilot you want to use. [Docs](https://frontmatter.codes/docs/settings/overview#frontmatter.copilot.family) - [View in VS Code](command:simpleBrowser.show?%5B%22https://frontmatter.codes/docs/settings/overview%23frontmatter.copilot.family%22%5D)"
 		}
-	}
+	},
+	"frontMatter.content.pageFolders": [
+		{
+			"title": "pages",
+			"path": "[[workspace]]/src/_pages"
+		},
+		{
+			"title": "projects",
+			"path": "[[workspace]]/src/_pages/projects"
+		},
+		{
+			"title": "smallProjects",
+			"path": "[[workspace]]/src/_pages/smallProjects"
+		}
+	],
+	"frontMatter.taxonomy.contentTypes": [
+		{
+			"name": "default",
+			"pageBundle": false,
+			"previewPath": null,
+			"fields": [
+				{
+					"title": "Title",
+					"name": "title",
+					"type": "string"
+				},
+				{
+					"title": "Description",
+					"name": "description",
+					"type": "string"
+				},
+				{
+					"title": "Publishing date",
+					"name": "date",
+					"type": "datetime",
+					"default": "{{now}}",
+					"isPublishDate": true
+				},
+				{
+					"title": "Content preview",
+					"name": "preview",
+					"type": "image"
+				},
+				{
+					"title": "Is in draft",
+					"name": "draft",
+					"type": "draft"
+				},
+				{
+					"title": "Tags",
+					"name": "tags",
+					"type": "tags"
+				},
+				{
+					"title": "Categories",
+					"name": "categories",
+					"type": "categories"
+				}
+			]
+		},
+		{
+			"name": "Project",
+			"pageBundle": false,
+			"previewPath": null,
+			"fields": [
+				{
+					"title": "Title",
+					"name": "title",
+					"type": "string"
+				},
+				{
+					"title": "Categories",
+					"name": "categories",
+					"type": "categories"
+				},
+				{
+					"title": "Project GitHub Link",
+					"name": "githubLink",
+					"type": "string"
+				},
+				{
+					"title": "Site Link",
+					"name": "siteLink",
+					"type": "string"
+				},
+				{
+					"title": "Front Matter Content Type",
+					"name": "fmContentType",
+					"type": "string",
+					"default": "Project"
+				},
+				{
+					"title": "Slug",
+					"name": "slug",
+					"type": "string"
+				},
+				{
+					"title": "Permalink",
+					"name": "permalink",
+					"type": "string",
+					"default": "Projects/project.html"
+				}
+			]
+		}
+	],
+	"frontMatter.framework.id": "11ty",
+	"frontMatter.preview.host": "http://localhost:8080"
 }
