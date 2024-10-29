@@ -1,0 +1,1 @@
+Figure out a way to dynamically scale the boxes for skills page and change the grid to a masonry layout

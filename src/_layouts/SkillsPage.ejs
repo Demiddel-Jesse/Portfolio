@@ -81,6 +81,113 @@
 				</h2>
 			</section>
 			<header class="c-header"><%- locals.content %></header>
+			<section class="c-skills__programmingLanguages">
+				<h2>Programming Languages</h2>
+				<section>
+					<% locals.ProgrammingLanguages.forEach(group => { %>
+					<div>
+						<h3><%- group.title %></h3>
+						<ul>
+							<% group.skills.forEach(skill => { %>
+							<% if (skill.link) { %>
+								<li><a href="<%- skill.link %>" target="_blank" rel="noopener noreferrer"><%- skill.name %></a> <% if (skill.learning == 'true') { %> <span class="u-highlight">(learning)</span> <% } %></li>
+							<% } else { %>
+								<li><%- skill.name %> <% if (skill.learning == 'true') { %> <span class="u-highlight">(learning)</span> <% } %></li>
+							<% } %>
+							<% }); %>
+						</ul>
+					</div>
+					<% }); %>
+				</section>
+			</section>
+            <section class="c-skills__other">
+				<h2>Other</h2>
+				<ul>
+                    <% Other.forEach(skill => { %>
+                    <li><%- skill.name %> <% if (skill.learning == 'true') { %> <span class="u-highlight">(learning)</span> <% } %></li> </li>
+                    <% }); %>
+                </ul>
+			</section>
+			<section class="c-skills__databases">
+				<h2>Databases</h2>
+				<ul>
+                    <% Databases.forEach(skill => { %>
+                    <li><%- skill.name %> <% if (skill.learning == 'true') { %> <span class="u-highlight">(learning)</span> <% } %></li> </li>
+                    <% }); %>
+                </ul>
+			</section>
+			<section class="c-skills__cms">
+				<h2>CMS</h2>
+				<ul>
+					<% CMS.forEach(skill => { %>
+						<li><%- skill.name %> <% if (skill.learning == 'true') { %> <span class="u-highlight">(learning)</span> <% } %></li> </li>
+						<% }); %>
+				</ul>
+			</section>
+			<section class="c-skills__languages">
+				<h2>Languages</h2>
+				<ul>
+					<% Languages.forEach(skill => { %>
+						<li><%- skill.name %> <span class="u-highlight">(<%- skill.level -%>)</span>  </li>
+						<% }); %></span></li>
+				</ul>
+			</section>
+			<section class="c-skills__graphicDesign">
+				<h2>Graphic design</h2>
+				<ul>
+					<% GraphicDesign.forEach(skill => { %>
+						<li><%- skill.name %> <% if (skill.learning == 'true') { %> <span class="u-highlight">(learning)</span> <% } %></li> </li>
+						<% }); %>
+				</ul>
+			</section>
+			<section class="c-skills__video">
+				<h2>Video editing / VFX</h2>
+				<ul>
+					<% VideoEditing.forEach(skill => { %>
+						<li><%- skill.name %> <% if (skill.learning == 'true') { %> <span class="u-highlight">(learning)</span> <% } %></li> </li>
+						<% }); %>
+				</ul>
+			</section>
+			<section class="c-skills__3d">
+				<h2>3D / CAD design</h2>
+				<ul>
+					<% DDDDesign.forEach(skill => { %>
+						<li><%- skill.name %> <% if (skill.learning == 'true') { %> <span class="u-highlight">(learning)</span> <% } %></li> </li>
+						<% }); %>
+				</ul>
+			</section>
+			<section class="c-skills__animation">
+				<h2>3D animation</h2>
+				<ul>
+					<% DDDAnimation.forEach(skill => { %>
+						<li><%- skill.name %> <% if (skill.learning == 'true') { %> <span class="u-highlight">(learning)</span> <% } %></li> </li>
+						<% }); %>
+				</ul>
+			</section>
+			<section class="c-skills__jsFrameworks">
+				<h2>JS frameworks</h2>
+				<ul>
+					<% JSFrameworks.forEach(skill => { %>
+						<li><%- skill.name %> <% if (skill.learning == 'true') { %> <span class="u-highlight">(learning)</span> <% } %></li> </li>
+						<% }); %>
+				</ul>
+			</section>
+			<section class="c-skills__phpFrameworks">
+				<h2>PHP frameworks</h2>
+				<ul>
+					<% PHPFrameworks.forEach(skill => { %>
+						<li><%- skill.name %> <% if (skill.learning == 'true') { %> <span class="u-highlight">(learning)</span> <% } %></li> </li>
+						<% }); %>
+				</ul>
+			</section>
+			<section class="c-skills__cssFrameworks">
+				<h2>CSS frameworks</h2>
+				<ul>
+					<% CSSFrameworks.forEach(skill => { %>
+						<li><%- skill.name %> <% if (skill.learning == 'true') { %> <span class="u-highlight">(learning)</span> <% } %></li> </li>
+						<% }); %>
+				</ul>
+			</section>
 		</main>
 	</body>
 </html>

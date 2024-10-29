@@ -93,10 +93,6 @@
 		{
 			"name": "SQL",
 			"learning": "false"
-		},
-		{
-			"name": "SQLite",
-			"learning": "true"
 		}
 	],
 	"CMS": [
@@ -123,7 +119,7 @@
 			"learning": "false"
 		}
 	],
-	"3DDesign": [
+	"DDDDesign": [
 		{
 			"name": "Blender",
 			"learning": "false"
@@ -151,7 +147,7 @@
 			"learning": "false"
 		}
 	],
-	"3DAnimation": [
+	"DDDAnimation": [
 		{
 			"name": "Blender",
 			"learning": "false"
