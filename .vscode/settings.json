@@ -88,6 +88,104 @@
 				},
 				"required": ["name", "description"]
 			}
+		},
+		{
+			"id": "Studies",
+			"title": "Studies",
+			"file": "[[workspace]]/src/_data/studies.json",
+			"fileType": "json",
+			"labelField": "degreeName",
+			"schema": {
+				"title": "portfolio studies",
+				"type": "object",
+				"properties": {
+					"startDate": {
+						"type": "string",
+						"title": "Start Date"
+					},
+					"endDate": {
+						"type": "string",
+						"title": "End Date"
+					},
+					"school": {
+						"type": "string",
+						"title": "School"
+					},
+					"location": {
+						"type": "string",
+						"title": "Location"
+					},
+					"degreeType": {
+						"type": "string",
+						"title": "Degree Type"
+					},
+					"degreeName": {
+						"type": "string",
+						"title": "Degree Name"
+					},
+					"description": {
+						"type": "string",
+						"title": "Description"
+					}
+				},
+				"required": [
+					"startDate",
+					"endDate",
+					"location",
+					"school",
+					"degreeType",
+					"degreeName"
+				]
+			}
+		},
+		{
+			"id": "Experiences",
+			"title": "Experiences",
+			"file": "[[workspace]]/src/_data/experiences.json",
+			"fileType": "json",
+			"labelField": "position",
+			"schema": {
+				"title": "portfolio experiences",
+				"type": "object",
+				"properties": {
+					"startDate": {
+						"type": "string",
+						"title": "Start Date"
+					},
+					"endDate": {
+						"type": "string",
+						"title": "End Date"
+					},
+					"company": {
+						"type": "string",
+						"title": "Company"
+					},
+					"location": {
+						"type": "string",
+						"title": "Location"
+					},
+					"experienceType": {
+						"type": "string",
+						"title": "Experience Type"
+					},
+					"position": {
+						"type": "string",
+						"title": "Position"
+					},
+					"description": {
+						"type": "string",
+						"title": "Description"
+					}
+				},
+				"required": [
+					"startDate",
+					"endDate",
+					"location",
+					"company",
+					"experienceType",
+					"position"
+				]
+			}
 		}
 	],
 	"frontMatter.data.types": [],
