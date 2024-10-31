@@ -1819,7 +1819,8 @@
 				{
 					"title": "Categories",
 					"name": "categories",
-					"type": "categories"
+					"type": "categories",
+					"default": ["Project"]
 				},
 				{
 					"title": "Project GitHub Link",
@@ -1836,6 +1837,52 @@
 					"name": "fmContentType",
 					"type": "string",
 					"default": "Project"
+				},
+				{
+					"title": "Slug",
+					"name": "slug",
+					"type": "string"
+				},
+				{
+					"title": "Permalink",
+					"name": "permalink",
+					"type": "string",
+					"default": "Projects/project.html"
+				}
+			]
+		},
+		{
+			"name": "SmallProject",
+			"pageBundle": false,
+			"previewPath": null,
+			"template": "./.frontmatter/templates/SmallProject.md",
+			"fields": [
+				{
+					"title": "Title",
+					"name": "title",
+					"type": "string"
+				},
+				{
+					"title": "Categories",
+					"name": "categories",
+					"type": "categories",
+					"default": ["SmallProject"]
+				},
+				{
+					"title": "Project GitHub Link",
+					"name": "githubLink",
+					"type": "string"
+				},
+				{
+					"title": "Site Link",
+					"name": "siteLink",
+					"type": "string"
+				},
+				{
+					"title": "Front Matter Content Type",
+					"name": "fmContentType",
+					"type": "string",
+					"default": "SmallProject"
 				},
 				{
 					"title": "Slug",
