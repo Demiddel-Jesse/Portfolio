@@ -4,6 +4,20 @@
 		{ "src": "/About", "dest": "/About.html" },
 		{ "src": "/Projects", "dest": "/Projects.html" },
 		{ "src": "/Playground", "dest": "/Playground.html" },
-		{ "src": "/*", "dest": "/*.html" }
+		{ "src": "/Skills", "dest": "/Skills.html" },
+		{ "src": "/Playground/FuzzyLamp", "dest": "/Playground/FuzzyLamp.html" },
+		{
+			"src": "/Playground/MovieDatabaseLearning",
+			"dest": "/Playground/MovieDatabaseLearning.html"
+		},
+		{
+			"src": "/Projects/GoplayDashboard",
+			"dest": "/Projects/GoplayDashboard.html"
+		},
+		{
+			"src": "/Projects/MiniMusePrototype",
+			"dest": "/Projects/MiniMusePrototype.html"
+		},
+		{ "src": "/Projects/Sinksen2022", "dest": "/Projects/Sinksen2022.html" }
 	]
 }
