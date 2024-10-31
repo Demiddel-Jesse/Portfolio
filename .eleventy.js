@@ -18,7 +18,7 @@ module.exports = function (eleventyConfig) {
 	// eleventyConfig.addWatchTarget('./src/compiled-assets/vendor.js');// Copy src/compiled-assets to /assets
 	eleventyConfig.addPassthroughCopy({ "src/compiled-assets": "/" });
 	// Copy all images
-	eleventyConfig.addPassthroughCopy("src/images");
+	eleventyConfig.addPassthroughCopy("src/assets/images");
 	return {
 		dir: {
 			includes: "_components",
