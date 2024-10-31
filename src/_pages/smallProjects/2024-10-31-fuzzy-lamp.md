@@ -2,12 +2,14 @@
 title: Fuzzy Lamp
 categories:
   - SmallProject
+tags:
+  - SmallProject
 githubLink: "https://github.com/Demiddel-Jesse/fuzzy-lamp"
 siteLink: ""
 fmContentType: SmallProject
 slug: ""
 permalink: Playground/FuzzyLamp.html
-layout: SmallProjectPage.ejs
+layout: PlaygroundPage.ejs
 ---
 
 <section class="c-project__about">

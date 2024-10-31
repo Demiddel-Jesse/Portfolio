@@ -2,12 +2,14 @@
 title: Movie Database Learning
 categories:
   - SmallProject
+tags:
+  - SmallProject
 githubLink: "https://github.com/Demiddel-Jesse/MovieDatabaseTest"
 siteLink: "https://simple-php-movie-database.vercel.app/"
 fmContentType: SmallProject
 slug: ""
 permalink: Playground/MovieDatabaseLearning.html
-layout: SmallProjectPage.ejs
+layout: PlaygroundPage.ejs
 ---
 
 <section class="c-project__about">

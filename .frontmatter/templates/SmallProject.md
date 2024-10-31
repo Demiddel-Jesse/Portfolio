@@ -7,7 +7,7 @@ siteLink:
 fmContentType: SmallProject
 slug:
 permalink: Playground/Project.html
-layout: SmallProjectPage.ejs
+layout: PlaygroundPage.ejs
 ---
 
 <section class="c-project__about">
