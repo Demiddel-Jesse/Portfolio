@@ -1,0 +1,157 @@
+!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Dashboard</title>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+    <link rel="manifest" href="/site.webmanifest"/>
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
+    <meta name="msapplication-TileColor" content="#2b5797"/>
+    <meta name="theme-color" content="#000000"/>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./dist/index.css"/>
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- JS -->
+    <script type="module" src="./dist/main-min.js"></script>
+</head>
+<body class="o-darkmode o-grid">
+<nav class="c-nav">
+    <div class="c-sidebar c-nav__hide">
+        <!-- TODO: Als men klikt op de div in in alles kleiner dan 428 px klapt de hamburger menu uit-->
+        <img class="c-sidebar__logo js-logo" src="/assets/svg/logo.svg" alt="GoPlay"/>
+        <img class="c-sidebar__logo js-logo u-hidden" src="/assets/svg/logo_dark.svg" alt="GoPlay"/>
+        <ul>
+            <li class="c-sidebar__item"><a href="index.html">Dashboard</a></li>
+            <li class="c-sidebar__item"><a href="users.html">Gebruikers beheer</a></li>
+            <li class="c-sidebar__item active"><a class="active" href="content.html">Content beheer</a></li>
+            <li class="c-sidebar__item"><a href="startscherm.html">Startscherm beheer</a></li>
+            <li class="c-sidebar__item"><a href="settings.html">Website instellingen</a></li>
+            <!-- FIXME: De content management underline is kleiner dan die erboven ik zie de reden hiervan niet in net zoals settings en log out-->
+        </ul>
+        <div class="c-sidebar__account">
+            <h2>Account</h2>
+            <ul>
+                <li class="c-sidebar__item">
+                    <div class="c-profile">
+                        <div class="c-profile--details">
+                            <img src="assets/img/tony_stark.png" alt="profileImg"/>
+                        </div>
+                        <div class="name-job">
+                            <div class="profile_name">Tony Stark</div>
+                            <div class="role">Admin</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="c-sidebar__item"><a href="#">Instellingen</a></li>
+                <li class="c-sidebar__item"><a class="c-sidebar__item--accent js-logout" href="#">Uitloggen</a></li>
+                
+                <!-- TODO: een hovermode zou leuk zijn -->
+            </ul>
+            <p class="creddits">&copy; Howest - 2022</p>
+        </div>
+    </div>
+    <div class="c-mobilenav">
+        <img class="c-mobilenav__logo js-logo" src="/assets/svg/logo.svg" alt="GoPlay"/>
+        <img class="c-mobilenav__logo js-logo u-hidden" src="/assets/svg/logo_dark.svg" alt="GoPlay"/>
+        <div class="c-mobilenav__hamburger js-togglenav">
+            <input class="c-mobilenav__toggle" type="checkbox"/>
+            <span class="c-mobilenav__bar c-mobilenav__bar--top"></span>
+            <span class="c-mobilenav__bar c-mobilenav__bar--mid"></span>
+            <span class="c-mobilenav__bar c-mobilenav__bar--bottom"></span>
+        </div>
+        <div class="c-mobilenav__content u-hidden">
+            <ul>
+                <li class="c-sidebar__item"><a href="index.html">Dashboard</a></li>
+                <li class="c-sidebar__item"><a href="users.html">Gebruikers beheer</a></li>
+                <li class="c-sidebar__item active"><a class="active" href="content.html">Content beheer</a></li>
+                <li class="c-sidebar__item"><a href="startscherm.html">Startscherm beheer</a></li>
+                <li class="c-sidebar__item"><a href="settings.html">Website instellingen</a></li>
+            </ul>
+            <div class="c-mobilenav__account">
+                <h2>Account</h2>
+                <ul>
+                    <li class="c-sidebar__item">
+
+                    </li>
+                    <li class="c-sidebar__item"><a href="#">Instellingen</a></li>
+                    <li class="c-sidebar__item"><a class="c-sidebar__item--accent js-logout" href="#">Uitloggen</a></li>
+                </ul>
+                <p class="creddits">&copy; Howest - 2022</p>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="c-createnew">
+    <div class="c-addContentDetails js-contentdata">
+        <div class="c-addContentDetails__header"><h1>1. Voeg Informatie van de Film/TVShow toe</h1></div>
+        <div class="c-addContentDetails__details">
+            <form action="">
+                <label for="title">Titel</label><br>
+                <input type="text" id="title" class="c-addContentDetails__details--input" placeholder="Titel"><br>
+                <label for="description">Beschrijving</label><br>
+                <textarea name="description" id="description" class="c-addContentDetails__details--input"
+                          placeholder="Description"></textarea><br>
+                <label for="Director">Regie</label><br>
+                <input type="text" id="Director" class="c-addContentDetails__details--input" placeholder="Regie"><br>
+                <label for="Cast">Cast</label><br>
+                <input type="text" id="Cast" class="c-addContentDetails__details--input" placeholder="Cast"><br>
+            </form>
+            <div class="c-addContentDetails__details--select">
+                <div><label for="type">Type</label><br>
+                    <select id="type">
+                        <option selected>TVShow</option>
+                        <option>Film</option>
+                    </select>
+                </div>
+                <div><label for="genre">Genre</label><br>
+                    <select id="genre">
+                        <option>Entertainment</option>
+                        <option>test2</option>
+                        <option>test3</option>
+                    </select>
+                </div>
+                <div><label for="language">Taal</label><br>
+                    <select id="language">
+                        <option>Nederlands</option>
+                        <option>Engels</option>
+                        <option>Frans</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="c-addContentDetails__settings">
+            <div><label for="release_date">Release Datum</label><br>
+                <input class="js-release-date" type="datetime-local" placeholder="Maak Beschikbaar Op"
+                       id="release_date">
+            </div>
+            <div><label for="release_date">Beschikbaar tot Datum</label><br>
+                <input class="js-availbleTill-date" type="datetime-local" placeholder="Beschikbaar Tot">
+            </div>
+
+            <div>
+                <label for="switch">Staat Online</label><br>
+                <label class="switch">
+                    <input type="checkbox" id="switch">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+        <div class="c-addContentDetails__buttons">
+            <a href="content.html">
+                <button class="c-button">Terug</button>
+            </a>
+            <a href="create_new_seasons.html">
+                <button class="c-button">Volgende</button>
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</html>

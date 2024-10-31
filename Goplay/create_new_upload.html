@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Dashboard</title>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+    <link rel="manifest" href="/site.webmanifest"/>
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
+    <meta name="msapplication-TileColor" content="#2b5797"/>
+    <meta name="theme-color" content="#000000"/>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./dist/index.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- JS -->
+    <script type="module" src="./dist/main-min.js"></script>
+</head>
+<body class="o-darkmode o-grid">
+<nav class="c-nav">
+    <div class="c-sidebar c-nav__hide">
+        <!-- TODO: Als men klikt op de div in in alles kleiner dan 428 px klapt de hamburger menu uit-->
+        <img class="c-sidebar__logo js-logo" src="/assets/svg/logo.svg" alt="GoPlay"/>
+        <img class="c-sidebar__logo js-logo u-hidden" src="/assets/svg/logo_dark.svg" alt="GoPlay"/>
+        <ul>
+            <li class="c-sidebar__item"><a href="index.html">Dashboard</a></li>
+            <li class="c-sidebar__item"><a href="users.html">Gebruikers beheer</a></li>
+            <li class="c-sidebar__item active"><a class="active" href="content.html">Content beheer</a></li>
+            <li class="c-sidebar__item"><a href="startscherm.html">Startscherm beheer</a></li>
+            <li class="c-sidebar__item"><a href="settings.html">Website instellingen</a></li>
+            <!-- FIXME: De content management underline is kleiner dan die erboven ik zie de reden hiervan niet in net zoals settings en log out-->
+        </ul>
+        <div class="c-sidebar__account">
+            <h2>Account</h2>
+            <ul>
+                <li class="c-sidebar__item">
+                    <div class="c-profile">
+                        <div class="c-profile--details">
+                            <img src="assets/img/tony_stark.png" alt="profileImg"/>
+                        </div>
+                        <div class="name-job">
+                            <div class="profile_name">Tony Stark</div>
+                            <div class="role">Admin</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="c-sidebar__item"><a href="#">Instellingen</a></li>
+                <li class="c-sidebar__item"><a class="c-sidebar__item--accent js-logout" href="#">Uitloggen</a></li>
+                
+                <!-- TODO: een hovermode zou leuk zijn -->
+            </ul>
+            <p class="creddits">&copy; Howest - 2022</p>
+        </div>
+    </div>
+    <div class="c-mobilenav">
+        <img class="c-mobilenav__logo js-logo" src="/assets/svg/logo.svg" alt="GoPlay"/>
+        <img class="c-mobilenav__logo js-logo u-hidden" src="/assets/svg/logo_dark.svg" alt="GoPlay"/>
+        <div class="c-mobilenav__hamburger js-togglenav">
+            <input class="c-mobilenav__toggle" type="checkbox"/>
+            <span class="c-mobilenav__bar c-mobilenav__bar--top"></span>
+            <span class="c-mobilenav__bar c-mobilenav__bar--mid"></span>
+            <span class="c-mobilenav__bar c-mobilenav__bar--bottom"></span>
+        </div>
+        <div class="c-mobilenav__content u-hidden">
+            <ul>
+                <li class="c-sidebar__item"><a href="index.html">Dashboard</a></li>
+                <li class="c-sidebar__item"><a href="users.html">Gebruikers beheer</a></li>
+                <li class="c-sidebar__item active"><a class="active" href="content.html">Content beheer</a></li>
+                <li class="c-sidebar__item"><a href="startscherm.html">Startscherm beheer</a></li>
+                <li class="c-sidebar__item"><a href="settings.html">Website instellingen</a></li>
+            </ul>
+            <div class="c-mobilenav__account">
+                <h2>Account</h2>
+                <ul>
+                    <li class="c-sidebar__item">
+
+                    </li>
+                    <li class="c-sidebar__item"><a href="#">Instellingen</a></li>
+                    <li class="c-sidebar__item"><a class="c-sidebar__item--accent js-logout" href="#">Uitloggen</a></li>
+                </ul>
+                <p class="creddits">&copy; Howest - 2022</p>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="c-createnew">
+    <div class="c-addContentUpload">
+        <div class="c-addContentUpload__header"><h1>2. Upload de Data</h1></div>
+        <div class="c-addContentUpload__upload">
+            <div class="drag-area">
+                <header>Drag & Drop Film</header>
+                <span>of</span>
+                <button>Browse File</button>
+                <input type="file" hidden>
+            </div>
+            <div class="drag-area">
+                <header>Drag & Drop Background</header>
+                <span>of</span>
+                <button>Browse File</button>
+                <input type="file" hidden>
+            </div>
+            <div class="drag-area">
+                <header>Drag & Drop Poster</header>
+                <span>of</span>
+                <button>Browse File</button>
+                <input type="file" hidden>
+            </div>
+            <div class="drag-area">
+                <header>Drag & Drop Trailer</header>
+                <span>of</span>
+                <button>Browse File</button>
+                <input type="file" hidden>
+            </div>
+        </div>
+        <div class="c-addContentUpload__bg">
+            <p>preview background image:</p>
+            <img
+                    src="https://wmimages.goplay.be/styles/f7331df9e0140370408293ff5186b3cc1ba2ff25/2023-01/goplaywp3840x2160dtvv-1-ro8aq5.jpg?style=W3sianBlZyI6eyJxdWFsaXR5Ijo5MH19LHsicmVzaXplIjp7ImZpdCI6ImNvdmVyIiwid2lkdGgiOjM4NDAsImhlaWdodCI6MjE2MCwiZ3Jhdml0eSI6bnVsbCwid2l0aG91dEVubGFyZ2VtZW50IjpmYWxzZX19XQ==&sign=1240b2ba0a2922ef673d76c46e7de21ff73b8b0feb724f412a80dd929da419b8"
+                    alt="">
+        </div>
+        <div class="c-addContentUpload__poster">
+            <p>preview poster image:</p><img
+                src="https://wmimages.goplay.be/styles/d03a19a83908ec0fa0ca867113b0553c8bce6d67/2022-08/goplaympmpl1050x1500dtvv-rhhesq.jpeg?style=W3sicmVzaXplIjp7ImZpdCI6Imluc2lkZSIsIndpZHRoIjo0MDAsImhlaWdodCI6NTgwLCJ3aXRob3V0RW5sYXJnZW1lbnQiOmZhbHNlfX0seyJqcGVnIjp7InF1YWxpdHkiOjk1fX1d&sign=c42b1d2ed34c175f0e698e554f225c9251438befc26f97ea31619b31f23f93ce"
+                alt="Programma: Tafel Van Vier">
+        </div>
+        <div class="c-addContentUpload__buttons">
+            <a href="create_new_seasons.html">
+                <button class="c-button">Terug</button>
+            </a>
+            <button class="c-button">Toevoegen</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
