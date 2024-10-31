@@ -5,27 +5,39 @@
 @use "../utilities/utility.box";
 
 .c-projects {
+	.c-back {
+		@include grid.height(2, "ts");
+		@include grid.height(1, "tl");
+	}
+
 	&__projectGoplay,
 	&__projectSinksen,
-	&__projectMiniMuse {
+	&__projectMiniMuse,
+	&__box {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 
 		@extend %u-box;
 
+		@include order.pos(3);
+
+		@include grid.width(1);
+
+		@include grid.height(1);
+
 		h2 {
 			margin-top: 8px;
 
-			font-size: clamp(1.6rem, 3.2vw + 1rem, 2rem);
+			font-size: clamp(1rem, 3.2vw + 1rem, 1.5rem);
 
 			display: flex;
 			align-items: center;
 			gap: 8px;
 
 			.c-svgArrow {
-				width: 3.5rem;
-				height: 3.5rem;
+				width: 3rem;
+				height: 3rem;
 			}
 		}
 
