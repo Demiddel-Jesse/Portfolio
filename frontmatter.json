@@ -1847,7 +1847,7 @@
 					"title": "Permalink",
 					"name": "permalink",
 					"type": "string",
-					"default": "Projects/project.html"
+					"default": "Playground/project.html"
 				}
 			]
 		},
