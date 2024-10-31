@@ -64,45 +64,45 @@ const config = {
 		host: "localhost",
 	},
 	plugins: [
-		// new FaviconsWebpackPlugin({
-		// 	logo: "src/assets/img/favicon.png",
-		// 	cache: true,
-		// 	prefix: "assets/favicon/",
-		// 	favicons: {
-		// 		appName: "Jesse Demiddels portfolio",
-		// 		appDescription: "Portfolio of full stack developer - Jesse Demiddel",
-		// 		developerName: "Jesse Demiddel",
-		// 		developerURL: null, // prevent retrieving from the nearest package.json
-		// 		background: "#000000",
-		// 		theme_color: "#171717",
-		// 		icons: {
-		// 			android: [
-		// 				"android-chrome-144x144.png",
-		// 				"android-chrome-192x192.png",
-		// 				"android-chrome-256x256.png",
-		// 				"android-chrome-512x512.png",
-		// 			],
-		// 			appleIcon: [
-		// 				"apple-touch-icon-57x57.png",
-		// 				"apple-touch-icon-76x76.png",
-		// 				"apple-touch-icon-120x120.png",
-		// 				"apple-touch-icon-180x180.png",
-		// 			],
-		// 			favicons: [
-		// 				"favicon-16x16.png",
-		// 				"favicon-32x32.png",
-		// 				"favicon-48x48.png",
-		// 				"favicon.ico",
-		// 			],
-		// 			// android: true,
-		// 			// appleIcon: true,
-		// 			// favicons: true
-		// 			appleStartup: false,
-		// 			windows: false,
-		// 			yandex: false,
-		// 		},
-		// 	},
-		// }),
+		new FaviconsWebpackPlugin({
+			logo: "src/assets/images/favicon.png",
+			cache: true,
+			prefix: "assets/favicon/",
+			favicons: {
+				appName: "Jesse Demiddels portfolio",
+				appDescription: "Portfolio of full stack developer - Jesse Demiddel",
+				developerName: "Jesse Demiddel",
+				developerURL: null, // prevent retrieving from the nearest package.json
+				background: "#000000",
+				theme_color: "#171717",
+				icons: {
+					android: [
+						"android-chrome-144x144.png",
+						"android-chrome-192x192.png",
+						"android-chrome-256x256.png",
+						"android-chrome-512x512.png",
+					],
+					appleIcon: [
+						"apple-touch-icon-57x57.png",
+						"apple-touch-icon-76x76.png",
+						"apple-touch-icon-120x120.png",
+						"apple-touch-icon-180x180.png",
+					],
+					favicons: [
+						"favicon-16x16.png",
+						"favicon-32x32.png",
+						"favicon-48x48.png",
+						"favicon.ico",
+					],
+					// android: true,
+					// appleIcon: true,
+					// favicons: true
+					appleStartup: false,
+					windows: false,
+					yandex: false,
+				},
+			},
+		}),
 	],
 	module: {
 		rules: [
