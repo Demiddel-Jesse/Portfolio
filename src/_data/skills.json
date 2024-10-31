@@ -1,181 +1,186 @@
 [
-	{
-		"name": "HTML5",
-		"group": "Programming Languages",
-		"subgroup": "Frontend",
-		"learning": false
-	},
-	{
-		"name": "CSS3",
-		"group": "Programming Languages",
-		"subgroup": "Frontend",
-		"learning": false
-	},
-	{
-		"name": "SCSS",
-		"group": "Programming Languages",
-		"subgroup": "Frontend",
-		"learning": false
-	},
-	{
-		"name": "JavaScript",
-		"group": "Programming Languages",
-		"subgroup": "Frontend",
-		"learning": false
-	},
-	{
-		"name": "JQuery",
-		"group": "Programming Languages",
-		"subgroup": "Frontend",
-		"learning": false
-	},
-	{
-		"name": "TypeScript",
-		"group": "Programming Languages",
-		"subgroup": "Frontend",
-		"learning": true
-	},
-	{
-		"name": "PHP",
-		"group": "Programming Languages",
-		"subgroup": "Backend",
-		"learning": false
-	},
-	{
-		"name": "Twig",
-		"group": "Programming Languages",
-		"subgroup": "Backend",
-		"learning": false
-	},
-	{
-		"name": "Python",
-		"group": "Programming Languages",
-		"subgroup": "Other",
-		"learning": false
-	},
-	{
-		"name": "Processing",
-		"group": "Programming Languages",
-		"subgroup": "Other",
-		"link": "https://processing.org/",
-		"learning": false
-	},
-	{
-		"name": "React",
-		"learning": true,
-		"group": "JS Frameworks"
-	},
-	{
-		"name": "Angular",
-		"group": "JS Frameworks",
-		"learning": true
-	},
-	{
-		"name": "Laravel",
-		"group": "PHP Frameworks",
-		"learning": true
-	},
-	{
-		"name": "Git",
-		"group": "Other",
-		"learning": false
-	},
-	{
-		"name": "SQL",
-		"group": "Databases",
-		"learning": false
-	},
-	{
-		"name": "Wordpress",
-		"group": "CMS",
-		"learning": false
-	},
-	{
-		"name": "Bootstrap",
-		"group": "CSS Frameworks",
-		"learning": false
-	},
-	{
-		"name": "Tailwind",
-		"group": "CSS Frameworks",
-		"learning": false
-	},
-	{
-		"name": "Dutch",
-		"group": "Languages",
-		"highlight": "native",
-		"learning": false
-	},
-	{
-		"name": "English",
-		"group": "Languages",
-		"highlight": "native",
-		"learning": false
-	},
-	{
-		"name": "French",
-		"group": "Languages",
-		"highlight": "high-school",
-		"learning": false
-	},
-	{
-		"name": "Figma",
-		"group": "Graphic Design",
-		"learning": false
-	},
-	{
-		"name": "Adobe XD",
-		"group": "Graphic Design",
-		"learning": false
-	},
-	{
-		"name": "Adobe Photoshop",
-		"group": "Graphic Design",
-		"learning": false
-	},
-	{
-		"name": "Adobe Illustrator",
-		"group": "Graphic Design",
-		"learning": false
-	},
-	{
-		"name": "Blender",
-		"group": "3D Animation",
-		"learning": false
-	},
-	{
-		"group": "3D Animation",
-		"name": "Autodesk Maya",
-		"learning": false
-	},
-	{
-		"name": "Davinci Resolve",
-		"group": "Video Editing / VFX",
-		"learning": false
-	},
-	{
-		"group": "Video Editing / VFX",
-		"name": "After Effects",
-		"learning": false
-	},
-	{
-		"group": "Video Editing / VFX",
-		"name": "Premiere Pro",
-		"learning": false
-	},
-	{
-		"name": "Blender",
-		"group": "3D / CAD Design",
-		"learning": false
-	},
-	{
-		"name": "SolidWorks",
-		"group": "3D / CAD Design",
-		"learning": false
-	},
-	{
-		"name": "Autodesk 3DS Max",
-		"group": "3D / CAD Design",
-		"learning": false
-	}
+  {
+    "name": "HTML5",
+    "group": "Programming Languages",
+    "subgroup": "Frontend",
+    "learning": false
+  },
+  {
+    "name": "CSS3",
+    "group": "Programming Languages",
+    "subgroup": "Frontend",
+    "learning": false
+  },
+  {
+    "name": "SCSS",
+    "group": "Programming Languages",
+    "subgroup": "Frontend",
+    "learning": false
+  },
+  {
+    "name": "JavaScript",
+    "group": "Programming Languages",
+    "subgroup": "Frontend",
+    "learning": false
+  },
+  {
+    "name": "JQuery",
+    "group": "Programming Languages",
+    "subgroup": "Frontend",
+    "learning": false
+  },
+  {
+    "name": "TypeScript",
+    "group": "Programming Languages",
+    "subgroup": "Frontend",
+    "learning": true
+  },
+  {
+    "name": "PHP",
+    "group": "Programming Languages",
+    "subgroup": "Backend",
+    "learning": false
+  },
+  {
+    "name": "Twig",
+    "group": "Programming Languages",
+    "subgroup": "Backend",
+    "learning": false
+  },
+  {
+    "name": "Python",
+    "group": "Programming Languages",
+    "subgroup": "Other",
+    "learning": false
+  },
+  {
+    "name": "Processing",
+    "group": "Programming Languages",
+    "subgroup": "Other",
+    "link": "https://processing.org/",
+    "learning": false
+  },
+  {
+    "name": "React",
+    "learning": true,
+    "group": "JS Frameworks"
+  },
+  {
+    "name": "Angular",
+    "group": "JS Frameworks",
+    "learning": true
+  },
+  {
+    "name": "Laravel",
+    "group": "PHP Frameworks",
+    "learning": true
+  },
+  {
+    "name": "Git",
+    "group": "Other",
+    "learning": false
+  },
+  {
+    "name": "SQL",
+    "group": "Databases",
+    "learning": false
+  },
+  {
+    "name": "Wordpress",
+    "group": "CMS",
+    "learning": false
+  },
+  {
+    "name": "Bootstrap",
+    "group": "CSS Frameworks",
+    "learning": false
+  },
+  {
+    "name": "Tailwind",
+    "group": "CSS Frameworks",
+    "learning": false
+  },
+  {
+    "name": "Dutch",
+    "group": "Languages",
+    "highlight": "native",
+    "learning": false
+  },
+  {
+    "name": "English",
+    "group": "Languages",
+    "highlight": "native",
+    "learning": false
+  },
+  {
+    "name": "French",
+    "group": "Languages",
+    "highlight": "high-school",
+    "learning": false
+  },
+  {
+    "name": "Figma",
+    "group": "Graphic Design",
+    "learning": false
+  },
+  {
+    "name": "Adobe XD",
+    "group": "Graphic Design",
+    "learning": false
+  },
+  {
+    "name": "Adobe Photoshop",
+    "group": "Graphic Design",
+    "learning": false
+  },
+  {
+    "name": "Adobe Illustrator",
+    "group": "Graphic Design",
+    "learning": false
+  },
+  {
+    "name": "Blender",
+    "group": "3D Animation",
+    "learning": false
+  },
+  {
+    "group": "3D Animation",
+    "name": "Autodesk Maya",
+    "learning": false
+  },
+  {
+    "name": "Davinci Resolve",
+    "group": "Video Editing / VFX",
+    "learning": false
+  },
+  {
+    "group": "Video Editing / VFX",
+    "name": "After Effects",
+    "learning": false
+  },
+  {
+    "group": "Video Editing / VFX",
+    "name": "Premiere Pro",
+    "learning": false
+  },
+  {
+    "name": "Blender",
+    "group": "3D / CAD Design",
+    "learning": false
+  },
+  {
+    "name": "SolidWorks",
+    "group": "3D / CAD Design",
+    "learning": false
+  },
+  {
+    "name": "Autodesk 3DS Max",
+    "group": "3D / CAD Design",
+    "learning": false
+  },
+  {
+    "group": "JS Frameworks",
+    "name": "Vue.js",
+    "learning": true
+  }
 ]
