@@ -1,11 +1,11 @@
 ---
-title: Goplay Dashboard
+title:
 categories:
   - Project
 githubLink:
 siteLink:
 fmContentType: Project
-slug: goplay-dashboard
+slug:
 permalink: Projects/Project.html
 layout: ProjectPage.ejs
 ---
