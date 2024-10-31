@@ -1,6 +1,9 @@
 ---
 title: MiniMuse Prototype
-categories: []
+categories:
+  - Project
+tags:
+  - Project
 githubLink: "https://github.com/Demiddel-Jesse/MiniMusePrototype"
 siteLink: ""
 fmContentType: Project

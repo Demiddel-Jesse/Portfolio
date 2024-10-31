@@ -2,6 +2,8 @@
 title: Goplay Dashboard
 categories:
   - Project
+tags:
+  - Project
 githubLink: https://github.com/howest-WDD/opdracht-5-dashboard-groep-4-goplay
 siteLink: ../Goplay/index.html
 fmContentType: Project
