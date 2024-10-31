@@ -1,17 +1,20 @@
 ---
-title:
+title: Goplay Dashboard
 categories:
   - Project
 githubLink:
 siteLink:
 fmContentType: Project
-slug:
-permalink: Projects/project.html
+slug: goplay-dashboard
+permalink: Projects/Project.html
+layout: ProjectPage.ejs
 ---
 
-# Project title
+<section class="c-project__about">
 
-Project description
+</section>
+
+<section class="c-project__tech">
 
 ## Tech used
 
@@ -23,3 +26,11 @@ Project description
   - [anychart.js](https://www.anychart.com/)
   - [chart.js](https://www.chartjs.org/)
 - [gulp](https://gulpjs.com/)
+
+</section>
+
+<section class="c-project__image">
+
+<img src="../../assets/images/" alt="" />
+
+</section>
