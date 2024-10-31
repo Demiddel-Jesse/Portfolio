@@ -1,0 +1,21 @@
+.c-formContent {
+  &__upload--buttons {
+    display: flex;
+    margin-top: 10px;
+    button {
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.c-form-actions {
+  display: flex;
+  margin-top: 30px;
+  button {
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

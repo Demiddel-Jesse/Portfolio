@@ -1,0 +1,24 @@
+@use '../tools/tools.breakpoints' as bp;
+
+.o-grid {
+	display: grid;
+
+	grid-template-rows: 100px 1fr;
+	grid-template-columns: 1fr;
+
+	grid-template-areas:
+		'nav'
+		'content';
+
+	gap: 0px;
+	height: 100%;
+
+	@include bp.up(tl) {
+		grid-template-rows: 100vh;
+		grid-template-columns: 300px calc(1vw - 300px);
+
+		grid-template-areas:
+			'nav'
+			'content';
+	}
+}

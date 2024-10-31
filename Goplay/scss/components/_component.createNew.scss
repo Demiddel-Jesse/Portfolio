@@ -1,0 +1,393 @@
+@use '../settings/colors' as color;
+@use '../tools/tools.breakpoints' as bp;
+
+.c-createnew {
+  display: flex;
+  justify-content: center;
+
+  @include bp.up(tl) {
+    flex-direction: column;
+    margin-left: 3rem;
+  }
+
+  button {
+    display: inline-block;
+    margin-top: 1rem;
+  }
+}
+
+.c-addContentUpload {
+  margin-top: 3rem;
+  grid-area: content;
+  display: grid;
+  gap: 20px;
+  height: 100%;
+
+  grid-template-columns: repeat(3, 350px);
+  grid-template-rows: 100px;
+
+  grid-template-areas:
+		'header header header'
+		'upload upload upload'
+		'bg_preview pstr_preview .'
+		'. . buttons';
+
+  &__header {
+    grid-area: header;
+    color: color.$neutral-500;
+  }
+
+  &__upload {
+    grid-area: upload;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    .drag-area {
+      height: 150px;
+      width: 30%;
+      padding: 1rem;
+      border: 2px dashed color.$accent-300;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .drag-area header {
+      font-size: 16px;
+      font-weight: 500;
+      color: #fff;
+    }
+
+    .drag-area span {
+      color: #fff;
+    }
+
+    .drag-area button {
+      padding: 10px 25px;
+      font-size: 20px;
+      font-weight: 500;
+      border: none;
+      outline: none;
+      background: color.$accent-300;
+      color: color.$neutral-900;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .drag-area img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  }
+
+  &__bg {
+    grid-area: bg_preview;
+    color: color.$neutral-500;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__poster {
+    grid-area: pstr_preview;
+    color: color.$neutral-500;
+
+    img {
+      max-height: 225px;
+    }
+  }
+
+  &__buttons {
+    grid-area: buttons;
+  }
+}
+
+.c-addContentSeaons {
+  margin-top: 3rem;
+  grid-area: content;
+  display: grid;
+  gap: 20px;
+  height: 100%;
+
+  grid-template-columns: repeat(3, 500px);
+  grid-template-rows: 100px;
+
+  grid-template-areas:
+		'header header header'
+		'table table table'
+		'. . buttons';
+
+  &__header {
+    grid-area: header;
+    color: color.$neutral-500;
+  }
+
+  &__addNewBtn {
+    grid-area: addNewBtn;
+  }
+
+  &__table {
+    grid-area: table;
+
+    table {
+      width: 100%;
+      color: color.$text-color-a;;
+      text-align: center;
+
+      td, th {
+        padding: 0.5rem;
+        background: color.$neutral-900;
+      }
+    }
+  }
+
+  &__buttons {
+    grid-area: buttons;
+  }
+
+  .material-icons {
+    margin-left: 1rem;
+  }
+
+  .c-addButton {
+    margin-left: 0;
+  }
+
+  .c-deleteIcon {
+    color: color.$accent-100;
+  }
+
+  .c-visibilityIcon {
+    color: color.$accent-300;
+
+    &--offline {
+      color: color.$accent-100;
+    }
+  }
+}
+
+.c-addContentDetails {
+  margin-top: 3rem;
+  grid-area: content;
+  display: grid;
+  height: 100%;
+  gap: 20px;
+
+  grid-template-columns: repeat(2, 750px);
+  grid-template-rows: 100px;
+
+  grid-template-areas:
+		'header header'
+		'details settings'
+		'details settings'
+		'. buttons';
+
+  &__header {
+    grid-area: header;
+    color: color.$text-color-a;
+  }
+
+  &__details {
+    grid-area: details;
+
+    label {
+      display: inline-block;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    &--select {
+      display: flex;
+      flex-wrap: wrap;
+
+      select {
+        margin-left: 0.5rem;
+      }
+
+      #type {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__settings {
+    grid-area: settings;
+
+    label {
+      display: inline-block;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__buttons {
+    grid-area: buttons;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  input {
+    width: 50%;
+    border-radius: 10px;
+    padding-left: 1.5rem;
+    background-color: color.$neutral-900;
+    border: 2px solid color.$accent-00;
+    height: 32px;
+    justify-content: center;
+    box-shadow: none;
+    color: color.$text-color-a;
+    transition: 800ms ease;
+
+    &:active {
+      box-shadow: none;
+      border: 2px solid color.$accent-00;
+    }
+
+    &:focus {
+      box-shadow: none;
+      border: 2px solid color.$accent-00;
+    }
+
+    &::placeholder {
+      color: color.$text-color-a;
+      box-shadow: none;
+    }
+
+    &:disabled {
+      display: none;
+    }
+  }
+
+  select {
+    background-color: color.$neutral-900;
+    border: 2px solid color.$accent-00;
+    border-radius: 10px;
+    justify-content: center;
+    box-shadow: none;
+    color: color.$text-color-a;
+    height: 36px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  textarea {
+    min-width: 50%;
+    max-width: 50%;
+    border-radius: 10px;
+    padding-left: 1.5rem;
+    background-color: color.$neutral-900;
+    border: 2px solid color.$accent-00;
+    min-height: 150px;
+    max-height: 150px;
+    justify-content: center;
+    box-shadow: none;
+    color: color.$text-color-a;
+
+    &:active {
+      box-shadow: none;
+      border: 2px solid color.$accent-00;
+    }
+
+    &:focus {
+      box-shadow: none;
+      border: 2px solid color.$accent-00;
+    }
+
+    &::placeholder {
+      color: color.$text-color-a;
+      box-shadow: none;
+    }
+  }
+
+  label {
+    color: color.$text-color-a;
+  }
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+  }
+
+  .slider {
+    border: 2px solid color.$accent-300;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: color.$neutral-800;
+    -webkit-transition: .4s;
+    transition: .4s;
+
+    &:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 2px;
+      bottom: 2px;
+      background-color: color.$neutral-500;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+  }
+
+  input {
+    &:checked {
+      + {
+        .slider {
+          background-color: color.$accent-00;
+
+          &:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+          }
+        }
+      }
+    }
+
+    &:focus {
+      + {
+        .slider {
+          box-shadow: 0 0 1px color.$accent-00;
+        }
+      }
+    }
+  }
+
+  .slider.round {
+    border-radius: 34px;
+
+    &:before {
+      border-radius: 50%;
+    }
+  }
+
+  @include bp.down(ml) {
+    grid-template-columns: repeat(1, 320px);
+    grid-template-areas:
+		'header'
+		'details'
+		'settings'
+		'buttons';
+  }
+}
+
