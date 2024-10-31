@@ -19,6 +19,26 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy({ "src/compiled-assets": "/" });
 	// Copy all images
 	eleventyConfig.addPassthroughCopy("src/assets/images");
+
+	// passthroughCopy for Sinksen static files
+	eleventyConfig.addPassthroughCopy({ "Sinksen2022/css": "/Sinksen2022/css" });
+	eleventyConfig.addPassthroughCopy({ "Sinksen2022/img": "/Sinksen2022/img" });
+	eleventyConfig.addPassthroughCopy({
+		"Sinksen2022/script": "/Sinksen2022/script",
+	});
+	eleventyConfig.addPassthroughCopy({ "Sinksen2022/*.html": "/Sinksen2022/" });
+
+	// passthroughCopy for Goplay static files
+	eleventyConfig.addPassthroughCopy({ "Goplay/assets": "/Goplay/assets" });
+	eleventyConfig.addPassthroughCopy({ "Goplay/dist": "/Goplay/dist" });
+	eleventyConfig.addPassthroughCopy({ "Goplay/json": "/Goplay/json" });
+	eleventyConfig.addPassthroughCopy({ "Goplay/*.png": "/Goplay/" });
+	eleventyConfig.addPassthroughCopy({ "Goplay/*.html": "/Goplay/" });
+	eleventyConfig.addPassthroughCopy({ "Goplay/*.xml": "/Goplay/" });
+	eleventyConfig.addPassthroughCopy({ "Goplay/*.ico": "/Goplay/" });
+	eleventyConfig.addPassthroughCopy({ "Goplay/*.svg": "/Goplay/" });
+	eleventyConfig.addPassthroughCopy({ "Goplay/*.webmanifest": "/Goplay/" });
+
 	return {
 		dir: {
 			includes: "_components",

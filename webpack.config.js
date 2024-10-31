@@ -175,86 +175,86 @@ module.exports = () => {
 				filename: "[name].css",
 			})
 		);
-		// config.plugins.push(
-		// 	new CopyPlugin({
-		// 		patterns: [
-		// 			// just to include only necessary files from Goplay folder
-		// 			{
-		// 				from: path.resolve(__dirname, "./Goplay/dist", "*.css"),
-		// 				to: "./",
-		// 			},
-		// 			{
-		// 				from: path.resolve(__dirname, "./Goplay/dist", "*.js"),
-		// 				to: "./",
-		// 			},
-		// 			{
-		// 				from: path.resolve(__dirname, "./Goplay/assets/img", "*"),
-		// 				to: "./",
-		// 			},
-		// 			{
-		// 				from: path.resolve(__dirname, "./Goplay/assets/svg", "*"),
-		// 				to: "./",
-		// 			},
-		// 			{
-		// 				from: path.resolve(__dirname, "./Goplay/json", "*"),
-		// 				to: "./",
-		// 			},
-		// 			{
-		// 				from: path.resolve(__dirname, "./Goplay", "*.html"),
-		// 				to: "./",
-		// 			},
-		// 			{
-		// 				from: path.resolve(__dirname, "./Goplay", "*.png"),
-		// 				to: "./",
-		// 			},
-		// 			{
-		// 				from: path.resolve(__dirname, "./Goplay", "*.ico"),
-		// 				to: "./",
-		// 			},
-		// 			{
-		// 				from: path.resolve(__dirname, "./Goplay", "*.svg"),
-		// 				to: "./",
-		// 			},
-		// 			{
-		// 				from: path.resolve(__dirname, "./Goplay", "*.xml"),
-		// 				to: "./",
-		// 			},
-		// 			{
-		// 				from: path.resolve(__dirname, "./Goplay", "*.webmanifest"),
-		// 				to: "./",
-		// 			},
-		// 			// copy sinksen project
-		// 			{
-		// 				from: path.resolve(__dirname, "./Sinksen2022", "*.html"),
-		// 				to: "./",
-		// 			},
-		// 			{
-		// 				from: path.resolve(__dirname, "./Sinksen2022/css", "*.css"),
-		// 				to: "./",
-		// 			},
-		// 			{
-		// 				from: path.resolve(__dirname, "./Sinksen2022/img", "*.png"),
-		// 				to: "./",
-		// 			},
-		// 			{
-		// 				from: path.resolve(__dirname, "./Sinksen2022/img", "*.svg"),
-		// 				to: "./",
-		// 			},
-		// 			{
-		// 				from: path.resolve(__dirname, "./Sinksen2022/img", "*.gif"),
-		// 				to: "./",
-		// 			},
-		// 			{
-		// 				from: path.resolve(__dirname, "./Sinksen2022/img", "*.jpg"),
-		// 				to: "./",
-		// 			},
-		// 			{
-		// 				from: path.resolve(__dirname, "./Sinksen2022/script", "*.js"),
-		// 				to: "./",
-		// 			},
-		// 		],
-		// 	})
-		// );
+		//config.plugins.push(
+			// new CopyPlugin({
+			// 	patterns: [
+			// 		// just to include only necessary files from Goplay folder
+			// 		{
+			// 			from: path.resolve(__dirname, "./Goplay/dist", "*.css"),
+			// 			to: "./",
+			// 		},
+			// 		{
+			// 			from: path.resolve(__dirname, "./Goplay/dist", "*.js"),
+			// 			to: "./",
+			// 		},
+			// 		{
+			// 			from: path.resolve(__dirname, "./Goplay/assets/img", "*"),
+			// 			to: "./",
+			// 		},
+			// 		{
+			// 			from: path.resolve(__dirname, "./Goplay/assets/svg", "*"),
+			// 			to: "./",
+			// 		},
+			// 		{
+			// 			from: path.resolve(__dirname, "./Goplay/json", "*"),
+			// 			to: "./",
+			// 		},
+			// 		{
+			// 			from: path.resolve(__dirname, "./Goplay", "*.html"),
+			// 			to: "./",
+			// 		},
+			// 		{
+			// 			from: path.resolve(__dirname, "./Goplay", "*.png"),
+			// 			to: "./",
+			// 		},
+			// 		{
+			// 			from: path.resolve(__dirname, "./Goplay", "*.ico"),
+			// 			to: "./",
+			// 		},
+			// 		{
+			// 			from: path.resolve(__dirname, "./Goplay", "*.svg"),
+			// 			to: "./",
+			// 		},
+			// 		{
+			// 			from: path.resolve(__dirname, "./Goplay", "*.xml"),
+			// 			to: "./",
+			// 		},
+			// 		{
+			// 			from: path.resolve(__dirname, "./Goplay", "*.webmanifest"),
+			// 			to: "./",
+			// 		},
+			// 		// copy sinksen project
+			// 		{
+			// 			from: path.resolve(__dirname, "./Sinksen2022", "*.html"),
+			// 			to: "./",
+			// 		},
+			// 		{
+			// 			from: path.resolve(__dirname, "./Sinksen2022/css", "*.css"),
+			// 			to: "./",
+			// 		},
+			// 		{
+			// 			from: path.resolve(__dirname, "./Sinksen2022/img", "*.png"),
+			// 			to: "./",
+			// 		},
+			// 		{
+			// 			from: path.resolve(__dirname, "./Sinksen2022/img", "*.svg"),
+			// 			to: "./",
+			// 		},
+			// 		{
+			// 			from: path.resolve(__dirname, "./Sinksen2022/img", "*.gif"),
+			// 			to: "./",
+			// 		},
+			// 		{
+			// 			from: path.resolve(__dirname, "./Sinksen2022/img", "*.jpg"),
+			// 			to: "./",
+			// 		},
+			// 		{
+			// 			from: path.resolve(__dirname, "./Sinksen2022/script", "*.js"),
+			// 			to: "./",
+			// 		},
+			// 	],
+			// })
+		//);
 		config.plugins.push(new RobotstxtPlugin(robotstxtOptions));
 	} else {
 		config.mode = "development";
