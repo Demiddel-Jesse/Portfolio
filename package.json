@@ -9,7 +9,8 @@
 		"build:assets": "webpack --mode=production --node-env=production",
 		"dev:assets": "webpack  --mode=development",
 		"del:dist": "rimraf ./dist",
-		"build": "npm run del:dist && npm run build:assets && npm run build:site",
+		"build:Goplay": "cd ./Goplay && npm install && npm run build",
+		"build": "npm run del:dist && npm run build:Goplay && npm run build:assets && npm run build:site",
 		"dev": "npm run dev:assets & npm run dev:site"
 	},
 	"keywords": [],
