@@ -1,0 +1,80 @@
+@use "../settings/color" as color;
+@use "../tools/tools.grid" as grid;
+@use "../tools/tools.order" as order;
+@use "../tools/tools.media-querries" as mq;
+@use "../utilities/utility.box";
+
+.c-projects {
+	.c-back {
+		@include grid.height(2, "ts");
+		@include grid.height(1, "tl");
+	}
+
+	&__projectGoplay,
+	&__projectSinksen,
+	&__projectMiniMuse,
+	&__box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		@extend %u-box;
+
+		@include order.pos(3);
+
+		@include grid.width(1);
+
+		@include grid.height(1);
+
+		h2 {
+			margin-top: 8px;
+
+			font-size: clamp(1rem, 3.2vw + 1rem, 1.5rem);
+
+			display: flex;
+			align-items: center;
+			gap: 8px;
+
+			.c-svgArrow {
+				width: 3rem;
+				height: 3rem;
+			}
+		}
+
+		a {
+			@extend %u-boxLink;
+		}
+	}
+
+	&__projectGoplay {
+		animation-delay: 550ms;
+
+		@include order.pos(3);
+
+		@include grid.width(1);
+		@include grid.width(2, "ts");
+
+		@include grid.height(2);
+	}
+
+	&__projectSinksen {
+		animation-delay: 750ms;
+
+		@include order.pos(4);
+
+		@include grid.width(1);
+
+		@include grid.height(2);
+	}
+
+	&__projectMiniMuse {
+		animation-delay: 650ms;
+
+		@include order.pos(5);
+
+		@include grid.width(2, "ts");
+
+		@include grid.height(4);
+		@include grid.height(2, "ts");
+	}
+}

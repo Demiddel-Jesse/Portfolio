@@ -1,0 +1,29 @@
+[
+  {
+    "startDate": "2016",
+    "endDate": "2018",
+    "school": "PTI",
+    "location": "Kortrijk",
+    "degreeType": "High school diploma",
+    "degreeName": "Industrial electricity",
+    "description": "Learned how to wire electrical systems of industrial capacity."
+  },
+  {
+    "startDate": "2021",
+    "endDate": "2023",
+    "school": "Howest",
+    "location": "Kortrijk",
+    "degreeType": "Graduates degree",
+    "degreeName": "Digitale Vormgeving",
+    "description": "Learned frontend web-development and video editing."
+  },
+  {
+    "startDate": "feb",
+    "endDate": "??? 2024",
+    "school": "VDAB",
+    "location": "Wevelgem",
+    "degreeType": "Course",
+    "degreeName": "Full stack developer PHP",
+    "description": "Learned backend web-development with PHP."
+  }
+]

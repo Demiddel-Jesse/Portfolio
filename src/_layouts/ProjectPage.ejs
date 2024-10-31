@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('../_components/headMeta.ejs') %>
+		<title><%= locals.title ? locals.title : site.title %></title>
+		<link rel="stylesheet" href="../main.css" />
+		<!-- <script src="./vendor.js" defer></script> -->
+		<script src="../main.js" defer></script>
+	</head>
+	<body class="u-background">
+		<main class="o-grid">
+			<section class="c-back">
+				<a href="/Projects">Back to Projects</a>
+				<h2>
+					Back to Projects
+					<svg
+						class="c-svgArrow"
+						width="32px"
+						height="32px"
+						viewBox="-2.4 -2.4 32 32"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<g id="SVGRepo_bgCarrier" class="c-svgArrow__bgCarrier"></g>
+						<g id="SVGRepo_tracerCarrier" class="c-svgArrow__tracerCarrier"></g>
+						<g id="SVGRepo_iconCarrier" class="c-svgArrow__iconCarrier">
+							<path d="M7 17L17 7M17 7H8M17 7V16"></path>
+						</g>
+					</svg>
+				</h2>
+			</section>
+			<header class="c-header"><h1><%- locals.title -%></h1></header>
+			<% if(locals.siteLink !== undefined && locals.siteLink !== null &&
+			locals.siteLink !== '') { %>
+			<section class="c-project__links c-project__links--site">
+				<a
+					href="<%= locals.siteLink %>"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					link to website
+				</a>
+				<h3>
+					See Site
+					<svg
+						class="c-svgArrow"
+						width="32px"
+						height="32px"
+						viewBox="-2.4 -2.4 32 32"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<g id="SVGRepo_bgCarrier" class="c-svgArrow__bgCarrier"></g>
+						<g id="SVGRepo_tracerCarrier" class="c-svgArrow__tracerCarrier"></g>
+						<g id="SVGRepo_iconCarrier" class="c-svgArrow__iconCarrier">
+							<path d="M7 17L17 7M17 7H8M17 7V16"></path>
+						</g>
+					</svg>
+				</h3>
+			</section>
+			<% } %> <% if(locals.githubLink !== undefined && locals.githubLink !==
+			null && locals.githubLink !== '') { %>
+			<section class="c-project__links c-project__links--code">
+				<a
+					href="<%= locals.githubLink %>"
+					target="_blank"
+					rel="noopener noreferrer"
+					>link to code</a
+				>
+				<h3>
+					See Code
+					<svg
+						class="c-svgArrow"
+						width="32px"
+						height="32px"
+						viewBox="-2.4 -2.4 32 32"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<g id="SVGRepo_bgCarrier" class="c-svgArrow__bgCarrier"></g>
+						<g id="SVGRepo_tracerCarrier" class="c-svgArrow__tracerCarrier"></g>
+						<g id="SVGRepo_iconCarrier" class="c-svgArrow__iconCarrier">
+							<path d="M7 17L17 7M17 7H8M17 7V16"></path>
+						</g>
+					</svg>
+				</h3>
+			</section>
+			<% } %> <%- locals.content -%>
+		</main>
+	</body>
+</html>

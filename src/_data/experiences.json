@@ -1,0 +1,20 @@
+[
+  {
+    "startDate": "2016",
+    "endDate": "2019",
+    "company": "Speelpleinwerking",
+    "location": "Harelbeke",
+    "experienceType": "Volunteer",
+    "position": "Children's entertainer",
+    "description": "Organizing and executing games for children."
+  },
+  {
+    "startDate": "March",
+    "endDate": "July 2023",
+    "company": "CreatorGalaxy",
+    "location": "De Pinte",
+    "experienceType": "Internship",
+    "position": "Motion graphic designer",
+    "description": "Creating of motion graphics and refactoring older ones to adhere to specific standards to sell on Adobe."
+  }
+]

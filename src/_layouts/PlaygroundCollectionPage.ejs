@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('../_components/headMeta.ejs') %>
+		<title><%= locals.title ? locals.title : site.title %></title>
+		<link rel="stylesheet" href="./main.css" />
+		<!-- <script src="./vendor.js" defer></script> -->
+		<script src="./main.js" defer></script>
+	</head>
+	<body class="u-background">
+		<main class="o-grid c-projects">
+			<section class="c-back">
+				<a href="/">Back</a>
+				<h2>
+					Go back
+					<svg
+						class="c-svgArrow"
+						width="32px"
+						height="32px"
+						viewBox="-2.4 -2.4 32 32"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<g id="SVGRepo_bgCarrier" class="c-svgArrow__bgCarrier"></g>
+						<g id="SVGRepo_tracerCarrier" class="c-svgArrow__tracerCarrier"></g>
+						<g id="SVGRepo_iconCarrier" class="c-svgArrow__iconCarrier">
+							<path d="M7 17L17 7M17 7H8M17 7V16"></path>
+						</g>
+					</svg>
+				</h2>
+			</section>
+			<header class="c-header"><h1><%- locals.topTitle -%></h1></header>
+			<% collections.SmallProject.forEach(project => { %>
+			<section class="c-projects__box">
+				<a href="./<%- project.data.permalink.replace('.html', '') %>"
+					><%- project.data.title %></a
+				>
+				<h2>
+					<%- project.data.title %>
+					<svg
+						class="c-svgArrow"
+						width="32px"
+						height="32px"
+						viewBox="-2.4 -2.4 28.80 28.80"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<g id="SVGRepo_bgCarrier" class="c-svgArrow__bgCarrier"></g>
+						<g id="SVGRepo_tracerCarrier" class="c-svgArrow__tracerCarrier"></g>
+						<g id="SVGRepo_iconCarrier" class="c-svgArrow__iconCarrier">
+							<path d="M7 17L17 7M17 7H8M17 7V16"></path>
+						</g>
+					</svg>
+				</h2>
+			</section>
+			<% }); %>
+		</main>
+	</body>
+</html>

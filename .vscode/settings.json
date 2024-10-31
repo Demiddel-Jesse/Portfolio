@@ -1,0 +1,206 @@
+{
+	"frontMatter.git.enabled": true,
+	"frontMatter.data.files": [
+		{
+			"id": "skills",
+			"title": "Skills",
+			"file": "[[workspace]]/src/_data/skills.json",
+			"fileType": "json",
+			"labelField": "name",
+			"schema": {
+				"title": "portfolio skills",
+				"type": "object",
+				"properties": {
+					"name": {
+						"type": "string",
+						"title": "Name"
+					},
+					"highlight": {
+						"type": "string",
+						"title": "Highlight"
+					},
+					"group": {
+						"type": "string",
+						"title": "Group"
+					},
+					"subgroup": {
+						"type": "string",
+						"title": "Subgroup"
+					},
+					"link": {
+						"type": "string",
+						"title": "Link"
+					},
+					"learning": {
+						"type": "boolean",
+						"title": "Learning",
+						"default": false
+					}
+				},
+				"required": ["name", "group"]
+			}
+		},
+		{
+			"id": "contactInfo",
+			"title": "Contact Info",
+			"file": "[[workspace]]/src/_data/contactInfo.json",
+			"fileType": "json",
+			"labelField": "name",
+			"schema": {
+				"title": "portfolio contact info",
+				"type": "object",
+				"properties": {
+					"name": {
+						"type": "string",
+						"title": "Name"
+					},
+					"value": {
+						"type": "string",
+						"title": "Value"
+					},
+					"link": {
+						"type": "string",
+						"title": "Link"
+					}
+				},
+				"required": ["name", "value", "link"]
+			}
+		},
+		{
+			"id": "currentOccupation",
+			"title": "Current Occupation",
+			"file": "[[workspace]]/src/_data/currentOccupation.json",
+			"fileType": "json",
+			"labelField": "name",
+			"singleEntry": true,
+			"schema": {
+				"title": "portfolio current occupation",
+				"type": "object",
+				"properties": {
+					"name": {
+						"type": "string",
+						"title": "Title"
+					},
+					"description": {
+						"type": "string",
+						"title": "Description"
+					}
+				},
+				"required": ["name", "description"]
+			}
+		},
+		{
+			"id": "Studies",
+			"title": "Studies",
+			"file": "[[workspace]]/src/_data/studies.json",
+			"fileType": "json",
+			"labelField": "degreeName",
+			"schema": {
+				"title": "portfolio studies",
+				"type": "object",
+				"properties": {
+					"startDate": {
+						"type": "string",
+						"title": "Start Date"
+					},
+					"endDate": {
+						"type": "string",
+						"title": "End Date"
+					},
+					"school": {
+						"type": "string",
+						"title": "School"
+					},
+					"location": {
+						"type": "string",
+						"title": "Location"
+					},
+					"degreeType": {
+						"type": "string",
+						"title": "Degree Type"
+					},
+					"degreeName": {
+						"type": "string",
+						"title": "Degree Name"
+					},
+					"description": {
+						"type": "string",
+						"title": "Description"
+					}
+				},
+				"required": [
+					"startDate",
+					"endDate",
+					"location",
+					"school",
+					"degreeType",
+					"degreeName"
+				]
+			}
+		},
+		{
+			"id": "Experiences",
+			"title": "Experiences",
+			"file": "[[workspace]]/src/_data/experiences.json",
+			"fileType": "json",
+			"labelField": "position",
+			"schema": {
+				"title": "portfolio experiences",
+				"type": "object",
+				"properties": {
+					"startDate": {
+						"type": "string",
+						"title": "Start Date"
+					},
+					"endDate": {
+						"type": "string",
+						"title": "End Date"
+					},
+					"company": {
+						"type": "string",
+						"title": "Company"
+					},
+					"location": {
+						"type": "string",
+						"title": "Location"
+					},
+					"experienceType": {
+						"type": "string",
+						"title": "Experience Type"
+					},
+					"position": {
+						"type": "string",
+						"title": "Position"
+					},
+					"description": {
+						"type": "string",
+						"title": "Description"
+					}
+				},
+				"required": [
+					"startDate",
+					"endDate",
+					"location",
+					"company",
+					"experienceType",
+					"position"
+				]
+			}
+		}
+	],
+	"frontMatter.data.types": [],
+	"frontMatter.data.folders": [],
+	"[markdown]": {
+		"editor.fontSize": 14,
+		"editor.lineHeight": 26,
+		"editor.wordWrap": "wordWrapColumn",
+		"editor.wordWrapColumn": 64,
+		"editor.lineNumbers": "off",
+		"editor.quickSuggestions": {
+			"comments": "off",
+			"strings": "off",
+			"other": "off"
+		},
+		"editor.minimap.enabled": false
+	}
+}

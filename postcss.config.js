@@ -7,8 +7,8 @@ module.exports = {
 			preset: ["cssnano-preset-advanced", { discardComments: false }],
 		}),
 		require("@hail2u/css-mqpacker")(),
-		require("postcss-uncss")({
-			html: ["./src/*.html"],
-		}),
+		// require("postcss-uncss")({
+		// 	html: ["./src/**/*.ejs"],
+		// }),
 	],
 };

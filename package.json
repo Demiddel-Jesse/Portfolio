@@ -1,28 +1,24 @@
 {
 	"name": "portfolio",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "Repo to have a backup of my Portfolio code",
 	"main": "./src/index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"build-goplay": "cd ./Goplay && npm install && npm run build",
-		"build": "npm run build-goplay && npm run build:prod",
-		"build:dev": "webpack --mode=development",
-		"build:prod": "webpack --mode=production --node-env=production",
-		"watch": "webpack --watch",
-		"serve": "webpack serve"
+		"build:site": "ELEVENTY_ENV=production npx eleventy",
+		"dev:site": "ELEVENTY_ENV=development npx eleventy --serve",
+		"build:assets": "webpack --mode=production --node-env=production",
+		"dev:assets": "webpack  --mode=development",
+		"del:dist": "rimraf ./dist",
+		"build:Goplay": "cd ./Goplay && npm install && npm run build",
+		"build": "npm run del:dist && npm run build:Goplay && npm run build:assets && npm run build:site",
+		"dev": "npm run dev:assets & npm run dev:site"
 	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/Demiddel-Jesse/Portfolio.git"
-	},
-	"author": "",
+	"keywords": [],
+	"author": "Demiddel Jesse",
 	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/Demiddel-Jesse/Portfolio/issues"
-	},
-	"homepage": "https://github.com/Demiddel-Jesse/Portfolio#readme",
 	"devDependencies": {
+		"@11ty/eleventy": "3.0.0",
+		"@11ty/eleventy-plugin-ejs": "1.0.0",
 		"@hail2u/css-mqpacker": "github:hail2u/node-css-mqpacker#v9.0.1",
 		"@webpack-cli/generators": "^3.0.7",
 		"autoprefixer": "^10.4.19",
@@ -30,6 +26,7 @@
 		"css-loader": "^7.1.2",
 		"cssnano": "^7.0.1",
 		"cssnano-preset-advanced": "^7.0.1",
+		"ejs": "^3.1.10",
 		"favicons": "^7.2.0",
 		"favicons-webpack-plugin": "^6.0.1",
 		"html-loader": "^5.0.0",
@@ -39,6 +36,7 @@
 		"postcss-loader": "^8.1.1",
 		"postcss-uncss": "^0.17.0",
 		"resolve-url-loader": "^5.0.0",
+		"rimraf": "6.0.1",
 		"robotstxt-webpack-plugin": "^8.0.0",
 		"sass": "^1.77.1",
 		"sass-loader": "^14.2.1",

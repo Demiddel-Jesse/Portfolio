@@ -1,0 +1,46 @@
+@use "../tools/tools.media-querries" as mq;
+@use "../settings/grid" as grid;
+@use "sass:map";
+
+@mixin height($height, $bp: "xs") {
+	@if map.get($map: grid.$rows, $key: $bp) == auto {
+		@if $bp == "xs" {
+			grid-row-start: span $height;
+		} @else {
+			@include mq.up($bp) {
+				grid-row-start: span $height;
+			}
+		}
+	} @else {
+		@if $height > map.get(grid.$rows, $bp) {
+			@warn 'too many rows defined';
+		} @else {
+			@if $bp == "xs" {
+				grid-row-start: span $height;
+			} @else {
+				@include mq.up($bp) {
+					grid-row-start: span $height;
+				}
+			}
+		}
+	}
+}
+
+@mixin width($width, $bp: "xs") {
+	@if $width > map.get(grid.$columns, $bp) {
+		@warn 'too many columns defined';
+	} @else {
+		@if $bp == "xs" {
+			grid-column-start: span $width;
+		} @else {
+			@include mq.up($bp) {
+				grid-column-start: span $width;
+			}
+		}
+	}
+}
+
+@mixin area($width, $height, $bp: "xs") {
+	@include grid-height($height, $bp);
+	@include grid-width($height, $bp);
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('../_components/headMeta.ejs') %>
+		<title><%= locals.title ? locals.title : site.title %></title>
+		<link rel="stylesheet" href="./main.css" />
+		<!-- <script src="./vendor.js" defer></script> -->
+		<script src="./main.js" defer></script>
+	</head>
+	<body class="u-background">
+		<main class="o-grid c-skills">
+			<section class="c-back">
+				<a href="/">Back</a>
+				<h2>
+					Go back
+					<svg
+						class="c-svgArrow"
+						width="32px"
+						height="32px"
+						viewBox="-2.4 -2.4 32 32"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<g id="SVGRepo_bgCarrier" class="c-svgArrow__bgCarrier"></g>
+						<g id="SVGRepo_tracerCarrier" class="c-svgArrow__tracerCarrier"></g>
+						<g id="SVGRepo_iconCarrier" class="c-svgArrow__iconCarrier">
+							<path d="M7 17L17 7M17 7H8M17 7V16"></path>
+						</g>
+					</svg>
+				</h2>
+			</section>
+			<header class="c-header"><%- locals.content -%></header>
+			<% const groupedData = {}; skills.forEach(item => { const { group,
+			subgroup = "General" } = item; if (!groupedData[group]) {
+			groupedData[group] = {}; } if (!groupedData[group][subgroup]) {
+			groupedData[group][subgroup] = []; }
+			groupedData[group][subgroup].push(item); }); %> <% for (const group in
+			groupedData) { %> <% let groupSelector = group.toLowerCase(); switch
+			(group) { case "Programming Languages": groupSelector =
+			"programmingLanguages"; break; case "CSS Frameworks": groupSelector =
+			"cssFrameworks"; break;case "Graphic Design": groupSelector =
+			"graphicDesign"; break;case "Video Editing / VFX": groupSelector =
+			"video"; break; case "3D / CAD Design": groupSelector = "3d"; break;case
+			"3D Animation": groupSelector = "animation"; break;case "JS Frameworks":
+			groupSelector = "jsFrameworks"; break;case "PHP Frameworks": groupSelector
+			= "phpFrameworks"; break; default: break; } %>
+			<section class="c-skills__<%= groupSelector %>">
+				<h2><%= group %></h2>
+
+				<section>
+					<% for (const subgroup in groupedData[group]) { %> <% if (subgroup !==
+					"General") { %>
+					<div>
+						<h3><%= subgroup %></h3>
+						<% } %>
+
+						<ul>
+							<% groupedData[group][subgroup].forEach(item => { %>
+							<li>
+								<% if (item.link !== undefined) { %>
+								<a href="<%= item.link %>"><strong><%= item.name %></strong></a>
+								<% } else { %> <%= item.name %> <% } %> <% if (item.learning) {
+								%>
+								<span class="u-highlight">(Learning)</span> <% } %> <% if
+								(item.highlight) { %>
+								<span class="u-highlight">(<%= item.highlight %>)</span> <% } %>
+							</li>
+							<% }) %>
+						</ul>
+						<% if (subgroup !== "General") { %>
+					</div>
+					<% } %> <% } %>
+				</section>
+			</section>
+			<% } %>
+		</main>
+	</body>
+</html>
