@@ -40,7 +40,7 @@
 
 		@include grid.width(1);
 
-		@include grid.height(1);
+		@include grid.height(2);
 
 		@extend %u-box;
 	}
@@ -54,7 +54,7 @@
 
 		@include grid.width(1);
 
-		@include grid.height(1);
+		@include grid.height(2);
 
 		@extend %u-box;
 	}
@@ -68,7 +68,7 @@
 
 		@include grid.width(1);
 
-		@include grid.height(1);
+		@include grid.height(2);
 
 		@extend %u-box;
 	}
