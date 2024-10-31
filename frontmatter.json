@@ -1809,6 +1809,7 @@
 			"name": "Project",
 			"pageBundle": false,
 			"previewPath": null,
+			"template": "./.frontmatter/templates/Project.md",
 			"fields": [
 				{
 					"title": "Title",
