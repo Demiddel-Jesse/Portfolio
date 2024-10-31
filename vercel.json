@@ -3,6 +3,7 @@
 		{ "src": "/", "dest": "/" },
 		{ "src": "/About", "dest": "/About.html" },
 		{ "src": "/Projects", "dest": "/Projects.html" },
-		{ "src": "/Playground", "dest": "/Playground.html" }
+		{ "src": "/Playground", "dest": "/Playground.html" },
+		{ "src": "/*", "dest": "/*.html" }
 	]
 }
